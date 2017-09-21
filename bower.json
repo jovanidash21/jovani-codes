@@ -1,0 +1,22 @@
+{
+  "name": "jovani-codes",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "author": "Jovani Warguez",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jovanidash21/jovani-codes.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
+    "popper.js": "^1.12.3"
+  }
+}
