@@ -9,7 +9,9 @@
     "type": "git",
     "url": "https://github.com/jovanidash21/jovani-codes.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "concurrently": "^3.5.0"
+  },
   "devDependencies": {
     "asset-builder": "^1.1.0",
     "axios": "^0.16.2",
