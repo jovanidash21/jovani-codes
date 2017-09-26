@@ -4,7 +4,8 @@
   	<?php wp_head(); ?>
   </head>
   <body>
-  	<h1>Hello World</h1>
+  	<div id="root">
+    </div>
     <?php wp_footer(); ?>
   </body>
 </html>
