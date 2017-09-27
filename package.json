@@ -9,6 +9,14 @@
     "type": "git",
     "url": "https://github.com/jovanidash21/jovani-codes.git"
   },
+  "scripts": {
+    "build": "run-s gulp:prod webpack:prod",
+    "dev": "run-p gulp:dev webpack:dev",
+    "gulp:prod": "gulp --production",
+    "gulp:dev": "gulp watch",
+    "webpack:prod": "webpack -p",
+    "webpack:dev": "webpack --watch"
+  },
   "dependencies": {
     "npm-run-all": "^4.1.1"
   },
