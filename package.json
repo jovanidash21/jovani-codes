@@ -59,6 +59,7 @@
     "react-addons-transition-group": "^15.6.2",
     "react-dom": "^15.6.1",
     "react-fontawesome": "^1.6.1",
+    "react-helmet": "^5.2.0",
     "react-owl-carousel": "^2.2.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
