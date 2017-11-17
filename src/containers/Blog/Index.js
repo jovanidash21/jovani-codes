@@ -7,13 +7,13 @@ import { fetchPosts } from '../../actions/post';
 import Head from '../../components/Head';
 import PostList from '../../components/Post/PostList';
 
-class Work extends Component {
+class Blog extends Component {
   constructor(props) {
     super(props);
   }
   componentWillMount() {
-    this.props.dispatch(fetchPage('work'));
-    this.props.dispatch(fetchPosts('work'));
+    this.props.dispatch(fetchPage('blog'));
+    this.props.dispatch(fetchPosts('blog'));
   }
   handleHeadData(headTitle) {
     const title = `${headTitle} | ${JOVANI_CODES.siteName}`;
@@ -23,14 +23,14 @@ class Work extends Component {
     )
   }
   render() {
-    const {
+    const { 
       page,
       post
     } = this.props;
 
     return (
       <div>
-        {::this.handleHeadData('Work')}
+        {::this.handleHeadData('Blog')}
         <div className="container">
           <Jumbotron>
             {
@@ -52,7 +52,7 @@ class Work extends Component {
                 ?
                 <div>
                   <hr className="my-2" />
-                  <h3>Work List</h3>
+                  <h3>Blog List</h3>
                   <PostList post={post} />
                 </div>
                 : ''
@@ -73,4 +73,4 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps
-)(Work);
+)(Blog);
