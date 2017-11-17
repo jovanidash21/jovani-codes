@@ -1,5 +1,4 @@
 <?php
-
 function setup() {
 
   // Register nav menus
@@ -77,8 +76,10 @@ function cpt_register_blog() {
 }
 
 function cpt_register_work() {
-  $slug      = 'work';
   $post_type = 'cpt-work';
+  $rest_base = 'work';
+  $slug      = 'work';
+  $menu_icon = 'dashicons-hammer';
 
   $labels = array(
     'name'               => _x( 'Work', 'post type general name' ),
@@ -94,22 +95,33 @@ function cpt_register_work() {
     'parent_item_colon'  => ''
   );
 
+  $supports = array(
+    'title',
+    'editor',
+    'thumbnail',
+    'excerpt'
+  );
+
+  $rewrite = array(
+    'slug' => $slug
+  );
+
   $args = array(
     'labels'                => $labels,
     'public'                => true,
+    'hierarchical'          => true,
     'publicly_queryable'    => true,
     'show_ui'               => true,
-    'query_var'             => true,
-    'rewrite'               => array( 'slug' => $slug ),
-    'capability_type'       => 'post',
-    'hierarchical'          => true,
-    'menu_position'         => null,
-    'menu_icon'             => 'dashicons-hammer',
     'show_in_rest'          => true,
-    'rest_base'             => 'work-api',
+    'rest_base'             => $rest_base,
     'rest_controller_class' => 'WP_REST_Posts_Controller',
-    'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-    'has_archive'           => false
+    'menu_position'         => null,
+    'menu_icon'             => $menu_icon,
+    'capability_type'       => 'post',
+    'supports'              => $supports,
+    'has_archive'           => false,
+    'rewrite'               => $rewrite,
+    'query_var'             => true
   );
 
   register_post_type( $post_type, $args );
@@ -121,3 +133,5 @@ function cpt_register() {
 }
 
 add_action( 'init', 'cpt_register' );
+
+?>
