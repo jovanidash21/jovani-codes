@@ -1,19 +1,30 @@
 {
   "dependencies": {
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "vendor.css": {
+      "files": [
+        "styles/vendor.scss"
+      ],
+      "bower": [
+        "PACE"
+      ]
+    },
     "main.js": {
       "files": [
         "scripts/main.js"
       ],
       "main": true
     },
-    "main.css": {
-      "files": [
-        "styles/main.scss"
-      ],
-      "main": true
+    "vendor.js": {
+      "bower": [
+        "jquery",
+        "PACE"
+      ]
     }
-  },
-  "config": {
-    "devUrl": "http://jovani-codes.dev"
   }
 }
