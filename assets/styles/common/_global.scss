@@ -10,3 +10,8 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+#wpadminbar {
+  @media (max-width: 600px) {
+    position: fixed;
+  }
+}
