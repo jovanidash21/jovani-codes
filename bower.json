@@ -19,5 +19,18 @@
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
     "PACE": "pace-js#^1.0.2",
     "popper.js": "^1.12.3"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "PACE": {
+      "main": [
+        "themes/blue/pace-theme-minimal.css",
+        "pace.js"
+      ]
+    }
   }
 }
