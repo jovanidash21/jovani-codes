@@ -11,6 +11,7 @@
         "styles/vendor.scss"
       ],
       "bower": [
+        "animate.css",
         "PACE"
       ]
     },
@@ -23,7 +24,8 @@
     "vendor.js": {
       "bower": [
         "jquery",
-        "PACE"
+        "PACE",
+        "wow"
       ]
     }
   }
