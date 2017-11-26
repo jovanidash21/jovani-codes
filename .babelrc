@@ -3,5 +3,5 @@
     "transform-function-bind",
     "transform-object-rest-spread"
   ],
-  "presets": ['latest', 'react']
+  "presets": ['env', 'react']
 }
