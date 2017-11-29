@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 class Head extends Component {
   render () {
-    const { 
+    const {
       title,
       description,
       keywords
@@ -20,10 +20,15 @@ class Head extends Component {
   }
 };
 
-Head.propTypes={
+Head.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   keywords: PropTypes.string
+}
+
+Head.defaultProps = {
+  description: '',
+  keywords: ''
 }
 
 export default Head;
