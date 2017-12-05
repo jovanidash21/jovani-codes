@@ -19,8 +19,7 @@
     "animate.css": "^3.5.2",
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
     "PACE": "pace-js#^1.0.2",
-    "popper.js": "^1.12.3",
-    "wow": "wowjs#^1.1.2"
+    "popper.js": "^1.12.3"
   },
   "overrides": {
     "bootstrap": {
