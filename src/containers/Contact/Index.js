@@ -28,18 +28,16 @@ class Contact extends Component {
         <div className="container">
           <Jumbotron>
             {
-              page.data.length
-                ?
-                page.data.map((data, i) =>
-                  <div key={i}>
-                    <h2 className="display-3">
-                      {data.title.rendered}
-                    </h2>
-                    <hr className="my-2" />
-                    {ReactHtmlParser(data.content.rendered)}
-                  </div>
-                )
-                : ''
+              page.data.length &&
+              page.data.map((data, i) =>
+                <div key={i}>
+                  <h2 className="display-3">
+                    {data.title.rendered}
+                  </h2>
+                  <hr className="my-2" />
+                  {ReactHtmlParser(data.content.rendered)}
+                </div>
+              )
             }
           </Jumbotron>
         </div>

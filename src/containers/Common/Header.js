@@ -29,20 +29,16 @@ class Header extends Component {
     const { menu } = this.props;
 
     return (
-      menu.data.length
-        ?
-        menu.data.map((data, i) =>
-          data.menuLocation === 'primary'
-            ?
-            data.menuStructure.map((menuStructure, i) =>
-              <MenuItem
-                key={i}
-                menu={menuStructure}
-              />
-            )
-            : ''
+      menu.data.length &&
+      menu.data.map((data, i) =>
+        (data.menuLocation === 'primary') &&
+        data.menuStructure.map((menuStructure, i) =>
+          <MenuItem
+            key={i}
+            menu={menuStructure}
+          />
         )
-        : ''
+      )
     )
   }
   render() {
