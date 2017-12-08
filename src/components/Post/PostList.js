@@ -13,8 +13,9 @@ class PostList extends Component {
   handleLink(url) {
     url = url.replace(/^(?:\/\/|[^\/]+)*\//, "/");
 
-    (url.length > 1)  &&
-    url = url.replace(/\/$/, "")
+    url.length > 1 
+      ? url = url.replace(/\/$/, "")
+      : ''
 
     return url;
   }
