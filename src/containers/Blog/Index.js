@@ -34,7 +34,7 @@ class Blog extends Component {
         <div className="container">
           <Jumbotron>
             {
-              page.data.length &&
+              page.data &&
               page.data.map((data, i) =>
                 <div key={i}>
                   <h2 className="display-3">
@@ -46,14 +46,12 @@ class Blog extends Component {
               )
             }
             {
-              post.data.length
-                ?
-                <div>
-                  <hr className="my-2" />
-                  <h3>Blog List</h3>
-                  <PostList post={post} />
-                </div>
-                : ''
+              post.data &&
+              <div>
+                <hr className="my-2" />
+                <h3>Blog List</h3>
+                <PostList post={post} />
+              </div>
             }
           </Jumbotron>
         </div>
