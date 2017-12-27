@@ -21,7 +21,6 @@ class WorkSingle extends Component {
   }
   render() {
     const { post } = this.props;
-    const title = `${JOVANI_CODES.siteName} | Work`;
 
     return (
       <div>

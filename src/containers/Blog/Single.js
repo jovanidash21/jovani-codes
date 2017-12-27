@@ -21,7 +21,6 @@ class BlogSingle extends Component {
   }
   render() {
     const { post } = this.props;
-    const title = `${JOVANI_CODES.siteName} | Blog`;
 
     return (
       <div>
