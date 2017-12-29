@@ -18,6 +18,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
+    "font-awesome": "^4.7.0",
     "PACE": "pace-js#^1.0.2",
     "popper.js": "^1.12.3"
   },
