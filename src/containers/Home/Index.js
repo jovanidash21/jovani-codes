@@ -15,7 +15,7 @@ class Home extends Component {
   componentWillMount() {
     const { fetchPage } = this.props;
 
-    fetchPage('contact');
+    fetchPage('home');
   }
   handleHeadData() {
     const title = `${JOVANI_CODES.siteName} | ${JOVANI_CODES.siteDescription}`;
