@@ -127,9 +127,25 @@ function cpt_register_work() {
   register_post_type( $post_type, $args );
 }
 
+function taxonomies_register_work() {
+	register_taxonomy(
+		'work_type',
+		array( 'cpt-work' ),
+		array(
+			'query_var'         => true,
+			'hierarchical'      => true,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'label'             => __( 'Work Types' )
+		)
+	);
+}
+
 function cpt_register() {
   cpt_register_blog();
   cpt_register_work();
+
+  taxonomies_register_work();
 }
 
 add_action( 'init', 'cpt_register' );
