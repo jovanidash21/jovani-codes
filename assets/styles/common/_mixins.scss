@@ -26,9 +26,21 @@
   display: -khtml-flex;
   display: -webkit-flex;
 }
+/* Transform
+ * @param {none|transform-functions|initial|inherit} $value - Value
+ */
+@mixin transform($value) {
+  @include css3-prefix('transform', $value);
+}
 /* Transform Translate
  * @param {number} $value - Value
  */
 @mixin transform-translate($value...) {
   @include css3-prefix('transform', translate($value));
+}
+/* Transition
+ * @param {css-property duration timing-function|none|initial|inherit} $value - Value
+ */
+@mixin transition($value) {
+  @include css3-prefix('transition', $value);
 }
