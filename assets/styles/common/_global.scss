@@ -22,7 +22,8 @@ body {
 }
 .pace {
   .pace-progress {
-    height: 3px;
+    background-color: $color-primary;
+    height: 4px;
     z-index: 100000;
   }
 }
