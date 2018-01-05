@@ -3,6 +3,23 @@ body {
   height: 100%;
   width: 100%;
 }
+html {
+  @include media-breakpoint-down(xs) {
+    font-size: 6px;
+  }
+  @include media-breakpoint-up(xs) {
+    font-size: 9px;
+  }
+  @include media-breakpoint-up(sm) {
+    font-size: 10px;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 12px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+  }
+}
 body {
   background-color: $color-tertiary;
   font-family: $font-family-lato;
@@ -17,8 +34,18 @@ body {
     position: fixed;
   }
 }
-.main-content {
-  padding: 21px 0;
+a {
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+section[class*=-section] {
+  position: relative;
 }
 .pace {
   .pace-progress {
