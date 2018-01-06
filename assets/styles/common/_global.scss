@@ -34,13 +34,15 @@ body {
     position: fixed;
   }
 }
+h1, h2, h3, h4, h5 {
+  font-family: $font-family-lobster;
+  font-weight: bold;
+}
 a {
   cursor: pointer;
   text-decoration: none;
+  &:focus,
   &:hover {
-    text-decoration: none;
-  }
-  &:focus {
     text-decoration: none;
   }
 }
