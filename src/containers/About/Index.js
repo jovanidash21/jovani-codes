@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Jumbotron } from 'reactstrap';
-import ReactHtmlParser from 'react-html-parser';
 import mapDispatchToProps from '../../actions';
 import Head from '../../components/Head';
+import Banner from '../Partial/Banner';
 
 class About extends Component {
   constructor(props) {
@@ -27,22 +26,7 @@ class About extends Component {
     return (
       <div>
         {::this.handleHeadData('About')}
-        <div className="container">
-          <Jumbotron>
-            {
-              page.data &&
-              page.data.map((data, i) =>
-                <div key={i}>
-                  <h2 className="display-3">
-                    {data.title.rendered}
-                  </h2>
-                  <hr className="my-2" />
-                  {ReactHtmlParser(data.content.rendered)}
-                </div>
-              )
-            }
-          </Jumbotron>
-        </div>
+        <Banner />
       </div>
     )
   }

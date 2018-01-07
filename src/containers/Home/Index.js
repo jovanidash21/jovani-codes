@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Jumbotron } from 'reactstrap';
-import ReactHtmlParser from 'react-html-parser';
 import mapDispatchToProps from '../../actions';
 import Head from '../../components/Head';
 import Banner from '../Partial/Banner';

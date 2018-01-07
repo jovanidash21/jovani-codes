@@ -4,6 +4,7 @@ import { Jumbotron } from 'reactstrap';
 import ReactHtmlParser from 'react-html-parser';
 import mapDispatchToProps from '../../actions';
 import Head from '../../components/Head';
+import Banner from '../Partial/Banner';
 
 class WorkSingle extends Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class WorkSingle extends Component {
     return (
       <div>
         <div className="container">
+          <Banner />
           <Jumbotron>
             {
               post.data &&
