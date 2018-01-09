@@ -10,6 +10,12 @@
   -khtml-#{$property}: #{$value};
   -webkit-#{$property}: #{$value};
 }
+/* Animation
+ * @param {name duration timing-function delay iteration-count direction fill-mode play-state} $value - Value
+ */
+@mixin animation($value) {
+  @include css3-prefix('animation', $value);
+}
 /* Flex
  * @param {flex-grow flex-shrink flex-basis|auto|initial|inherit} $value - Value
  */
