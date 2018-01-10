@@ -44,6 +44,18 @@
 @mixin transform-translate($value...) {
   @include css3-prefix('transform', translate($value));
 }
+/* Transform Translate X
+ * @param {number} $value - Value
+ */
+@mixin transform-translateX($value) {
+  @include css3-prefix('transform', translateX($value));
+}
+/* Transform Translate Y
+ * @param {number} $value - Value
+ */
+@mixin transform-translateY($value) {
+  @include css3-prefix('transform', translateY($value));
+}
 /* Transition
  * @param {css-property duration timing-function|none|initial|inherit} $value - Value
  */
