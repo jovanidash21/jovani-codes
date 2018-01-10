@@ -1,0 +1,38 @@
+.scroll-down-indicator {
+  font-size: 14px;
+  text-align: center;
+  text-transform: lowercase;
+  .mouse {
+    border: 3px solid $color-primary;
+    border-radius: 15px;
+  	display: block;
+  	height: 40px;
+    margin: 0 auto 4px;
+    position: relative;
+  	width: 30px;
+  }
+  .scroll-wheel {
+    &:before,
+    &:after {
+      content: "";
+      left: 50%;
+      position: absolute;
+    }
+    &:before {
+      @include transform-translate(-50%, -50%);
+      background-color: rgba($color-primary, 0.4);
+      border-radius: 2px;
+      height: 55%;
+      top: 50%;
+      width: 4px;
+    }
+    &:after {
+      @include animation(scroll-wheel 1.5s ease-in-out infinite);
+      @include transform-translateX(-50%);
+      background: $color-primary;
+      border-radius: 50%;
+      height: 10px;
+      width: 10px;
+    }
+  }
+}

@@ -18,3 +18,22 @@
     @content;
   }
 }
+
+@include keyframes(scroll-wheel) {
+  0% {
+    opacity: 1;
+    top: 22%;
+	}
+  33% {
+    opacity: 1;
+    top: 48%;
+	}
+  66% {
+    opacity: 0;
+    top: 48%;
+	}
+  100% {
+    opacity: 0;
+    top: 22%;
+  }
+}
