@@ -1,9 +1,10 @@
 .scroll-down-indicator {
+  $mouse-color: $color-primary;
   font-size: 14px;
   text-align: center;
   text-transform: lowercase;
   .mouse {
-    border: 3px solid $color-primary;
+    border: 3px solid $mouse-color;
     border-radius: 15px;
   	display: block;
   	height: 40px;
@@ -20,7 +21,7 @@
     }
     &:before {
       @include transform-translate(-50%, -50%);
-      background-color: rgba($color-primary, 0.4);
+      background-color: rgba($mouse-color, 0.4);
       border-radius: 2px;
       height: 55%;
       top: 50%;
@@ -29,7 +30,7 @@
     &:after {
       @include animation(scroll-wheel 1.5s ease-in-out infinite);
       @include transform-translateX(-50%);
-      background: $color-primary;
+      background: $mouse-color;
       border-radius: 50%;
       height: 10px;
       width: 10px;
