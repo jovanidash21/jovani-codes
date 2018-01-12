@@ -32,7 +32,6 @@ class Work extends Component {
     return (
       <div>
         {::this.handleHeadData('Work')}
-        <Banner />
       </div>
     )
   }

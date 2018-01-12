@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapDispatchToProps from '../../actions';
 import Head from '../../components/Head';
-import Banner from '../Partial/Banner';
 
 class Contact extends Component {
   constructor(props) {
@@ -26,7 +25,6 @@ class Contact extends Component {
     return (
       <div>
         {::this.handleHeadData('Contact')}
-        <Banner />
       </div>
     )
   }
