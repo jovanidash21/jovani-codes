@@ -14,4 +14,11 @@
   h4 {
     font-size: 4rem;
   }
+  .social-media-menu {
+    margin: 30px 0;
+    .social-media-item {
+      display: inline-block;
+      margin: 3px;
+    }
+  }
 }
