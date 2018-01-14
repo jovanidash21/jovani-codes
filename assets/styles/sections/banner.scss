@@ -21,4 +21,34 @@
       margin: 3px;
     }
   }
+  .banner-description {
+    @include transform-translateY(-50%);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+  .face-portrait {
+    position: absolute;
+    right: 0;
+    top: 0 ;
+    @include media-breakpoint-down(sm) {
+      left: 0;
+      right: auto;
+    }
+    .low-poly {
+      height: 100vh;
+      width: auto;
+      .admin-bar & {
+        height: calc(100vh - #{$wp-admin-bar-height-desktop});
+        @media (max-width: $wp-admin-screen-md-max) {
+          height: calc(100vh - #{$wp-admin-bar-height-mobile});
+        }
+      }
+    }
+  }
+  .scroll-down-indicator {
+    bottom: 21px;
+    position: absolute;
+    width: 100%;
+  }
 }
