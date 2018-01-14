@@ -1,11 +1,14 @@
 .banner-section {
-  background-color: $color-secondary;
   color: #fff;
-  height: 100vh;
-  .admin-bar & {
-    height: calc(100vh - #{$wp-admin-bar-height-desktop});
-    @media (max-width: $wp-admin-screen-md-max) {
-      height: calc(100vh - #{$wp-admin-bar-height-mobile});
+  &,
+  .particles,
+  .face-portrait .low-poly {
+    height: 100vh;
+    .admin-bar & {
+      height: calc(100vh - #{$wp-admin-bar-height-desktop});
+      @media (max-width: $wp-admin-screen-md-max) {
+        height: calc(100vh - #{$wp-admin-bar-height-mobile});
+      }
     }
   }
   h2 {
@@ -13,6 +16,9 @@
   }
   h4 {
     font-size: 4rem;
+  }
+  .particles {
+    width: 100%;
   }
   .social-media-menu {
     margin: 30px 0;
@@ -36,14 +42,7 @@
       right: auto;
     }
     .low-poly {
-      height: 100vh;
       width: auto;
-      .admin-bar & {
-        height: calc(100vh - #{$wp-admin-bar-height-desktop});
-        @media (max-width: $wp-admin-screen-md-max) {
-          height: calc(100vh - #{$wp-admin-bar-height-mobile});
-        }
-      }
     }
   }
   .scroll-down-indicator {

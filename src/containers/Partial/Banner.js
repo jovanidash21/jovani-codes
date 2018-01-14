@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import ReactSVG from 'react-svg';
+import Particles from 'react-particles-js';
 import mapDispatchToProps from '../../actions';
 import SocialMediaItem from '../../components/SocialMediaItem';
 import ScrollDownIndicator from '../../components/Banner/ScrollDownIndicator';
+import particlesJSConfig from './particles-js-config.json';
 
 class Banner extends Component {
   constructor(props) {
@@ -18,6 +20,10 @@ class Banner extends Component {
 
     return (
       <section className="banner-section">
+        <Particles
+          params={particlesJSConfig}
+          className="particles"
+        />
         <div className="banner-description">
           <Container>
             <Row>
@@ -60,8 +66,8 @@ class Banner extends Component {
         </div>
         <ReactSVG
           path={JOVANI_CODES.images + '/low-poly-portrait.svg'}
-          className="low-poly"
           wrapperClassName="face-portrait"
+          className="low-poly"
         />
         <ScrollDownIndicator>Scroll Down</ScrollDownIndicator>
       </section>
