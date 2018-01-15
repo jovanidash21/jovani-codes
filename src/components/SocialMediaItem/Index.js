@@ -6,14 +6,18 @@ const SocialMediaItem = (props) => {
   return (
     <div className={"social-media-item " + props.socialMedia}>
       <a href={props.link} target="_blank">
-        <div className="hexagon">
-          <FontAwesome
-            name={props.icon}
-            size="2x"
-          />
-        </div>
-      </a>
-    </div>
+        <div className="hexagon-anti-diagonal">
+          <div className="hexagon-main-diagonal">
+            <div className="hexagon-vertical">
+              <FontAwesome
+                name={props.icon}
+                size="2x"
+              />
+            </div>
+           </div>
+         </div>
+       </a>
+     </div>
   )
 }
 

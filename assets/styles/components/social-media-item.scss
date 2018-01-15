@@ -2,36 +2,36 @@
   $bg-color: $color-tertiary;
   $social-media-list: 'facebook' 'twitter' 'instagram' 'linkedin' 'google-plus' 'youtube' 'github';
   $social-media-colors: $color-facebook $color-twitter $color-instagram $color-linkedin $color-google-plus $color-youtube $color-github;
+  height: 58px;
   position: relative;
-  .hexagon {
+  width: 50px;
+  .hexagon-anti-diagonal {
+    @include transform-rotate(120deg);
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+  }
+  .hexagon-main-diagonal {
+    @include transform-rotate(-60deg);
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
+  .hexagon-vertical {
     @include display-flex();
+    @include transform-rotate(-60deg);
     @include transition(0.2s all ease);
     align-items: center;
-    background: $bg-color;
-    height: 28.87px;
+    background: $color-secondary;
+    height: 100%;
     justify-content: center;
+    overflow: hidden;
     text-align: center;
-    top: 100px;
-    width: 50px;
-    &:before,
-    &:after {
-      content: "";
-      @include transition(0.2s all ease);
-      border-left: 25px solid transparent;
-      border-right: 25px solid transparent;
-      height: 0;
-      left: 0;
-      position: absolute;
-      width: 0;
-    }
-    &:before {
-      border-bottom: 14.43px solid $bg-color;
-      bottom: 100%;
-    }
-    &:after {
-      border-top: 14.43px solid $bg-color;
-      top: 100%;
-    }
+    visibility: visible;
+    width: 100%;
     .fa {
       color: #fff;
       text-align: unset;
@@ -40,14 +40,8 @@
   @for $i from 1 through length($social-media-list) {
     &.#{nth($social-media-list, $i)} {
       &:hover {
-        .hexagon {
+        .hexagon-vertical {
           background: nth($social_media_colors, $i);
-          &:before {
-            border-bottom-color: nth($social_media_colors, $i);
-          }
-          &:after {
-            border-top-color: nth($social_media_colors, $i);
-          }
         }
       }
     }
