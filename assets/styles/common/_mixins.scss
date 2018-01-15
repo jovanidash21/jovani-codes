@@ -16,6 +16,12 @@
 @mixin animation($value) {
   @include css3-prefix('animation', $value);
 }
+/* Box Shadow
+ * @param {none|h-shadow v-shadow blur spread color |inset|initial|inherit} $value - Value
+ */
+@mixin box-shadow($value) {
+  @include css3-prefix('box-shadow', $value);
+}
 /* Flex
  * @param {flex-grow flex-shrink flex-basis|auto|initial|inherit} $value - Value
  */
@@ -37,6 +43,12 @@
  */
 @mixin transform($value) {
   @include css3-prefix('transform', $value);
+}
+/* Transform Rotate
+ * @param {number} $value - Value
+ */
+@mixin transform-rotate($value) {
+  @include css3-prefix('transform', rotate($value));
 }
 /* Transform Translate
  * @param {number} $value - Value
