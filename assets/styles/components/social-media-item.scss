@@ -5,6 +5,9 @@
   height: 58px;
   position: relative;
   width: 50px;
+  &:hover {
+    @include transform-scale(1.2);
+  }
   .hexagon-anti-diagonal {
     @include transform-rotate(120deg);
     cursor: pointer;
@@ -23,7 +26,7 @@
   .hexagon-vertical {
     @include display-flex();
     @include transform-rotate(-60deg);
-    @include transition(0.2s all ease);
+    @include transition(all 0.3s ease);
     align-items: center;
     background: $color-secondary;
     height: 100%;
