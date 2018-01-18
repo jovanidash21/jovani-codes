@@ -79,6 +79,7 @@
     "react-router-redux": "^5.0.0-alpha.6",
     "react-skrollr": "^1.0.3",
     "react-spinkit": "^3.0.0",
+    "react-springy-parallax": "^1.2.0",
     "react-svg": "^2.2.10",
     "react-typist": "^2.0.4",
     "reactstrap": "^5.0.0-alpha.3",
