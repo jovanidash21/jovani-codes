@@ -82,6 +82,7 @@
     "react-spinkit": "^3.0.0",
     "react-springy-parallax": "^1.2.0",
     "react-svg": "^2.2.10",
+    "react-svg-morph": "^0.2.1",
     "react-typist": "^2.0.4",
     "reactstrap": "^5.0.0-alpha.3",
     "redux": "^3.7.2",
