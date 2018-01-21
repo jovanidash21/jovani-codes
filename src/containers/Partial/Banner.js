@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import ReactSVG from 'react-svg';
 import Particles from 'react-particles-js';
+import Typist from 'react-typist';
 import mapDispatchToProps from '../../actions';
 import SocialMediaItem from '../../components/SocialMediaItem';
 import ScrollDownIndicator from '../../components/Banner/ScrollDownIndicator';
 import particlesJSConfig from './particles-js-config.json';
+import 'react-typist/dist/Typist.css';
 
 class Banner extends Component {
   constructor(props) {
@@ -28,8 +30,14 @@ class Banner extends Component {
           <Container>
             <Row>
               <Col xs="6">
-                <h2>Lorem ipsum dolor</h2>
-                <h4>Sed porttitor lectus nibh</h4>
+                <h2>
+                  Lorem ipsum dolor
+                </h2>
+                <h4>
+                  <Typist>
+                    Sed porttitor lectus nibh
+                  </Typist>
+                </h4>
                 <div className="social-media-menu">
                   {
                     options.data.acf.facebook_url &&
