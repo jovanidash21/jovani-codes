@@ -1,4 +1,5 @@
 <?php
+
 $libraries = [
   'lib/setup.php',
   'lib/post-type.php',
@@ -19,4 +20,5 @@ foreach ( $libraries as $lib ) {
 }
 
 unset($lib, $libraries);
+
 ?>

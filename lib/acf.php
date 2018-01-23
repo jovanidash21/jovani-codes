@@ -112,7 +112,7 @@ if ( ! class_exists( 'ACF_Configuration' ) ) {
 				}
 			}
 
-			$json_dir = get_template_directory() . '/acf';
+			$json_dir = get_template_directory() . '/acf-json';
 			$delete   = [];
 
 			foreach ( $groups as $group ) {

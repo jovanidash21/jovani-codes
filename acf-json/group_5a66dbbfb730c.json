@@ -1,10 +1,10 @@
 {
-    "key": "group_5a433e737f510",
+    "key": "group_5a66dbbfb730c",
     "title": "Theme Settings",
     "fields": [
         {
-            "key": "field_5a55c8e751b63",
-            "label": "Social Media",
+            "key": "field_5a66dbca5c7ad",
+            "label": "Social",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -19,11 +19,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a55c93751b64",
+            "key": "field_5a66dbd55c7ae",
             "label": "Facebook URL",
             "name": "facebook_url",
             "type": "url",
-            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,11 +35,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_5a55cac251b65",
+            "key": "field_5a66dc485c7af",
             "label": "Twitter URL",
             "name": "twitter_url",
             "type": "url",
-            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,11 +51,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_5a55cb5751b66",
+            "key": "field_5a66dca95c7b4",
             "label": "Instagram URL",
             "name": "instagram_url",
             "type": "url",
-            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -70,11 +67,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_5a55cb6f51b68",
+            "key": "field_5a66dc6d5c7b0",
             "label": "LinkedIn URL",
             "name": "linkedin_url",
             "type": "url",
-            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -87,11 +83,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_5a55cb5e51b67",
+            "key": "field_5a66dc785c7b1",
             "label": "Google Plus URL",
             "name": "google_plus_url",
             "type": "url",
-            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -104,11 +99,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_5a55cb8951b69",
+            "key": "field_5a66dc865c7b2",
             "label": "YouTube URL",
             "name": "youtube_url",
             "type": "url",
-            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -121,11 +115,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_5a55cba551b6a",
+            "key": "field_5a66dc935c7b3",
             "label": "GitHub URL",
             "name": "github_url",
             "type": "url",
-            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -155,5 +148,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1515641280
+    "modified": 1516690779
 }
