@@ -4,11 +4,11 @@
       "value": 90,
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area": 1500
       }
     },
     "color": {
-      "value": "#fffd70"
+      "value": "#ffffff"
     },
     "shape": {
       "type": "star",
@@ -36,11 +36,11 @@
       }
     },
     "size": {
-      "value": 5,
+      "value": 4,
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 21,
+        "speed": 17,
         "size_min": 0.1,
         "sync": false
       }
@@ -75,7 +75,7 @@
         "mode": "repulse"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "resize": true
