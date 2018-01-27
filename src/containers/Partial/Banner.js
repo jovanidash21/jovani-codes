@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
-import ReactSVG from 'react-svg';
 import Particles from 'react-particles-js';
 import Typist from 'react-typist';
 import mapDispatchToProps from '../../actions';
@@ -72,11 +71,9 @@ class Banner extends Component {
             </Row>
           </Container>
         </div>
-        <ReactSVG
-          path={JOVANI_CODES.images + '/low-poly-portrait.svg'}
-          wrapperClassName="face-portrait"
-          className="low-poly"
-        />
+        <div className="face-portrait">
+          <img src={JOVANI_CODES.images + '/low-poly-portrait.png'} className="low-poly" />
+        </div>
         <ScrollDownIndicator>Scroll Down</ScrollDownIndicator>
       </section>
     )
