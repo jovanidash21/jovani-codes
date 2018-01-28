@@ -44,6 +44,15 @@
   display: -khtml-flex;
   display: -webkit-flex;
 }
+/* Opacity
+ * @param {number} $value - Value
+ */
+@mixin opacity($value) {
+  @include css3-prefix('opacity', $value);
+  filter: alpha(opacity=#{$value * 100});
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$value * 100});
+  opacity: $value;
+}
 /* Transform
  * @param {none|transform-functions|initial|inherit} $value - Value
  */
