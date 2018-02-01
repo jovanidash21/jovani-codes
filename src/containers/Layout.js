@@ -27,7 +27,6 @@ class Layout extends Component {
           <div className="main-content">
             <Content {...matchProps} />
           </div>
-          <Footer />
         </div>
       )
     } else {
