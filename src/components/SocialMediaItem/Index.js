@@ -5,7 +5,7 @@ import FontAwesome from 'react-fontawesome';
 const SocialMediaItem = (props) => {
   return (
     <div className={"social-media-item " + props.socialMedia}>
-      <a href={props.link} target="_blank">
+      <a href={props.link} title={props.title} target="_blank">
         <div className="hexagon-anti-diagonal">
           <div className="hexagon-main-diagonal">
             <div className="hexagon-vertical">
@@ -24,12 +24,14 @@ const SocialMediaItem = (props) => {
 SocialMediaItem.propTypes = {
   socialMedia: PropTypes.string,
   icon: PropTypes.string.isRequired,
-  link: PropTypes.string
+  link: PropTypes.string,
+  title: PropTypes.string
 }
 
 SocialMediaItem.defaultProps = {
   socialMedia: '',
-  link: '#'
+  link: '#',
+  title: ''
 }
 
 export default SocialMediaItem;
