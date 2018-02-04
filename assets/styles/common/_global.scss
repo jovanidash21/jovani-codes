@@ -56,3 +56,12 @@ section[class*=-section] {
     z-index: 100000;
   }
 }
+.full-page-section {
+  height: 100vh !important;
+  .admin-bar & {
+    height: calc(100vh - #{$wp-admin-bar-height-desktop}) !important;
+    @media (max-width: $wp-admin-screen-md-max) {
+      height: calc(100vh - #{$wp-admin-bar-height-mobile}) !important;
+    }
+  }
+}

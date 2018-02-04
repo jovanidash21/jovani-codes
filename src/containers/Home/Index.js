@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { SectionsContainer, Section } from 'react-fullpage';
 import mapDispatchToProps from '../../actions';
 import Head from '../../components/Head';
 import Banner from '../Partial/Banner';
@@ -22,12 +23,20 @@ class Home extends Component {
   }
   render() {
     const { page } = this.props;
+    let options = {
+      sectionClassName: 'full-page-section',
+      anchors: ['banner-section'],
+      scrollBar: false,
+      navigation: true,
+      verticalAlign: false,
+      arrowNavigation: true
+    };
 
     return (
-      <div>
+      <SectionsContainer {...options}>
         {::this.handleHeadData()}
-        <Banner />
-      </div>
+        <Section><Banner /></Section>
+      </SectionsContainer>
     )
   }
 }
