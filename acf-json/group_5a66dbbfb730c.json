@@ -19,10 +19,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a66dbd55c7ae",
-            "label": "Facebook URL",
-            "name": "facebook_url",
-            "type": "url",
+            "key": "field_5a8001a47df1e",
+            "label": "Social Medias",
+            "name": "social_medias",
+            "type": "select",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,17 +32,93 @@
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "facebook": "Facebook",
+                "twitter": "Twitter",
+                "instagram": "Instagram",
+                "linkedin": "LinkedIn",
+                "google_plus": "Google Plus",
+                "youtube": "YouTube",
+                "github": "GitHub"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a66dbd55c7ae",
+            "label": "Facebook - URL",
+            "name": "facebook_url",
+            "type": "url",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "facebook"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5a800f0edef4e",
+            "label": "Facebook - Message",
+            "name": "facebook_message",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "facebook"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5a66dc485c7af",
-            "label": "Twitter URL",
+            "label": "Twitter - URL",
             "name": "twitter_url",
             "type": "url",
+            "value": null,
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "twitter"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -49,15 +126,52 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5a800fc9def4f",
+            "label": "Twitter -Message",
+            "name": "twitter_message",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "twitter"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5a66dca95c7b4",
-            "label": "Instagram URL",
+            "label": "Instagram - URL",
             "name": "instagram_url",
             "type": "url",
+            "value": null,
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "instagram"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -65,15 +179,52 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5a800fe4def50",
+            "label": "Instagram -Messsage",
+            "name": "instagram_message",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "instagram"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5a66dc6d5c7b0",
-            "label": "LinkedIn URL",
+            "label": "LinkedIn - URL",
             "name": "linkedin_url",
             "type": "url",
+            "value": null,
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "linkedin"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -81,15 +232,52 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5a800ff5def51",
+            "label": "LinkedIn - Message",
+            "name": "linkedin_message",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "linkedin"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5a66dc785c7b1",
-            "label": "Google Plus URL",
+            "label": "Google Plus - URL",
             "name": "google_plus_url",
             "type": "url",
+            "value": null,
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "google_plus"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -97,15 +285,52 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5a80100cdef52",
+            "label": "Google Plus - Message",
+            "name": "google_plus_message",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "google_plus"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5a66dc865c7b2",
-            "label": "YouTube URL",
+            "label": "YouTube - URL",
             "name": "youtube_url",
             "type": "url",
+            "value": null,
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -115,13 +340,50 @@
             "placeholder": ""
         },
         {
-            "key": "field_5a66dc935c7b3",
-            "label": "GitHub URL",
-            "name": "github_url",
-            "type": "url",
+            "key": "field_5a801020def53",
+            "label": "YouTube - Message",
+            "name": "youtube_message",
+            "type": "text",
+            "value": null,
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a66dc935c7b3",
+            "label": "GitHub - URL",
+            "name": "github_url",
+            "type": "url",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "github"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -129,6 +391,34 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5a801033def54",
+            "label": "GitHub - Message",
+            "name": "github_message",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a8001a47df1e",
+                        "operator": "==",
+                        "value": "github"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -148,5 +438,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1516690779
+    "modified": 1518342237
 }
