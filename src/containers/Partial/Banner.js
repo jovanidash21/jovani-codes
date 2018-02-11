@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import Particles from 'react-particles-js';
-import ScrollAnimation from 'react-animate-on-scroll';
 import Typist from 'react-typist';
 import mapDispatchToProps from '../../actions';
 import SocialMediaItem from '../../components/SocialMediaItem';
@@ -30,18 +29,14 @@ class Banner extends Component {
           <Container>
             <Row>
               <Col xs="6">
-                <ScrollAnimation animateIn="bounceInRight" animateOut="bounceOutLeft">
-                  <h2>
-                    Lorem ipsum dolor
-                  </h2>
-                </ScrollAnimation>
-                <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp">
-                  <h4>
-                    <Typist>
-                      Sed porttitor lectus nibh
-                    </Typist>
-                  </h4>
-                </ScrollAnimation>
+                <h2>
+                  Lorem ipsum dolor
+                </h2>
+                <h4>
+                  <Typist>
+                    Sed porttitor lectus nibh
+                  </Typist>
+                </h4>
                 <div className="social-media-menu">
                   {
                     options.data.acf.facebook_url &&
