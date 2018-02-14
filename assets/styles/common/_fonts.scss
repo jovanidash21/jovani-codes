@@ -1,0 +1,18 @@
+/* Font Face
+ * @param {*} $font-family - Font family
+ * @param {path} $src - Source
+ * @param {normal|italic|oblique} $font-style - Font style
+ * @param {normal|bold|bolder|lighter|number} $font-weight - Font weight
+ */
+@mixin font-face($font-family , $src, $font-style: normal, $font-weight: normal) {
+	@font-face {
+		font-family: $font-family;
+		src: url('#{$src}.eot');
+		src: url('#{$src}.eot?#iefix') format('embedded-opentype'),
+			url('#{$src}.woff') format('woff'),
+			url('#{$src}.ttf') format('truetype'),
+			url('#{$src}.svg##{$font-family}') format('svg');
+		font-style: $font-style;
+		font-weight: $font-weight;
+	}
+}
