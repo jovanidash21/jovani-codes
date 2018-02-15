@@ -34,7 +34,10 @@ body {
     position: fixed;
   }
 }
-h1, h2, h3, h4, h5 {
+h1, h2 {
+  font-family: $font-family-chunk-five-print;
+}
+h3, h4, h5 {
   font-family: $font-family-lobster;
   font-weight: bold;
 }
