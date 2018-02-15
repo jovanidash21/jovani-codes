@@ -9,6 +9,7 @@
 		font-family: $font-family;
 		src: url('#{$src}.eot');
 		src: url('#{$src}.eot?#iefix') format('embedded-opentype'),
+			url('#{$src}.woff2') format('woff2'),
 			url('#{$src}.woff') format('woff'),
 			url('#{$src}.ttf') format('truetype'),
 			url('#{$src}.svg##{$font-family}') format('svg');
