@@ -56,8 +56,9 @@
     }
   }
   .scroll-down-indicator {
+    @include transform-translateX(-50%);
     bottom: 21px;
+    left: 50%;
     position: absolute;
-    width: 100%;
   }
 }
