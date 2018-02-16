@@ -61,4 +61,10 @@ section[class*=-section] {
 }
 .full-page-section {
   overflow: hidden !important;
+  .admin-bar & {
+    padding-bottom: $wp-admin-bar-height-desktop !important;
+    @media (max-width: $wp-admin-screen-md-max) {
+      padding-bottom: $wp-admin-bar-height-mobile !important;
+    }
+  }
 }
