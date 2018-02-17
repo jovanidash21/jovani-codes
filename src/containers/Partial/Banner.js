@@ -39,32 +39,46 @@ class Banner extends Component {
                 </h4>
                 <div className="social-media-menu">
                   {
-                    options.data.acf.facebook_url &&
-                    <SocialMediaItem socialMedia="facebook" icon="facebook" link={options.data.acf.facebook_url} />
-                  }
-                  {
-                    options.data.acf.twitter_url &&
-                    <SocialMediaItem socialMedia="twitter" icon="twitter" link={options.data.acf.twitter_url} />
-                  }
-                  {
-                    options.data.acf.instagram_url &&
-                    <SocialMediaItem socialMedia="instagram" icon="instagram" link={options.data.acf.instagram_url} />
-                  }
-                  {
-                    options.data.acf.linkedin_url &&
-                    <SocialMediaItem socialMedia="linkedin" icon="linkedin" link={options.data.acf.linkedin_url} />
-                  }
-                  {
-                    options.data.acf.google_plus_url &&
-                    <SocialMediaItem socialMedia="google-plus" icon="google-plus" link={options.data.acf.google_plus_url} />
-                  }
-                  {
-                    options.data.acf.youtube_url &&
-                    <SocialMediaItem socialMedia="youtube" icon="youtube-play" link={options.data.acf.youtube_url} />
-                  }
-                  {
-                    options.data.acf.github_url &&
-                    <SocialMediaItem socialMedia="github" icon="github" link={options.data.acf.github_url} />
+                    options.data.acf.social_medias &&
+                    options.data.acf.social_medias.map((socialMedia, i) => {
+                      switch (socialMedia) {
+                        case 'facebook':
+                          return (
+                            <SocialMediaItem socialMedia="facebook" icon="facebook" link={options.data.acf.facebook_url} />
+                          );
+                          break;
+                        case 'twitter':
+                          return (
+                            <SocialMediaItem socialMedia="twitter" icon="twitter" link={options.data.acf.twitter_url} />
+                          );
+                          break;
+                        case 'instagram':
+                          return (
+                            <SocialMediaItem socialMedia="instagram" icon="instagram" link={options.data.acf.instagram_url} />
+                          );
+                          break;
+                        case 'linkedin':
+                          return (
+                            <SocialMediaItem socialMedia="linkedin" icon="linkedin" link={options.data.acf.linkedin_url} />
+                          );
+                          break;
+                        case 'google_plus':
+                          return (
+                            <SocialMediaItem socialMedia="google-plus" icon="google-plus" link={options.data.acf.google_plus_url} />
+                          );
+                          break;
+                        case 'youtube':
+                          return (
+                            <SocialMediaItem socialMedia="youtube" icon="youtube-play" link={options.data.acf.youtube_url} />
+                          );
+                          break;
+                        case 'github':
+                          return (
+                            <SocialMediaItem socialMedia="github" icon="github" link={options.data.acf.github_url} />
+                          );
+                          break;
+                      }
+                    })
                   }
                 </div>
               </Col>
