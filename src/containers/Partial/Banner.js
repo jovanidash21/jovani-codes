@@ -29,7 +29,7 @@ class Banner extends Component {
         <div className="banner-description">
           <Container>
             <Row>
-              <Col xs="6">
+              <Col xs="8">
                 <ReactSVG
                   path={JOVANI_CODES.images + '/full-name.svg'}
                   wrapperClassName="full-name"
