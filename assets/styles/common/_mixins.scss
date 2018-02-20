@@ -28,6 +28,12 @@
 @mixin box-shadow($value) {
   @include css3-prefix('box-shadow', $value);
 }
+/* Filter
+ * @param {none/filter-functions} $value - Value
+ */
+@mixin filter($value) {
+  @include css3-prefix('filter', $value);
+}
 /* Flex
  * @param {flex-grow flex-shrink flex-basis|auto|initial|inherit} $value - Value
  */
