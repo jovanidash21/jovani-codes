@@ -34,6 +34,12 @@
 @mixin filter($value) {
   @include css3-prefix('filter', $value);
 }
+/* Filter Grayscale
+ * @param {percent} $value - Value
+ */
+@mixin filter-grayscale($value) {
+  @include css3-prefix('filter', grayscale($value));
+}
 /* Flex
  * @param {flex-grow flex-shrink flex-basis|auto|initial|inherit} $value - Value
  */
