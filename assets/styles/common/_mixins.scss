@@ -65,6 +65,23 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$value * 100});
   opacity: $value;
 }
+/* Placeholder
+ * @param {}
+ */
+@mixin placeholder() {
+  &::-webkit-input-placeholder { // For Chrome / Opera / Safari
+    @content;
+  }
+  &::-moz-placeholder { // For Firefox 19 and up
+    @content;
+  }
+  &:-moz-placeholder { // For Firefox 18 and earlier versions
+    @content;
+  }
+  &:-ms-input-placeholder { // For IE10 and up
+    @content;
+  }
+}
 /* Transform
  * @param {none|transform-functions|initial|inherit} $value - Value
  */
