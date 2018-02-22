@@ -106,6 +106,18 @@
 @mixin transform-scale($value...) {
   @include css3-prefix('transform', scale($value));
 }
+/* Transform Scale X
+ * @param {number} $value - Value
+ */
+@mixin transform-scaleX($value...) {
+  @include css3-prefix('transform', scaleX($value));
+}
+/* Transform Scale Y
+ * @param {number} $value - Value
+ */
+@mixin transform-scaleY($value...) {
+  @include css3-prefix('transform', scaleY($value));
+}
 /* Transform Translate
  * @param {number} $value - Value
  */
