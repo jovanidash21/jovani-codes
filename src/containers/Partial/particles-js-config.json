@@ -8,10 +8,10 @@
       }
     },
     "color": {
-      "value": "#ffff00"
+      "value": "#ffffff"
     },
     "shape": {
-      "type": "star",
+      "type": "circle",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -29,8 +29,8 @@
       "value": 0.9,
       "random": true,
       "anim": {
-        "enable": true,
-        "speed": 3,
+        "enable": false,
+        "speed": 5,
         "opacity_min": 0.1,
         "sync": false
       }
@@ -39,8 +39,8 @@
       "value": 4,
       "random": true,
       "anim": {
-        "enable": false,
-        "speed": 17,
+        "enable": true,
+        "speed": 10,
         "size_min": 0.1,
         "sync": false
       }
@@ -54,9 +54,9 @@
     },
     "move": {
       "enable": true,
-      "speed": 1,
-      "direction": "none",
-      "random": false,
+      "speed": 2,
+      "direction": "top",
+      "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
