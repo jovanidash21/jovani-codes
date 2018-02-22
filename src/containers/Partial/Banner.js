@@ -119,9 +119,9 @@ class Banner extends Component {
           </Container>
         </div>
         <div className="face-portrait">
-          <img src={JOVANI_CODES.images + '/low-poly-portrait.png'} className="low-poly" />
+
         </div>
-        <ScrollDownIndicator>Scroll Down</ScrollDownIndicator>
+        <ScrollDownIndicator title="Scroll Down" />
       </section>
     )
   }
