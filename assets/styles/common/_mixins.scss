@@ -65,6 +65,12 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$value * 100});
   opacity: $value;
 }
+/* Perspective
+ * @param {length|none} $value - Value
+ */
+@mixin prespective($value) {
+  @include css3-prefix('perspective', $value);
+}
 /* Placeholder
  * @param {}
  */
