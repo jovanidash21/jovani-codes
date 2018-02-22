@@ -27,99 +27,99 @@ class Banner extends Component {
           className="particles"
         />
         <div className="banner-description">
-          <Container>
+          <Container fluid>
             <Row>
-              <Col xs="8">
+              <Col xs="7">
                 <ReactSVG
                   path={JOVANI_CODES.images + '/full-name.svg'}
                   wrapperClassName="full-name"
                   className="retro"
                 />
-                <div className="social-media-menu">
-                  {
-                    options.data.acf.social_medias &&
-                    options.data.acf.social_medias.map((socialMedia, i) => {
-                      switch (socialMedia) {
-                        case 'facebook':
-                          return (
-                            <SocialMediaItem
-                              socialMedia="facebook"
-                              icon="facebook"
-                              link={options.data.acf.facebook_url}
-                              title={options.data.acf.facebook_message}
-                            />
-                          );
-                          break;
-                        case 'twitter':
-                          return (
-                            <SocialMediaItem
-                              socialMedia="twitter"
-                              icon="twitter"
-                              link={options.data.acf.twitter_url}
-                              title={options.data.acf.twitter_message}
-                            />
-                          );
-                          break;
-                        case 'instagram':
-                          return (
-                            <SocialMediaItem
-                              socialMedia="instagram"
-                              icon="instagram"
-                              link={options.data.acf.instagram_url}
-                              title={options.data.acf.instagram_message}
-                            />
-                          );
-                          break;
-                        case 'linkedin':
-                          return (
-                            <SocialMediaItem
-                              socialMedia="linkedin"
-                              icon="linkedin"
-                              link={options.data.acf.linkedin_url}
-                              title={options.data.acf.linkedin_message}
-                            />
-                          );
-                          break;
-                        case 'google_plus':
-                          return (
-                            <SocialMediaItem
-                              socialMedia="google-plus"
-                              icon="google-plus"
-                              link={options.data.acf.google_plus_url}
-                              title={options.data.acf.google_plus_message}
-                            />
-                          );
-                          break;
-                        case 'youtube':
-                          return (
-                            <SocialMediaItem
-                              socialMedia="youtube"
-                              icon="youtube-play"
-                              link={options.data.acf.youtube_url}
-                              title={options.data.acf.youtube_message}
-                            />
-                          );
-                          break;
-                        case 'github':
-                          return (
-                            <SocialMediaItem
-                              socialMedia="github"
-                              icon="github"
-                              link={options.data.acf.github_url}
-                              title={options.data.acf.github_message}
-                            />
-                          );
-                          break;
-                        }
-                    })
-                  }
-                </div>
               </Col>
             </Row>
           </Container>
         </div>
         <div className="face-portrait">
-
+          <img src={JOVANI_CODES.images + '/low-poly-portrait.png'} className="low-poly" />
+        </div>
+        <div className="social-media-menu">
+          {
+            options.data.acf.social_medias &&
+            options.data.acf.social_medias.map((socialMedia, i) => {
+              switch (socialMedia) {
+                case 'facebook':
+                  return (
+                    <SocialMediaItem
+                      socialMedia="facebook"
+                      icon="facebook"
+                      link={options.data.acf.facebook_url}
+                      title={options.data.acf.facebook_message}
+                    />
+                  );
+                  break;
+                case 'twitter':
+                  return (
+                    <SocialMediaItem
+                      socialMedia="twitter"
+                      icon="twitter"
+                      link={options.data.acf.twitter_url}
+                      title={options.data.acf.twitter_message}
+                    />
+                  );
+                  break;
+                case 'instagram':
+                  return (
+                    <SocialMediaItem
+                      socialMedia="instagram"
+                      icon="instagram"
+                      link={options.data.acf.instagram_url}
+                      title={options.data.acf.instagram_message}
+                    />
+                  );
+                  break;
+                case 'linkedin':
+                  return (
+                    <SocialMediaItem
+                      socialMedia="linkedin"
+                      icon="linkedin"
+                      link={options.data.acf.linkedin_url}
+                      title={options.data.acf.linkedin_message}
+                    />
+                  );
+                  break;
+                case 'google_plus':
+                  return (
+                    <SocialMediaItem
+                      socialMedia="google-plus"
+                      icon="google-plus"
+                      link={options.data.acf.google_plus_url}
+                      title={options.data.acf.google_plus_message}
+                    />
+                  );
+                  break;
+                case 'youtube':
+                  return (
+                    <SocialMediaItem
+                      socialMedia="youtube"
+                      icon="youtube-play"
+                      link={options.data.acf.youtube_url}
+                      title={options.data.acf.youtube_message}
+                    />
+                  );
+                  break;
+                case 'github':
+                  return (
+                    <SocialMediaItem
+                      socialMedia="github"
+                      icon="github"
+                      link={options.data.acf.github_url}
+                      title={options.data.acf.github_message}
+                    />
+                  );
+                  break;
+                }
+            })
+          }
         </div>
         <ScrollDownIcon title="Scroll Down" />
       </section>
