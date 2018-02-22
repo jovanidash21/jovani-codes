@@ -6,7 +6,7 @@ import Particles from 'react-particles-js';
 import Typist from 'react-typist';
 import mapDispatchToProps from '../../actions';
 import SocialMediaItem from '../../components/SocialMediaItem';
-import ScrollDownIndicator from '../../components/Banner/ScrollDownIndicator';
+import ScrollDownIcon from '../../components/Banner/ScrollDownIcon';
 import particlesJSConfig from './particles-js-config.json';
 import 'react-typist/dist/Typist.css';
 
@@ -121,7 +121,7 @@ class Banner extends Component {
         <div className="face-portrait">
 
         </div>
-        <ScrollDownIndicator title="Scroll Down" />
+        <ScrollDownIcon title="Scroll Down" />
       </section>
     )
   }

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ScrollDownIndicator = (props) => {
+const ScrollDownIcon = (props) => {
   return (
-    <div className="scroll-down-indicator">
+    <div className="scroll-down-icon">
       <span className="mouse" title={props.title}>
         <span className="scroll-wheel" />
       </span>
@@ -12,12 +12,12 @@ const ScrollDownIndicator = (props) => {
   )
 }
 
-ScrollDownIndicator.propTypes = {
+ScrollDownIcon.propTypes = {
   title: PropTypes.string
 }
 
-ScrollDownIndicator.defaultProps = {
+ScrollDownIcon.defaultProps = {
   title: ''
 }
 
-export default ScrollDownIndicator;
+export default ScrollDownIcon;
