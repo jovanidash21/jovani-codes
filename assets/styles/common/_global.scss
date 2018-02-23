@@ -68,3 +68,18 @@ section[class*=-section] {
     }
   }
 }
+.background-primary {
+  background-color: $color-primary;
+}
+.background-secondary {
+  background-color: $color-secondary;
+}
+.background-tertiary {
+  background-color: $color-tertiary;
+}
+.background-black {
+  background-color: $color-mine-shaft;
+}
+.background-white {
+  background-color: #fff;
+}
