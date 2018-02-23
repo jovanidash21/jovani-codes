@@ -44,7 +44,7 @@ class Banner extends Component {
         </div>
         <div className="social-media-menu">
           {
-            options.data.acf.social_medias &&
+            Object.keys(options.data.acf).length === 0 && options.data.acf === Object &&
             options.data.acf.social_medias.map((socialMedia, i) => {
               switch (socialMedia) {
                 case 'facebook':
