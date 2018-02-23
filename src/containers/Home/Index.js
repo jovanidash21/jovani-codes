@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { SectionsContainer, Section } from 'react-fullpage';
+import {
+  ScrollToTopOnMount,
+  SectionsContainer,
+  Section
+} from 'react-fullpage';
 import mapDispatchToProps from '../../actions';
 import Head from '../../components/Head';
 import Banner from '../Partial/Banner';
@@ -35,6 +39,7 @@ class Home extends Component {
     return (
       <SectionsContainer {...options}>
         {::this.handleHeadData()}
+        <ScrollToTopOnMount />
         <Section><Banner /></Section>
       </SectionsContainer>
     )
