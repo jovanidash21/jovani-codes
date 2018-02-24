@@ -41,12 +41,12 @@
   }
   .hexagon-vertical {
     @include display-flex();
+    @include justify-content(center);
     @include transform-rotate(-60deg);
     @include transition(all 0.3s ease);
     align-items: center;
     background-color: $bg-color;
     height: 100%;
-    justify-content: center;
     overflow: hidden;
     text-align: center;
     visibility: visible;
