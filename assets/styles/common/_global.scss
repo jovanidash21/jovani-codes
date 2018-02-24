@@ -52,22 +52,6 @@ a {
 section[class*=-section] {
   position: relative;
 }
-.pace {
-  .pace-progress {
-    background-color: $color-primary;
-    height: 4px;
-    z-index: 100000;
-  }
-}
-.full-page-section {
-  overflow: hidden !important;
-  .admin-bar & {
-    padding-bottom: $wp-admin-bar-height-desktop !important;
-    @media (max-width: $wp-admin-screen-md-max) {
-      padding-bottom: $wp-admin-bar-height-mobile !important;
-    }
-  }
-}
 .background-primary {
   background-color: $color-primary;
 }
