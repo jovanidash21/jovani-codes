@@ -10,6 +10,23 @@
   -khtml-#{$property}: #{$value};
   -webkit-#{$property}: #{$value};
 }
+/* Align Items
+ * @param stretch|center|flex-start|flex-end|baseline|initial|inherit} $value - Value
+ */
+@mixin align-items($value) {
+	@if $value == flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	} @else if $value == flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	} @else {
+		-webkit-box-align: $value;
+		-ms-flex-align: $value;
+	}
+  @include css3-prefix('align-items', $value);
+}
+
 /* Animation
  * @param {name duration timing-function delay iteration-count direction fill-mode play-state} $value - Value
  */

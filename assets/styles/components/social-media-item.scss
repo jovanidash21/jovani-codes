@@ -40,11 +40,11 @@
     width: 100%;
   }
   .hexagon-vertical {
+    @include align-items(center);
     @include display-flex();
     @include justify-content(center);
     @include transform-rotate(-60deg);
     @include transition(all 0.3s ease);
-    align-items: center;
     background-color: $bg-color;
     height: 100%;
     overflow: hidden;
