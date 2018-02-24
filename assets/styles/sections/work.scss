@@ -1,0 +1,27 @@
+.work-section {
+  .slick-slider,
+  .slick-list,
+  .slick-track,
+  .slick-slide {
+    height: 100%;
+  }
+  .slick-slide {
+    @include align-items(center);
+    @include display-flex();
+    @include justify-content(center);
+  }
+  .slick-prev,
+  .slick-next,
+  .slick-dots {
+    z-index: 10;
+  }
+  .slick-prev {
+    left: 75px;
+  }
+  .slick-next {
+    right: 75px;
+  }
+  .slick-dots {
+    bottom: 25px;
+  }
+}
