@@ -21,19 +21,36 @@
   top: 50%;
   z-index: 10;
   #{&}-anchor {
-    $size: 9px;
-    @include transition(all 0.2s ease-in);
-    background-color: #fff;
-    border-radius: 50%;
+    $size: 5px;
     display: block;
-    height: $size;
-    margin: 17px 10px;
-    width: $size;
+    margin: 3px;
+    padding: 14px;
+    position: relative;
+    &:before {
+      content: "";
+      @include transform-translate(-50%, -50%);
+      @include transition(all 0.2s ease-in);
+      background-color: #fff;
+      border-radius: 50%;
+      height: $size;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      width: $size;
+    }
     &:hover {
-      @include transform-scale(1.4);
+      $size: 11px;
+      &:before {
+        height: $size;
+        width: $size;
+      }
     }
     &.active {
-      @include transform-scale(1.7);
+      $size: 15px;
+      &:before {
+        height: $size;
+        width: $size;
+      }
     }
   }
 }
