@@ -54,3 +54,27 @@
     }
   }
 }
+.slick-dots {
+  li {
+    button {
+      &:before {
+        @include opacity(1);
+        @include transition(all 0.2s ease-in);
+        font-size: 6px;
+      }
+      &:hover {
+        &:before {
+          font-size: 14px;
+        }
+      }
+    }
+    &.slick-active {
+      button {
+        &:before {
+          @include opacity(1);
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
