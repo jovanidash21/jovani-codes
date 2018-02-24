@@ -28,6 +28,16 @@
 @mixin box-shadow($value) {
   @include css3-prefix('box-shadow', $value);
 }
+/* Display Flex
+ * @param {true|false} $is_important - Is important
+ */
+@mixin display-flex() {
+  display: flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -khtml-flex;
+  display: -webkit-flex;
+}
 /* Filter
  * @param {none/filter-functions} $value - Value
  */
@@ -46,15 +56,24 @@
 @mixin flex($value) {
   @include css3-prefix('flex', $value);
 }
-/* Display Flex
- * @param {true|false} $is_important - Is important
+/* Flex Direction
+ * @param {row|row-reverse|column|column-reverse|initial|inherit} $value - Value
  */
-@mixin display-flex() {
-  display: flex;
-  display: -ms-flexbox;
-  display: -moz-box;
-  display: -khtml-flex;
-  display: -webkit-flex;
+@mixin flex-direction($value) {
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	} @else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	} @else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+  @include css3-prefix('flex-direction', $value);
 }
 /* Opacity
  * @param {number} $value - Value
