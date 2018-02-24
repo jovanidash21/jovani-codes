@@ -21,7 +21,7 @@
   top: 50%;
   z-index: 10;
   #{&}-anchor {
-    $size: 5px;
+    $size: 9px;
     @include transition(all 0.2s ease-in);
     background-color: #fff;
     border-radius: 50%;
@@ -30,10 +30,10 @@
     margin: 17px 10px;
     width: $size;
     &:hover {
-      @include transform-scale(1.7);
+      @include transform-scale(1.4);
     }
     &.active {
-      @include transform-scale(2.5);
+      @include transform-scale(1.7);
     }
   }
 }
