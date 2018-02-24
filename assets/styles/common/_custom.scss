@@ -14,3 +14,26 @@
     }
   }
 }
+.full-page-navigation {
+  @include transform-translateY(-50%);
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  z-index: 10;
+  #{&}-anchor {
+    $size: 5px;
+    @include transition(all 0.2s ease-in);
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    height: $size;
+    margin: 17px 10px;
+    width: $size;
+    &:hover {
+      @include transform-scale(1.7);
+    }
+    &.active {
+      @include transform-scale(2.5);
+    }
+  }
+}

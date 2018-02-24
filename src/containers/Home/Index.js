@@ -32,6 +32,8 @@ class Home extends Component {
       anchors: ['banner-section'],
       scrollBar: false,
       navigation: true,
+      navigationClass: 'full-page-navigation',
+      navigationAnchorClass: 'full-page-navigation-anchor',
       verticalAlign: false,
       arrowNavigation: true
     };
