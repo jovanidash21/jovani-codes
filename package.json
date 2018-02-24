@@ -69,6 +69,7 @@
     "react-autosuggest": "^9.3.2",
     "react-dom": "^16.0.0",
     "react-fontawesome": "^1.6.1",
+    "react-fullpage": "^0.1.18",
     "react-gsap-enhancer": "^0.3.0",
     "react-helmet": "^5.2.0",
     "react-html-parser": "^2.0.1",
