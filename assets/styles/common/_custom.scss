@@ -54,6 +54,14 @@
     }
   }
 }
+.slick-next,
+.slick-prev {
+  &:before {
+    @include transition(all 0.2s ease-in);
+    color: #000;
+    font-size: 40px;
+  }
+}
 .slick-dots {
   li {
     button {
