@@ -1,5 +1,6 @@
 .social-media-item {
-  $bg-color: $color-treehouse;
+  $bg-color: $color-dusty-gray;
+  $color: $color-mine-shaft;
   $social-media-list: 'facebook' 'twitter' 'instagram' 'linkedin' 'google-plus' 'youtube' 'github';
   $social-media-colors: $color-facebook $color-twitter $color-instagram $color-linkedin $color-google-plus $color-youtube $color-github;
   @include transition(all 0.2s cubic-bezier(0, 1.1, 0.5, 3));
@@ -53,7 +54,7 @@
     width: 100%;
     .fa {
       @include transition(all 0.3s ease);
-      color: $color-primary;
+      color: $color;
       font-size: 21px;
       text-align: unset;
     }
