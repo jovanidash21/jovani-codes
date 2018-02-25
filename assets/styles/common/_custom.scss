@@ -56,12 +56,27 @@
 }
 .slick-next,
 .slick-prev {
+  height: auto;
+  width: auto;
   &:before {
+    @include opacity(0.5);
     @include transition(all 0.2s ease-in);
     color: #000;
-    font-size: 40px;
+    font-family: $font-family-font-awesome;
+    font-size: 100px;
   }
 }
+.slick-next {
+  &:before {
+    content:  "\f105";
+  }
+}
+.slick-prev {
+  &:before {
+    content:  "\f104";
+  }
+}
+
 .slick-dots {
   li {
     button {
