@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
+import Tilt from 'react-tilt';
 import ReactSVG from 'react-svg';
 import Particles from 'react-particles-js';
 import Typist from 'react-typist';
@@ -19,6 +20,10 @@ class Banner extends Component {
       options,
       page
     } = this.props;
+    const tiltOptions = {
+      max: 20,
+      speed: 200
+    }
 
     return (
       <section className="banner-section background-black">
@@ -30,11 +35,13 @@ class Banner extends Component {
           <Container fluid>
             <Row>
               <Col xs="7">
-                <ReactSVG
-                  path={JOVANI_CODES.images + '/full-name.svg'}
-                  wrapperClassName="full-name"
-                  className="retro"
-                />
+                <Tilt className="Tilt" options={{tiltOptions}}>
+                  <ReactSVG
+                    path={JOVANI_CODES.images + '/full-name.svg'}
+                    wrapperClassName="full-name"
+                    className="retro"
+                  />
+                </Tilt>
               </Col>
             </Row>
           </Container>
