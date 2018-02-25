@@ -10,6 +10,7 @@ import Head from '../../components/Head';
 import Banner from '../Partial/Banner';
 import Work from '../Partial/Work';
 import About from '../Partial/About';
+import Contact from '../Partial/Contact';
 
 class Home extends Component {
   constructor(props) {
@@ -34,7 +35,8 @@ class Home extends Component {
       anchors: [
         'banner-section',
         'work-section',
-        'about-section'
+        'about-section',
+        'contact-section'
       ],
       scrollBar: false,
       navigation: true,
@@ -51,6 +53,7 @@ class Home extends Component {
         <Section><Banner /></Section>
         <Section><Work /></Section>
         <Section><About /></Section>
+        <Section><Contact /></Section>
       </SectionsContainer>
     )
   }
