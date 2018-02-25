@@ -9,6 +9,7 @@ import mapDispatchToProps from '../../actions';
 import Head from '../../components/Head';
 import Banner from '../Partial/Banner';
 import Work from '../Partial/Work';
+import About from '../Partial/About';
 
 class Home extends Component {
   constructor(props) {
@@ -30,7 +31,11 @@ class Home extends Component {
     const { page } = this.props;
     const fullPageOptions = {
       sectionClassName: 'full-page-section',
-      anchors: ['banner-section', 'work-section'],
+      anchors: [
+        'banner-section',
+        'work-section',
+        'about-section'
+      ],
       scrollBar: false,
       navigation: true,
       navigationClass: 'full-page-navigation',
@@ -45,6 +50,7 @@ class Home extends Component {
         <ScrollToTopOnMount />
         <Section><Banner /></Section>
         <Section><Work /></Section>
+        <Section><About /></Section>
       </SectionsContainer>
     )
   }
