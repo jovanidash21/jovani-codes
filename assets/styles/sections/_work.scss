@@ -15,11 +15,18 @@
   .slick-dots {
     z-index: 10;
   }
+  .slick-next,
   .slick-prev {
-    left: 75px;
+    display: none !important;
+    @include media-breakpoint-up(md) {
+      display: block !important;
+    }
   }
   .slick-next {
     right: 75px;
+  }
+  .slick-prev {
+    left: 75px;
   }
   .slick-dots {
     bottom: 0;
