@@ -72,4 +72,8 @@ section[class*=-section] {
 }
 .section-title {
   font-size: 4rem;
+  text-align: left;
+  @include media-breakpoint-up(md) {
+    text-align: center;
+  }
 }
