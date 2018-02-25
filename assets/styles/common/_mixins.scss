@@ -193,6 +193,12 @@
 @mixin transform-translateY($value) {
   @include css3-prefix('transform', translateY($value));
 }
+/* Transform Translate 3d
+ * @param {length|none} $value - Value
+ */
+@mixin translate3d($value...) {
+  @include css3-prefix('transform', translate3d($value));
+}
 /* Transition
  * @param {css-property duration timing-function|none|initial|inherit} $value - Value
  */
