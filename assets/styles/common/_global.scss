@@ -71,6 +71,21 @@ section[class*=-section] {
 .background-white {
   background-color: #fff;
 }
+.color-primary {
+  color: $color-primary;
+}
+.color-secondary {
+  color: $color-secondary
+}
+.color-tertiary {
+  color: $color-tertiary;
+}
+.color-black {
+  color: #000;
+}
+.color-white {
+  color: #fff;
+}
 .section-title {
   font-size: 4rem;
   text-align: left;
