@@ -151,6 +151,12 @@
 @mixin transform($value) {
   @include css3-prefix('transform', $value);
 }
+/* Transform Origin
+ * @param {x-axis y-axis z-axis|initial|inherit;} $value - Value
+ */
+@mixin transform-origin($value) {
+  @include css3-prefix('transform-origin', $value);
+}
 /* Transform Rotate
  * @param {number} $value - Value
  */
