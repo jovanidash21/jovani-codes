@@ -79,23 +79,45 @@
 
 .slick-dots {
   li {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: auto;
     button {
+      $size: 5px;
+      display: block;
+      margin: 3px;
+      padding: 14px;
+      position: relative;
       &:before {
+        content: "";
         @include opacity(1);
         @include transition(all 0.2s ease-in);
-        font-size: 6px;
+        @include transform-translate(-50%, -50%);
+        @include transition(all 0.2s ease-in);
+        background-color: #000;
+        border-radius: 50%;
+        height: $size;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        width: $size;
       }
       &:hover {
+        $size: 11px;
         &:before {
-          font-size: 14px;
+          height: $size;
+          width: $size;
         }
       }
     }
     &.slick-active {
       button {
+        $size: 15px;
         &:before {
           @include opacity(1);
-          font-size: 18px;
+          height: $size;
+          width: $size;
         }
       }
     }
