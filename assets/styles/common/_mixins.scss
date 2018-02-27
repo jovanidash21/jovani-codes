@@ -199,6 +199,12 @@
 @mixin transform-translateY($value) {
   @include css3-prefix('transform', translateY($value));
 }
+/* Transform Translate Z
+ * @param {number} $value - Value
+ */
+@mixin transform-translateZ($value) {
+  @include css3-prefix('transform', translateZ($value));
+}
 /* Transform Translate 3d
  * @param {length|none} $value - Value
  */
