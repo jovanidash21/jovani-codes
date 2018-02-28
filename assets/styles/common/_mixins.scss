@@ -122,6 +122,16 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$value * 100});
   opacity: $value;
 }
+/* Order
+ * @param {number|initial|inherit} $value - Value
+ */
+@mixin order($value: 0) {
+	order: $value;
+  -webkit-order: $value;
+  -moz-order: $value;
+  -ms-flex-order: $value;
+  -webkit-box-ordinal-group: $value + 1;
+}
 /* Perspective
  * @param {length|none} $value - Value
  */
