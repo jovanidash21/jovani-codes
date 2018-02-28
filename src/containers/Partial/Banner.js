@@ -29,7 +29,7 @@ class Banner extends Component {
         <div className="banner-description">
           <Container fluid>
             <Row>
-              <Col xs="7">
+              <Col xs="12" sm="8" md="7">
                 <FullName />
               </Col>
             </Row>
