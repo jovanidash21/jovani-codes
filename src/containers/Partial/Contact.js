@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import mapDispatchToProps from '../../actions';
+import LogoSpeech from '../../components/LogoSpeech';
 
 class Contact extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class Contact extends Component {
             </Col>
           </Row>
         </Container>
+        <LogoSpeech speech="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus." />
       </section>
     )
   }
