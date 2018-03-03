@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router';
 import mapDispatchToProps from '../actions';
-import Header from './Common/Header';
-import Footer from './Common/Footer';
 
 class Layout extends Component {
   constructor(props) {
