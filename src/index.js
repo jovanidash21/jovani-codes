@@ -5,6 +5,8 @@ import store from './store';
 import { ConnectedRouter } from 'react-router-redux';
 import history from './history';
 import routes from './routes';
+import 'velocity-animate';
+import 'velocity-animate/velocity.ui';
 
 render(
   <Provider store={store}>
