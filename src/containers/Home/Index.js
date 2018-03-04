@@ -11,6 +11,7 @@ import Banner from '../Partial/Banner';
 import Work from '../Partial/Work';
 import About from '../Partial/About';
 import Contact from '../Partial/Contact';
+import Footer from '../Partial/Footer';
 
 class Home extends Component {
   constructor(props) {
@@ -36,7 +37,8 @@ class Home extends Component {
         'banner',
         'work',
         'about',
-        'contact'
+        'contact',
+        'footer'
       ],
       scrollBar: false,
       navigation: true,
@@ -54,6 +56,7 @@ class Home extends Component {
         <Section><Work /></Section>
         <Section><About /></Section>
         <Section><Contact /></Section>
+        <Section><Footer /></Section>
       </SectionsContainer>
     )
   }
