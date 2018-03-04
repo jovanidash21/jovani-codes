@@ -33,10 +33,10 @@ class Home extends Component {
     const fullPageOptions = {
       sectionClassName: 'full-page-section',
       anchors: [
-        'banner-section',
-        'work-section',
-        'about-section',
-        'contact-section'
+        'banner',
+        'work',
+        'about',
+        'contact'
       ],
       scrollBar: false,
       navigation: true,
