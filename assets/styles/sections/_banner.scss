@@ -16,12 +16,23 @@
     top: 0;
     width: 100%;
   }
+  .main-logo {
+    @include transform-translateX(-50%);
+    left: 50%;
+    position: absolute;
+    top: 21px;
+    z-index: 1;
+    .face-logo {
+      height: auto;
+      width: 120px;
+    }
+  }
   .banner-description {
     @include transform-translateY(-50%);
     position: absolute;
     top: 50%;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   .face-portrait {
     position: absolute;

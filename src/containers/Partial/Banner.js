@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import Particles from 'react-particles-js';
-import Typist from 'react-typist';
+import ReactSVG from 'react-svg';
 import mapDispatchToProps from '../../actions';
 import FullName from '../../components/Banner/FullName';
 import SocialMediaItem from '../../components/SocialMediaItem';
@@ -25,6 +25,11 @@ class Banner extends Component {
         <Particles
           params={particlesJSConfig}
           className="particles"
+        />
+        <ReactSVG
+          path={JOVANI_CODES.images + '/face-logo.svg'}
+          wrapperClassName="main-logo"
+          className="face-logo"
         />
         <div className="banner-description">
           <Container fluid>
