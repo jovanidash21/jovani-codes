@@ -24,8 +24,11 @@
     $size: 5px;
     display: block;
     margin: 3px;
-    padding: 14px;
+    padding: 7px;
     position: relative;
+    @include media-breakpoint-up(sm) {
+      padding: 14px;
+    }
     &:before {
       content: "";
       @include transform-translate(-50%, -50%);
@@ -86,9 +89,13 @@
     button {
       $size: 5px;
       display: block;
-      margin: 3px;
-      padding: 14px;
+      margin: 0;
+      padding: 0;
       position: relative;
+      @include media-breakpoint-up(sm) {
+        margin: 3px;
+        padding: 14px;
+      }
       &:before {
         content: "";
         @include opacity(1);
