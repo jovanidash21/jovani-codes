@@ -49,15 +49,17 @@ class Home extends Component {
     };
 
     return (
-      <SectionsContainer {...fullPageOptions}>
-        {::this.handleHeadData()}
+      <div>
         <ScrollToTopOnMount />
-        <Section><Banner /></Section>
-        <Section><Work /></Section>
-        <Section><About /></Section>
-        <Section><Contact /></Section>
-        <Section><Footer /></Section>
-      </SectionsContainer>
+        <SectionsContainer {...fullPageOptions}>
+          {::this.handleHeadData()}
+          <Section><Banner /></Section>
+          <Section><Work /></Section>
+          <Section><About /></Section>
+          <Section><Contact /></Section>
+          <Section><Footer /></Section>
+        </SectionsContainer>
+      </div>
     )
   }
 }
