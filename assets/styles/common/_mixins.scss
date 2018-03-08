@@ -61,6 +61,12 @@
 @mixin filter($value) {
   @include css3-prefix('filter', $value);
 }
+/* Filter Blur
+ * @param {length} $value - Value
+ */
+@mixin filter-blur($value: 0) {
+  @include css3-prefix('filter', blur($value));
+}
 /* Filter Grayscale
  * @param {percent} $value - Value
  */
