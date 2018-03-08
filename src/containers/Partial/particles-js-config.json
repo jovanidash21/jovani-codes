@@ -4,11 +4,11 @@
       "value": 100,
       "density": {
         "enable": true,
-        "value_area": 1500
+        "value_area": 1700
       }
     },
     "color": {
-      "value": "#cc6a55"
+      "value": "#f7882f"
     },
     "shape": {
       "type": "circle",
@@ -26,8 +26,8 @@
       }
     },
     "opacity": {
-      "value": 0.9,
-      "random": true,
+      "value": 1,
+      "random": false,
       "anim": {
         "enable": false,
         "speed": 5,
@@ -55,7 +55,7 @@
     "move": {
       "enable": true,
       "speed": 2,
-      "direction": "top",
+      "direction": "bottom",
       "random": true,
       "straight": false,
       "out_mode": "out",
