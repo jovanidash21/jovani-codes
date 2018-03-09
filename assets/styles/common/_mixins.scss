@@ -13,7 +13,7 @@
 /* Align Items
  * @param stretch|center|flex-start|flex-end|baseline|initial|inherit} $value - Value
  */
-@mixin align-items($value) {
+@mixin align-items($value: stretch) {
 	@if $value == flex-start {
 		-webkit-box-align: start;
 		-ms-flex-align: start;
@@ -36,13 +36,13 @@
 /* Background Size
  * @param {auto|length|cover|contain|initial|inherit} $value - Value
  */
-@mixin background-size($value) {
+@mixin background-size($value: auto) {
   @include css3-prefix('background-size', $value);
 }
 /* Box Shadow
  * @param {none|h-shadow v-shadow blur spread color |inset|initial|inherit} $value - Value
  */
-@mixin box-shadow($value) {
+@mixin box-shadow($value: none) {
   @include css3-prefix('box-shadow', $value);
 }
 /* Display Flex
@@ -58,7 +58,7 @@
 /* Filter
  * @param {none/filter-functions} $value - Value
  */
-@mixin filter($value) {
+@mixin filter($value: none) {
   @include css3-prefix('filter', $value);
 }
 /* Filter Blur
@@ -70,19 +70,19 @@
 /* Filter Grayscale
  * @param {percent} $value - Value
  */
-@mixin filter-grayscale($value) {
+@mixin filter-grayscale($value: 0) {
   @include css3-prefix('filter', grayscale($value));
 }
 /* Flex
  * @param {flex-grow flex-shrink flex-basis|auto|initial|inherit} $value - Value
  */
-@mixin flex($value) {
+@mixin flex($value: 0 1 auto) {
   @include css3-prefix('flex', $value);
 }
 /* Flex Direction
  * @param {row|row-reverse|column|column-reverse|initial|inherit} $value - Value
  */
-@mixin flex-direction($value) {
+@mixin flex-direction($value: row) {
 	@if $value == row-reverse {
 		-webkit-box-direction: reverse;
 		-webkit-box-orient: horizontal;
@@ -101,7 +101,7 @@
 /* Justify Content
  * @param {flex-start|flex-end|center|space-between|space-around|initial|inherit} $value - Value
  */
-@mixin justify-content($value) {
+@mixin justify-content($value: flex-start) {
 	@if $value == flex-start {
 		-webkit-box-pack: start;
 		-ms-flex-pack: start;
@@ -122,7 +122,7 @@
 /* Opacity
  * @param {number} $value - Value
  */
-@mixin opacity($value) {
+@mixin opacity($value: 1) {
   @include css3-prefix('opacity', $value);
   filter: alpha(opacity=#{$value * 100});
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$value * 100});
@@ -141,7 +141,7 @@
 /* Perspective
  * @param {length|none} $value - Value
  */
-@mixin prespective($value) {
+@mixin prespective($value: none) {
   @include css3-prefix('perspective', $value);
 }
 /* Placeholder
@@ -164,19 +164,19 @@
 /* Transform
  * @param {none|transform-functions|initial|inherit} $value - Value
  */
-@mixin transform($value) {
+@mixin transform($value: none) {
   @include css3-prefix('transform', $value);
 }
 /* Transform Origin
  * @param {x-axis y-axis z-axis|initial|inherit;} $value - Value
  */
-@mixin transform-origin($value) {
+@mixin transform-origin($value: 50% 50% 0) {
   @include css3-prefix('transform-origin', $value);
 }
 /* Transform Rotate
  * @param {number} $value - Value
  */
-@mixin transform-rotate($value) {
+@mixin transform-rotate($value: 0) {
   @include css3-prefix('transform', rotate($value));
 }
 /* Transform Scale
@@ -206,19 +206,19 @@
 /* Transform Translate X
  * @param {number} $value - Value
  */
-@mixin transform-translateX($value) {
+@mixin transform-translateX($value: 0) {
   @include css3-prefix('transform', translateX($value));
 }
 /* Transform Translate Y
  * @param {number} $value - Value
  */
-@mixin transform-translateY($value) {
+@mixin transform-translateY($value: 0) {
   @include css3-prefix('transform', translateY($value));
 }
 /* Transform Translate Z
  * @param {number} $value - Value
  */
-@mixin transform-translateZ($value) {
+@mixin transform-translateZ($value: 0) {
   @include css3-prefix('transform', translateZ($value));
 }
 /* Transform Translate 3d
@@ -230,6 +230,6 @@
 /* Transition
  * @param {css-property duration timing-function|none|initial|inherit} $value - Value
  */
-@mixin transition($value) {
+@mixin transition($value: all 0s ease 0s) {
   @include css3-prefix('transition', $value);
 }
