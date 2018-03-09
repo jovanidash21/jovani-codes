@@ -21,7 +21,7 @@ class Banner extends Component {
     } = this.props;
 
     return (
-      <section className="banner-section background-black">
+      <section className="banner-section">
         <Particles
           params={particlesJSConfig}
           className="particles"
