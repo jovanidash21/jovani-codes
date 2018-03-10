@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ReactSVG from 'react-svg';
+import BadgeLogo from '../../components/BadgeLogo';
 import mapDispatchToProps from '../../actions';
 
 class Footer extends Component {
@@ -15,10 +15,9 @@ class Footer extends Component {
 
     return (
       <section className="footer-section background-black">
-        <ReactSVG
-          path={JOVANI_CODES.images + '/badge-logo.svg'}
-          wrapperClassName="footer-logo"
-          className="badge-logo"
+        <BadgeLogo
+          className="footer-logo"
+          width="90%"
         />
       </section>
     )

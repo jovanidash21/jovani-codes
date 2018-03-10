@@ -6,10 +6,8 @@
     text-align: center;
     width: 100%;
     .badge-logo {
-      height: auto;
-      width: 90%;
       @include media-breakpoint-up(sm) {
-        width: 50%;
+        width: 50% !important;
       }
     }
   }
