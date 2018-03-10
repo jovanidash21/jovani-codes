@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'reactstrap';
 import Particles from 'react-particles-js';
 import ReactSVG from 'react-svg';
 import mapDispatchToProps from '../../actions';
+import FaceLogo from '../../components/FaceLogo';
 import FullName from '../../components/Banner/FullName';
 import SocialMediaItem from '../../components/SocialMediaItem';
 import ScrollDownIcon from '../../components/Banner/ScrollDownIcon';
@@ -26,10 +27,9 @@ class Banner extends Component {
           params={particlesJSConfig}
           className="particles"
         />
-        <ReactSVG
-          path={JOVANI_CODES.images + '/face-logo.svg'}
+        <FaceLogo
           wrapperClassName="main-logo"
-          className="face-logo"
+          height="120px"
         />
         <div className="banner-description">
           <Container fluid>

@@ -26,10 +26,6 @@
     position: absolute;
     top: 21px;
     z-index: 1;
-    .face-logo {
-      height: auto;
-      width: 120px;
-    }
   }
   .banner-description {
     @include transform-translateY(-50%);
