@@ -16,6 +16,10 @@ import Footer from '../Partial/Footer';
 class Home extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      activeSection: 0
+    };
   }
   componentWillMount() {
     const { fetchPage } = this.props;
@@ -31,6 +35,7 @@ class Home extends Component {
   }
   render() {
     const { page } = this.props;
+    const { activeSection } = this.state;
     const fullPageOptions = {
       sectionClassName: 'full-page-section',
       anchors: [
@@ -45,13 +50,14 @@ class Home extends Component {
       navigationClass: 'full-page-navigation',
       navigationAnchorClass: 'full-page-navigation-anchor',
       verticalAlign: false,
-      arrowNavigation: true
+      arrowNavigation: true,
+      scrollCallback: (states) => this.setState({activeSection: states.activeSection})
     };
 
     return (
       <div>
         <ScrollToTopOnMount />
-        <SectionsContainer {...fullPageOptions}>
+        <SectionsContainer {...fullPageOptions} activeSection={activeSection}>
           {::this.handleHeadData()}
           <Section><Banner /></Section>
           <Section><Work /></Section>
