@@ -33,12 +33,6 @@
 @mixin animation($value) {
   @include css3-prefix('animation', $value);
 }
-/* Background Size
- * @param {auto|length|cover|contain|initial|inherit} $value - Value
- */
-@mixin background-size($value: auto) {
-  @include css3-prefix('background-size', $value);
-}
 /* Box Shadow
  * @param {none|h-shadow v-shadow blur spread color |inset|initial|inherit} $value - Value
  */

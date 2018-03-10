@@ -1,8 +1,8 @@
 .banner-section {
-  @include background-size(cover);
   background-image: url('#{$images}/polygon-abstract-background.jpg');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
   .particles,
   .face-portrait .low-poly {
