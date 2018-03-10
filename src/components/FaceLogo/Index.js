@@ -6,7 +6,7 @@ const FaceLogo = (props) => {
   return (
     <ReactSVG
       path={JOVANI_CODES.images + '/face-logo.svg'}
-      wrapperClassName={props.wrapperClassName}
+      wrapperClassName={props.className}
       className="face-logo"
       style={{height: props.height, width: props.width}}
     />
@@ -14,13 +14,13 @@ const FaceLogo = (props) => {
 }
 
 FaceLogo.propTypes = {
-  wrapperClassName: PropTypes.string,
+  className: PropTypes.string,
   height: PropTypes.string,
   width: PropTypes.string
 }
 
 FaceLogo.defaultProps = {
-  wrapperClassName: '',
+  className: '',
   height: 'auto',
   width: 'auto'
 }

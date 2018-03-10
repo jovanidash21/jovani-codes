@@ -28,8 +28,8 @@ class Banner extends Component {
           className="particles"
         />
         <FaceLogo
-          wrapperClassName="main-logo"
-          height="120px"
+          className="main-logo"
+          width="120px"
         />
         <div className="banner-description">
           <Container fluid>
