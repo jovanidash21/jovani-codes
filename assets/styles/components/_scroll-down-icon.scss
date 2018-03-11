@@ -4,11 +4,12 @@
   text-align: center;
   text-transform: lowercase;
   .mouse {
+    @include animation(mouse 1.5s ease infinite);
     border: 3px solid $mouse-color;
     border-radius: 15px;
   	display: block;
   	height: 45px;
-    margin: 0 auto 4px;
+    margin: 0 auto;
     position: relative;
   	width: 30px;
   }

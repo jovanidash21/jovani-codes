@@ -19,6 +19,18 @@
   }
 }
 
+@include keyframes(mouse) {
+  0% {
+    margin-bottom: 15px;
+	}
+  50% {
+    margin-bottom: 5px;
+	}
+  100% {
+    margin-bottom: 15px;
+  }
+}
+
 @include keyframes(scroll-wheel) {
   0% {
     opacity: 1;
