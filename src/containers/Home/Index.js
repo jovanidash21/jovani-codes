@@ -8,8 +8,8 @@ import {
 import mapDispatchToProps from '../../actions';
 import Head from '../../components/Head';
 import Banner from '../Partial/Banner';
-import Work from '../Partial/Work';
 import About from '../Partial/About';
+import Work from '../Partial/Work';
 import Contact from '../Partial/Contact';
 import Footer from '../Partial/Footer';
 
@@ -40,8 +40,8 @@ class Home extends Component {
       sectionClassName: 'full-page-section',
       anchors: [
         'banner',
-        'work',
         'about',
+        'work',
         'contact',
         'footer'
       ],
@@ -60,8 +60,8 @@ class Home extends Component {
         <SectionsContainer {...fullPageOptions} activeSection={activeSection}>
           {::this.handleHeadData()}
           <Section><Banner /></Section>
-          <Section><Work /></Section>
           <Section><About /></Section>
+          <Section><Work /></Section>
           <Section><Contact /></Section>
           <Section><Footer /></Section>
         </SectionsContainer>
