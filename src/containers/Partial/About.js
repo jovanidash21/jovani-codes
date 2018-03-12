@@ -18,7 +18,16 @@ class About extends Component {
         <Container>
           <Row>
             <Col xs="12">
-              <h2 className="section-title">About</h2>
+              <div className="greetings text-center">
+                <p className="color-dark-brown text-uppercase">Hello</p>
+                <p className="color-white text-lowercase">Stranger</p>
+                <p className="color-tertiary text-uppercase">I&#39;m a Web developer</p>
+                <p className="color-dark-brown text-uppercase">I Build</p>
+                <p className="color-tertiary text-uppercase">Websites</p>
+                <p className="color-dark-brown text-lowercase">with</p>
+                <p className="color-white text-lowercase">Maximum</p>
+                <p className="color-dark-brown text-uppercase">Effort</p>
+              </div>
             </Col>
           </Row>
         </Container>

@@ -1,3 +1,84 @@
 .about-section {
-  
+  @include display-flex();
+  @include align-items(center);
+  .greetings {
+    font-family: $font-family-chunk-five-print;
+    p {
+      margin-bottom: 0;
+      &:first-child {
+        font-size: 90px;
+        line-height: 80px;
+        @include media-breakpoint-up(sm) {
+          font-size: 150px;
+          line-height: 130px;
+        }
+      }
+      &:nth-child(2) {
+        font-size: 60px;
+        letter-spacing: 7px;
+        line-height: 40px;
+        margin-bottom: 15px;
+        margin-top: -10px;
+        @include media-breakpoint-up(sm) {
+          font-size: 100px;
+          letter-spacing: 11px;
+          line-height: 80px;
+          margin-bottom: 20px;
+          margin-top: -25px;
+        }
+      }
+      &:nth-child(3) {
+        font-size: 26px;
+        line-height: 23px;
+        margin-bottom: 8px;
+        @include media-breakpoint-up(sm) {
+          font-size: 42px;
+          line-height: 35px;
+          margin-bottom: 15px;
+        }
+      }
+      &:nth-child(4) {
+        letter-spacing: 11px;
+        @include media-breakpoint-up(sm) {
+          letter-spacing: 20px;
+        }
+      }
+      &:nth-child(4),
+      &:nth-child(5) {
+        font-size: 57px;
+        line-height: 45px;
+        @include media-breakpoint-up(sm) {
+          font-size: 90px;
+          line-height: 70px;
+        }
+      }
+      &:nth-child(6) {
+        font-family: $font-family-lobster;
+        font-size: 30px;
+        line-height: 22px;
+        @include media-breakpoint-up(sm) {
+          font-size: 40px;
+          line-height: 30px;
+        }
+      }
+      &:nth-child(7) {
+        font-size: 63px;
+        line-height: 60px;
+        margin-top: 5px;
+        @include media-breakpoint-up(sm) {
+          font-size: 100px;
+          line-height: 80px;
+          margin-top: 15px;
+        }
+      }
+      &:nth-child(8) {
+        font-size: 76px;
+        line-height: 60px;
+        @include media-breakpoint-up(sm) {
+          font-size: 121px;
+          line-height: 100px;
+        }
+      }
+    }
+  }
 }
