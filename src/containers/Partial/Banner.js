@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import Particles from 'react-particles-js';
@@ -18,7 +19,8 @@ class Banner extends Component {
   render() {
     const {
       options,
-      page
+      page,
+      isActive
     } = this.props;
 
     return (
@@ -133,6 +135,12 @@ const mapStateToProps = (state) => {
     options: state.options,
     page: state.page
   }
+}
+
+}
+
+Banner.defaultProps = {
+  isActive: false,
 }
 
 export default connect(

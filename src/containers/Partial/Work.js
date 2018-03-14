@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import Slider from 'react-slick';
@@ -9,10 +10,7 @@ class Work extends Component {
     super(props);
   }
   render() {
-    const {
-      options,
-      page
-    } = this.props;
+    const { isActive } = this.props;
     const slickOptions = {
       dots: true,
       infinite: true,
@@ -41,6 +39,14 @@ const mapStateToProps = (state) => {
     options: state.options,
     page: state.page
   }
+}
+
+Work.propTypes = {
+  isActive: PropTypes.bool,
+}
+
+Work.defaultProps = {
+  isActive: false,
 }
 
 export default connect(

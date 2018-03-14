@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import BadgeLogo from '../../components/BadgeLogo';
 import mapDispatchToProps from '../../actions';
@@ -8,10 +9,7 @@ class Footer extends Component {
     super(props);
   }
   render() {
-    const {
-      options,
-      page
-    } = this.props;
+    const { isActive } = this.props;
 
     return (
       <section className="footer-section background-black">
@@ -29,6 +27,14 @@ const mapStateToProps = (state) => {
     options: state.options,
     page: state.page
   }
+}
+
+Footer.propTypes = {
+  isActive: PropTypes.bool,
+}
+
+Footer.defaultProps = {
+  isActive: false,
 }
 
 export default connect(
