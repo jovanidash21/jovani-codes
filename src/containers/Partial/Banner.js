@@ -37,12 +37,14 @@ class Banner extends Component {
           <Container fluid>
             <Row>
               <Col xs="12" sm="8" md="7">
-                <FullName />
+                <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
+                  <FullName />
+                </div>
               </Col>
             </Row>
           </Container>
         </div>
-        <div className="face-portrait">
+        <div className={"face-portrait animated " + (isActive ? 'slideInRight' : 'slideOutRight')}>
           <img src={JOVANI_CODES.images + '/low-poly-portrait.png'} className="low-poly" />
         </div>
         <div className="social-media-menu">
@@ -137,6 +139,8 @@ const mapStateToProps = (state) => {
   }
 }
 
+Banner.propTypes = {
+  isActive: PropTypes.bool,
 }
 
 Banner.defaultProps = {
