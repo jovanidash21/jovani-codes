@@ -7,7 +7,7 @@ import NotFound from '../containers/NotFound';
 const routes = (
   <div>
     <Switch>
-      <Layout exact path="/jovani-codes/" component={Home} />
+      <Layout exact path="/" component={Home} />
       <Layout path="*" component={NotFound} />
     </Switch>
   </div>
