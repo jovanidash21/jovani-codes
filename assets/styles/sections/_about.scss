@@ -56,9 +56,30 @@
         font-family: $font-family-lobster;
         font-size: 30px;
         line-height: 22px;
+        &:before,
+        &:after {
+          content: "";
+          background-color: $color-treehouse;
+          display: inline-block;
+          height: 5px;
+          position: relative;
+          vertical-align: middle;
+          width: 120px;
+        }
+        &:before {
+          margin-right: 10px;
+        }
+        &:after {
+          margin-left: 10px;
+        }
         @include media-breakpoint-up(sm) {
           font-size: 40px;
           line-height: 30px;
+          &:before,
+          &:after {
+            height: 8px;
+            width: 200px;
+          }
         }
       }
       &:nth-child(7) {
