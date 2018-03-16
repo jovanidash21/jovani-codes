@@ -10,6 +10,7 @@
   -khtml-#{$property}: #{$value};
   -webkit-#{$property}: #{$value};
 }
+
 /* Align Items
  * @param stretch|center|flex-start|flex-end|baseline|initial|inherit} $value - Value
  */
@@ -26,12 +27,17 @@
 	}
   @include css3-prefix('align-items', $value);
 }
-
 /* Animation
  * @param {name duration timing-function delay iteration-count direction fill-mode play-state} $value - Value
  */
 @mixin animation($value) {
   @include css3-prefix('animation', $value);
+}
+/* Clip Path
+ * @param {none|clip-source|basic-shape|geometry-box} $value - Value
+ */
+@mixin clip-path($value: none) {
+  @include css3-prefix('clip-path', $value);
 }
 /* Display Flex
  * @param {true|false} $is_important - Is important
