@@ -12,10 +12,14 @@ class LogoSpeech extends Component {
       showSpeechBubble: false
     };
   }
-  onMouseEnter() {
+  onMouseEnter(event) {
+    event.stopPropagation();
+
     this.setState({showSpeechBubble: true});
   }
-  onMouseLeave() {
+  onMouseLeave(event) {
+    event.stopPropagation();
+
     this.setState({showSpeechBubble: false});
   }
   render() {
