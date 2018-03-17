@@ -7,6 +7,7 @@ import ReactSVG from 'react-svg';
 import mapDispatchToProps from '../../actions';
 import FaceLogo from '../../components/FaceLogo';
 import FullName from '../../components/Banner/FullName';
+import FacePortrait from '../../components/Banner/FacePortrait';
 import SocialMediaItem from '../../components/SocialMediaItem';
 import ScrollDownIcon from '../../components/Banner/ScrollDownIcon';
 import particlesJSConfig from './particles-js-config.json';
@@ -43,8 +44,8 @@ class Banner extends Component {
             </Row>
           </Container>
         </div>
-        <div className={"face-portrait animated " + (isActive ? 'slideInRight' : 'slideOutRight')}>
-          <img src={JOVANI_CODES.images + '/low-poly-portrait.png'} className="low-poly" />
+        <div className={"animated " + (isActive ? 'slideInRight' : 'slideOutRight')}>
+          <FacePortrait />
         </div>
         <div className="social-media-menu">
           {
