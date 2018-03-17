@@ -10,7 +10,6 @@ import FullName from '../../components/Banner/FullName';
 import SocialMediaItem from '../../components/SocialMediaItem';
 import ScrollDownIcon from '../../components/Banner/ScrollDownIcon';
 import particlesJSConfig from './particles-js-config.json';
-import 'react-typist/dist/Typist.css';
 
 class Banner extends Component {
   constructor(props) {
