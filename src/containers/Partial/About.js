@@ -17,14 +17,46 @@ class About extends Component {
           <Row>
             <Col xs="12">
               <div className="greetings text-center">
-                <p className="color-dark-brown text-uppercase">Hello</p>
-                <p className="color-white text-lowercase">Stranger</p>
-                <p className="color-tertiary text-uppercase">I&#39;m a Web developer</p>
-                <p className="color-dark-brown text-uppercase">I Build</p>
-                <p className="color-tertiary text-uppercase">Websites</p>
-                <p className="color-dark-brown text-lowercase">with</p>
-                <p className="color-white text-lowercase">Maximum</p>
-                <p className="color-dark-brown text-uppercase">Effort</p>
+                <p className={"color-dark-brown text-uppercase animated " +
+                  (isActive ? 'rotateIn' : 'rotateOut')}
+                >
+                  Hello
+                </p>
+                <p className={"color-white text-lowercase animated " +
+                  (isActive ? 'slideInUp' : 'slideOutDown')}
+                >
+                  Stranger
+                </p>
+                <p className={"color-tertiary text-uppercase animated " +
+                  (isActive ? 'fadeInUp' : 'fadeOutDown')}
+                >
+                  I&#39;m a Web developer
+                </p>
+                <p className={"color-dark-brown text-uppercase animated " +
+                  (isActive ? 'bounceInDown' : 'bounceOutUp')}
+                >
+                  I Build
+                </p>
+                <p className={"color-tertiary text-uppercase animated " +
+                  (isActive ? 'bounceInUp' : 'bounceOutDown')}
+                >
+                  Websites
+                </p>
+                <p className={"color-dark-brown text-lowercase animated " +
+                  (isActive ? 'zoomIn' : 'zoomOut')}
+                >
+                  with
+                </p>
+                <p className={"color-white text-lowercase animated " +
+                  (isActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
+                >
+                  Maximum
+                </p>
+                <p className={"color-dark-brown text-uppercase animated " +
+                  (isActive ? 'rollIn' : 'rollOut')}
+                >
+                  Effort
+                </p>
               </div>
             </Col>
           </Row>
