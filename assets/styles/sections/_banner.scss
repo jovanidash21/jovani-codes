@@ -17,19 +17,32 @@
     top: 0;
     width: 100%;
   }
-  .main-logo {
+  .main-logo-wrapper {
     @include transform-translateX(-50%);
     left: 50%;
     position: absolute;
     top: 21px;
     z-index: 1;
   }
-  .banner-description {
-    @include transform-translateY(-50%);
+  .full-name-wrapper {
+    @include transform-translate(-50%, -50%);
+    left: 50%;
+    padding: 0 10px;
     position: absolute;
     top: 50%;
-    width: 100%;
     z-index: 2;
+    @include media-breakpoint-up(sm) {
+      left: 30%;
+    }
+  }
+  .face-portrait-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0 ;
+    @include media-breakpoint-down(sm) {
+      left: 0;
+      right: auto;
+    }
   }
   .social-media-menu {
     bottom: 21px;
@@ -48,7 +61,7 @@
       }
     }
   }
-  .scroll-down-icon {
+  .scroll-down-icon-wrapper {
     @include transform-translateX(-50%);
     bottom: 21px;
     left: 50%;

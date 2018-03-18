@@ -1,11 +1,4 @@
 .face-portrait {
-  position: absolute;
-  right: 0;
-  top: 0 ;
-  @include media-breakpoint-down(sm) {
-    left: 0;
-    right: auto;
-  }
   .low-poly {
     height: 100vh;
     width: auto;
