@@ -4,10 +4,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  .particles,
-  .face-portrait .low-poly {
-    height: 100%;
-  }
   h2 {
     font-size: 7rem;
   }
@@ -15,6 +11,7 @@
     font-size: 4rem;
   }
   .particles {
+    height: 100%;
     position: absolute;
     left: 0;
     top: 0;

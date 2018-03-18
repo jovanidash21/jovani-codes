@@ -37,7 +37,7 @@ class Banner extends Component {
           <Container fluid>
             <Row>
               <Col xs="12" sm="8" md="7">
-                <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
+                <div className={"animated " + (isActive ? 'slideInLeft' : 'slideOutLeft')}>
                   <FullName />
                 </div>
               </Col>
@@ -48,6 +48,7 @@ class Banner extends Component {
           <FacePortrait />
         </div>
         <div className="social-media-menu">
+          <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
           {
             options.data.acf.social_medias &&
             options.data.acf.social_medias.map((socialMedia, i) => {
@@ -125,6 +126,7 @@ class Banner extends Component {
                 }
             })
           }
+          </div>
         </div>
         <ScrollDownIcon title="Scroll Down" />
       </section>
