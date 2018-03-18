@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import Slider from 'react-slick';
 import mapDispatchToProps from '../../actions';
+import WorkSlideItem from '../../components/Work/WorkSlideItem';
 
 class Work extends Component {
   constructor(props) {
@@ -22,12 +23,12 @@ class Work extends Component {
     return (
       <section className="work-section background-primary">
         <Slider {...slickOptions}>
-          <div><h2 className="section-title">Work 1</h2></div>
-          <div><h2 className="section-title">Work 2</h2></div>
-          <div><h2 className="section-title">Work 3</h2></div>
-          <div><h2 className="section-title">Work 4</h2></div>
-          <div><h2 className="section-title">Work 5</h2></div>
-          <div><h2 className="section-title">Work 6</h2></div>
+          <div><WorkSlideItem title="Work 1" /></div>
+          <div><WorkSlideItem title="Work 2" /></div>
+          <div><WorkSlideItem title="Work 3" /></div>
+          <div><WorkSlideItem title="Work 4" /></div>
+          <div><WorkSlideItem title="Work 5" /></div>
+          <div><WorkSlideItem title="Work 6" /></div>
         </Slider>
       </section>
     )
