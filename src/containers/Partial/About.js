@@ -23,12 +23,12 @@ class About extends Component {
                   Hello
                 </p>
                 <p className={"color-white text-lowercase animated " +
-                  (isActive ? 'slideInUp' : 'slideOutDown')}
+                  (isActive ? 'fadeInDownBig' : 'fadeOutUpBig')}
                 >
                   Stranger
                 </p>
                 <p className={"color-tertiary text-uppercase animated " +
-                  (isActive ? 'fadeInUp' : 'fadeOutDown')}
+                  (isActive ? 'rotateInDownLeft' : 'rotateOutUpLeft')}
                 >
                   I&#39;m a Web developer
                 </p>
