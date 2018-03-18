@@ -9,13 +9,14 @@ const tiltOptions = {
 
 const FullName = (props) => {
   return (
-    <Tilt className="Tilt" options={{tiltOptions}}>
-      <ReactSVG
-        path={JOVANI_CODES.images + '/full-name.svg'}
-        wrapperClassName="full-name"
-        className="retro"
-      />
-    </Tilt>
+    <div className="full-name">
+      <Tilt className="Tilt" options={{tiltOptions}}>
+        <ReactSVG
+          path={JOVANI_CODES.images + '/full-name.svg'}
+          className="retro"
+        />
+      </Tilt>
+    </div>
   )
 }
 
