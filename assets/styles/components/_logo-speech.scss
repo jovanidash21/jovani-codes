@@ -10,38 +10,9 @@
     @include transform-translateY(-100%);
   }
   .speech-bubble {
-    background-color: #fff;
-    border: 3px solid #000;
-    border-radius: 30px;
     bottom: 110%;
-    color: #000;
-    font-family: $font-family-komika-axis;
     left: -160px;
-    margin: 0;
-    padding: 20px;
     position: absolute;
-    text-align: center;
-    width: 200px;
-    &:before,
-    &:after {
-      content: "";
-      height: 0;
-      left: auto;
-      position: absolute;
-      width: 0;
-    }
-    &:before {
-      border: 14px solid;
-      border-color: #000 #000 transparent transparent;
-      bottom: -28px;
-      right: 18px;
-    }
-    &:after {
-      border: 11px solid;
-      border-color: #fff #fff transparent transparent;
-      bottom: -21px;
-      right: 21px;
-    }
   }
   .speaker {
     .face-logo {
