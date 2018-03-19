@@ -96,3 +96,57 @@ section[class*=-section] {
     text-align: center;
   }
 }
+.speech-bubble {
+  &.big {
+    font-size: 25px;
+    width: 300px;
+  }
+  &.small {
+    font-size: 14px;
+    width: 200px;
+  }
+  &.left {
+    &:before {
+      border-color: #000 #000 transparent transparent;
+      right: 18px;
+    }
+    &:after {
+      border-color: #fff #fff transparent transparent;
+      right: 21px;
+    }
+  }
+  &.right {
+    &:before {
+      border-color: #000 transparent transparent #000;
+      left: 18px;
+    }
+    &:after {
+      border-color: #fff transparent transparent #fff;
+      left: 21px;
+    }
+  }
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 30px;
+  color: #000;
+  font-family: $font-family-komika-axis;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  &:before,
+  &:after {
+    content: "";
+    height: 0;
+    left: auto;
+    position: absolute;
+    width: 0;
+  }
+  &:before {
+    border: 14px solid;
+    bottom: -28px;
+  }
+  &:after {
+    border: 11px solid;
+    bottom: -21px;
+  }
+}

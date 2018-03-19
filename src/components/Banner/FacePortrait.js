@@ -11,7 +11,7 @@ class FacePortrait extends Component {
 
     return (
       <div className="face-portrait">
-        <div className="speech-bubble d-none d-md-block">
+        <div className="speech-bubble big right d-none d-md-block">
           <Typist>
             <Typist.Delay ms={500} />
             {speech}

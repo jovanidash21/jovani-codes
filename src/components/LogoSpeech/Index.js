@@ -35,7 +35,7 @@ class LogoSpeech extends Component {
         <VelocityTransitionGroup enter={{animation: "fadeIn"}} leave={{animation: "fadeOut"}}>
           {
             showSpeechBubble &&
-            <div className="speech-bubble">
+            <div className="speech-bubble small left">
               <Typist>
                 <Typist.Delay ms={500} />
                 {speech}

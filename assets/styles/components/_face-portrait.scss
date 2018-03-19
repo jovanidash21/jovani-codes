@@ -1,38 +1,8 @@
 .face-portrait {
   .speech-bubble {
-    background-color: #fff;
-    border: 3px solid #000;
-    border-radius: 30px;
     bottom: 70%;
-    color: #000;
-    font-family: $font-family-komika-axis;
-    font-size: 25px;
-    margin: 0;
-    padding: 20px;
     position: absolute;
     right: 110px;
-    text-align: center;
-    width: 200px;
-    &:before,
-    &:after {
-      content: "";
-      height: 0;
-      left: auto;
-      position: absolute;
-      width: 0;
-    }
-    &:before {
-      border: 14px solid;
-      border-color: #000 transparent transparent #000;
-      bottom: -28px;
-      left: 18px;
-    }
-    &:after {
-      border: 11px solid;
-      border-color: #fff transparent transparent #fff;
-      bottom: -21px;
-      left: 21px;
-    }
   }
   .low-poly {
     height: 100vh;
