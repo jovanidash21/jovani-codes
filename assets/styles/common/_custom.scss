@@ -5,6 +5,9 @@
     z-index: 100000;
   }
 }
+.SectionContainer {
+  @include transition(all 700ms cubic-bezier(0.550, 1.055, 0.675, 1.110) !important);
+}
 .full-page-section {
   overflow: hidden !important;
   .admin-bar & {
