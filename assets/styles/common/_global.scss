@@ -81,12 +81,18 @@ section[class*=-section] {
 .color-white {
   color: #fff;
 }
-.section-title {
-  font-size: 4rem;
+.section-title,
+.section-description {
   text-align: left;
   @include media-breakpoint-up(md) {
     text-align: center;
   }
+}
+.section-title {
+  font-size: 4rem;
+}
+.section-description {
+  font-size: 1.5rem;
 }
 .speech-bubble {
   &.big {

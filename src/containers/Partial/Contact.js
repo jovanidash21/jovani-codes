@@ -17,7 +17,10 @@ class Contact extends Component {
         <Container>
           <Row>
             <Col xs="12">
-              <h2 className="section-title">Contact</h2>
+              <h2 className="section-title color-white">Contact</h2>
+              <p className="section-description color-white">
+                Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+              </p>
             </Col>
           </Row>
         </Container>
