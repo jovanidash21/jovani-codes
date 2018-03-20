@@ -4,16 +4,8 @@ body {
   width: 100%;
 }
 html {
-  @include media-breakpoint-down(xs) {
-    font-size: 6px;
-  }
-  @include media-breakpoint-up(xs) {
-    font-size: 9px;
-  }
+  font-size: 9px;
   @include media-breakpoint-up(sm) {
-    font-size: 10px;
-  }
-  @include media-breakpoint-up(md) {
     font-size: 12px;
   }
   @include media-breakpoint-up(lg) {
