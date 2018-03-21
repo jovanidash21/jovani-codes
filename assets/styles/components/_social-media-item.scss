@@ -1,6 +1,7 @@
 .social-media-item {
-  $bg-color: $color-dusty-gray;
+  $bg-color: $color-mercury;
   $color: $color-mine-shaft;
+  $color-hover: $color-mercury;
   $social-media-list: 'facebook' 'twitter' 'instagram' 'linkedin' 'google-plus' 'youtube' 'github';
   $social-media-colors: $color-facebook $color-twitter $color-instagram $color-linkedin $color-google-plus $color-youtube $color-github;
   @include transition(all 0.2s cubic-bezier(0, 1.1, 0.5, 3));
@@ -21,7 +22,7 @@
     z-index: 1;
     .hexagon-vertical {
       .fa {
-        color: #fff;
+        color: $color-hover;
       }
     }
   }
