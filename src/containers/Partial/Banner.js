@@ -44,7 +44,10 @@ class Banner extends Component {
         </div>
         <div className="face-portrait-wrapper">
           <div className={"animated " + (isActive ? 'slideInRight' : 'slideOutRight')}>
-            <FacePortrait speech="Hey! Remember the name!" />
+            <FacePortrait
+              speech="Hey! Remember the name!"
+              interval={11000}
+            />
           </div>
         </div>
         <div className="social-media-menu">

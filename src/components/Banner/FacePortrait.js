@@ -12,7 +12,9 @@ class FacePortrait extends Component {
     };
   }
   componentDidMount() {
-    this.interval = setInterval(::this.handleSpeechBubbleToggle, 10000);
+    const { interval } = this.props;
+
+    this.interval = setInterval(::this.handleSpeechBubbleToggle, interval);
   }
   componentWillUnmount() {
     clearInterval(this.interval);
@@ -28,17 +30,17 @@ class FacePortrait extends Component {
 
     return (
       <div className="face-portrait">
-      <VelocityTransitionGroup enter={{animation: "fadeIn"}} leave={{animation: "fadeOut"}}>
-        {
-          showSpeechBubble &&
-          <div className="speech-bubble big right">
-            <Typist>
-              <Typist.Delay ms={500} />
-              {speech}
-            </Typist>
-          </div>
-        }
-      </VelocityTransitionGroup>
+        <VelocityTransitionGroup enter={{animation: "fadeIn"}} leave={{animation: "fadeOut"}}>
+          {
+            showSpeechBubble &&
+            <div className="speech-bubble big right">
+              <Typist>
+                <Typist.Delay ms={500} />
+                {speech}
+              </Typist>
+            </div>
+          }
+        </VelocityTransitionGroup>
         <img src={JOVANI_CODES.images + '/low-poly-portrait.png'} className="low-poly" />
       </div>
     )
@@ -46,11 +48,13 @@ class FacePortrait extends Component {
 }
 
 FacePortrait.propTypes = {
-  speech: PropTypes.string
+  speech: PropTypes.string,
+  interval: PropTypes.number
 }
 
 FacePortrait.defaultProps = {
-  speech: ''
+  speech: '',
+  interval: 10000
 }
 
 export default FacePortrait;
