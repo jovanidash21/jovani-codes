@@ -50,12 +50,13 @@ class Banner extends Component {
         <div className="social-media-menu">
           <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
             {
-              options.data.acf.social_medias &&
+              Object.keys(options.data).length > 0 && options.data.constructor === Object &&
               options.data.acf.social_medias.map((socialMedia, i) => {
                 switch (socialMedia) {
                   case 'facebook':
                     return (
                       <SocialMediaItem
+                        key={i}
                         socialMedia="facebook"
                         icon="facebook"
                         link={options.data.acf.facebook_url}
@@ -66,6 +67,7 @@ class Banner extends Component {
                   case 'twitter':
                     return (
                       <SocialMediaItem
+                        key={i}
                         socialMedia="twitter"
                         icon="twitter"
                         link={options.data.acf.twitter_url}
@@ -76,6 +78,7 @@ class Banner extends Component {
                   case 'instagram':
                     return (
                       <SocialMediaItem
+                        key={i}
                         socialMedia="instagram"
                         icon="instagram"
                         link={options.data.acf.instagram_url}
@@ -86,6 +89,7 @@ class Banner extends Component {
                   case 'linkedin':
                     return (
                       <SocialMediaItem
+                        key={i}
                         socialMedia="linkedin"
                         icon="linkedin"
                         link={options.data.acf.linkedin_url}
@@ -96,6 +100,7 @@ class Banner extends Component {
                   case 'google_plus':
                     return (
                       <SocialMediaItem
+                        key={i}
                         socialMedia="google-plus"
                         icon="google-plus"
                         link={options.data.acf.google_plus_url}
@@ -106,6 +111,7 @@ class Banner extends Component {
                   case 'youtube':
                     return (
                       <SocialMediaItem
+                        key={i}
                         socialMedia="youtube"
                         icon="youtube-play"
                         link={options.data.acf.youtube_url}
@@ -116,6 +122,7 @@ class Banner extends Component {
                   case 'github':
                     return (
                       <SocialMediaItem
+                        key={i}
                         socialMedia="github"
                         icon="github"
                         link={options.data.acf.github_url}
