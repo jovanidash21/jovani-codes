@@ -1,3 +1,30 @@
 .contact-section {
-  
+  .social-contact {
+    text-align: center;
+    .social-media-menu {
+      margin: 0 auto;
+      width: 230px;
+      .social-media-item {
+        display: inline-block;
+        margin: 3px;
+        &:nth-child(n+5) {
+          margin-top: -15px;
+        }
+        &:nth-child(7n-2) {
+          margin-left: 2px;
+        }
+        @include media-breakpoint-up(sm) {
+          &:nth-child(n+5) {
+            margin-top: 3px;
+          }
+          &:nth-child(7n-2) {
+            margin-left: 3px;
+          }
+        }
+      }
+      @include media-breakpoint-up(sm) {
+        width: auto;
+      }
+    }
+  }
 }
