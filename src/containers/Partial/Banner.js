@@ -50,7 +50,7 @@ class Banner extends Component {
             />
           </div>
         </div>
-        <div className="social-media-menu">
+        <div className="social-media-menu d-none d-md-block">
           <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
             {
               Object.keys(options.data).length > 0 && options.data.constructor === Object &&

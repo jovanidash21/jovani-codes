@@ -33,7 +33,7 @@ class FacePortrait extends Component {
         <VelocityTransitionGroup enter={{animation: "fadeIn"}} leave={{animation: "fadeOut"}}>
           {
             showSpeechBubble &&
-            <div className="speech-bubble big right">
+            <div className="speech-bubble big right d-none d-md-block">
               <Typist>
                 <Typist.Delay ms={500} />
                 {speech}
