@@ -1,6 +1,4 @@
 .about-section {
-  @include display-flex();
-  @include align-items(center);
   .greetings {
     font-family: $font-family-chunk-five-print;
     p {
