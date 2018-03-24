@@ -20,6 +20,10 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
+  @include selection {
+    background: $color-electric-violet;
+    color: #fff;
+  }
 }
 #wpadminbar {
   @media (max-width: $wp-admin-screen-xs-max) {
