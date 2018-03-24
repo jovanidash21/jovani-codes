@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Container, Row, Col } from 'reactstrap';
 import BadgeLogo from '../../components/BadgeLogo';
 import mapDispatchToProps from '../../actions';
 
@@ -12,11 +13,17 @@ class Footer extends Component {
     const { isActive } = this.props;
 
     return (
-      <section className="footer-section background-black">
-        <BadgeLogo
-          className="footer-logo"
-          width="90%"
-        />
+      <section className="footer-section vertical-align-middle background-black">
+        <Container>
+          <Row>
+            <Col xs="12">
+              <BadgeLogo
+                className="footer-logo text-center"
+                width="90vw"
+              />
+            </Col>
+          </Row>
+        </Container>
       </section>
     )
   }

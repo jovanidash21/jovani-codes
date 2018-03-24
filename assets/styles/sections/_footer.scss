@@ -1,13 +1,8 @@
 .footer-section {
   .footer-logo {
-    @include transform-translateY(-50%);
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    width: 100%;
     .badge-logo {
       @include media-breakpoint-up(sm) {
-        width: 50% !important;
+        width: 45vw !important;
       }
     }
   }
