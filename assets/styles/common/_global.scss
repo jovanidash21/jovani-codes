@@ -81,6 +81,10 @@ section[class*=-section] {
 .color-white {
   color: #fff;
 }
+.vertical-align-middle {
+  @include display-flex();
+  @include align-items(center);
+}
 .section-title,
 .section-description {
   text-align: left;
