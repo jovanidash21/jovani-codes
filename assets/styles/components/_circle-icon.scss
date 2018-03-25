@@ -3,14 +3,19 @@
   $bg-color-hover: $color-punch;
   $color: $color-punch;
   $color-hover: $color-treehouse;
-  $size: 140px;
+  $desktop-size: 140px;
+  $mobile-size: 70px;
   @include transition(all 0.3s ease);
   background-color: $bg-color;
   border: 5px solid $bg-color;
   border-radius: 50%;
-  height: $size;
+  height: $mobile-size;
   justify-content: center;
-  width: $size;
+  width: $mobile-size;
+  @include media-breakpoint-up(sm) {
+    height: $desktop-size;
+    width: $desktop-size;
+  }
   &:hover {
     background-color: $bg-color-hover;
     .fa {
