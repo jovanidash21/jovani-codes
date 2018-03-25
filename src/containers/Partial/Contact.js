@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import mapDispatchToProps from '../../actions';
+import CircleIcon from '../../components/CircleIcon';
 import SocialMediaItem from '../../components/SocialMediaItem';
 import LogoSpeech from '../../components/LogoSpeech';
 
@@ -21,15 +22,50 @@ class Contact extends Component {
     };
 
     return (
-      <section className="contact-section vertical-align-middle background-tertiary">
+      <section className="contact-section background-tertiary">
         <Container>
           <Row>
             <Col xs="12">
-              <h2 className="section-title color-white">Contact</h2>
-              <p className="section-description color-white">
+              <h2 className="section-title color-white">Contact Me</h2>
+              <p className="section-description color-dark-brown">
                 Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
               </p>
+              <div className="contact-details">
+                <Row>
+                  <Col xs="12" sm="4">
+                    <div className="contact-info text-center">
+                      <a href="tel:09123456789" className="color-white">
+                        <CircleIcon icon="phone" />
+                      </a>
+                      <a href="tel:09123456789" className="contact-link color-white">
+                        09123456789
+                      </a>
+                    </div>
+                  </Col>
+                  <Col xs="12" sm="4">
+                    <div className="contact-info text-center">
+                      <a href="mailto:jovani@example.com" className="color-white">
+                        <CircleIcon icon="envelope" />
+                      </a>
+                      <a href="mailto:jovani@example.com" className="contact-link color-white">
+                        jovani@example.com
+                      </a>
+                    </div>
+                  </Col>
+                  <Col xs="12" sm="4">
+                    <div className="contact-info text-center">
+                      <a href="https://www.google.com/maps" className="color-white" target="_blank">
+                        <CircleIcon icon="map-marker" />
+                      </a>
+                      <a href="https://www.google.com/maps" className="contact-link color-white" target="_blank">
+                        Quezon City, Philippines
+                      </a>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
               <div className="social-contact">
+                <h2 className="section-title color-white">Let&#39;s Keep in Touch</h2>
                 <div className="social-media-menu">
                   <div className={"animated " + (isActive ? 'rubberBand' : 'fadeOut')}>
                     {

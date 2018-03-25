@@ -1,4 +1,19 @@
 .contact-section {
+  .contact-details {
+    margin: 40px 0;
+    .contact-info {
+      .circle-icon {
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+      .contact-link {
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
   .social-contact {
     text-align: center;
     .social-media-menu {
