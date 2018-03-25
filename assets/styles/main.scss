@@ -11,13 +11,6 @@
 @import "common/global";
 @import "common/custom";
 
-// Sections SCSS
-@import "sections/banner";
-@import "sections/work";
-@import "sections/about";
-@import "sections/contact";
-@import "sections/footer";
-
 // Components SCSS
 @import "components/full-name";
 @import "components/face-portrait";
@@ -26,3 +19,10 @@
 @import "components/work-slide-item";
 @import "components/circle-icon";
 @import "components/logo-speech";
+
+// Sections SCSS
+@import "sections/banner";
+@import "sections/work";
+@import "sections/about";
+@import "sections/contact";
+@import "sections/footer";
