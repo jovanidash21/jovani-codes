@@ -26,15 +26,23 @@ class Contact extends Component {
         <Container>
           <Row>
             <Col xs="12">
-              <h2 className="section-title color-white">Contact Me</h2>
-              <p className="section-description color-dark-brown">
+              <h2 className={"section-title color-white animated " +
+                (isActive ? 'fadeInUp' : 'fadeOutDown')}
+              >
+                Contact Me
+              </h2>
+              <p className={"section-description color-dark-brown animated " +
+                (isActive ? 'fadeIn' : 'fadeOut')}
+              >
                 Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
               </p>
               <div className="contact-details">
                 <Row>
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
-                      <CircleIcon icon="phone" link="tel:09123456789" />
+                      <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
+                        <CircleIcon icon="phone" link="tel:09123456789" />
+                      </div>
                       <a href="tel:09123456789" className="contact-link color-white">
                         09123456789
                       </a>
@@ -42,7 +50,9 @@ class Contact extends Component {
                   </Col>
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
-                      <CircleIcon icon="envelope" link="mailto:jovani@example.com" />
+                      <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
+                        <CircleIcon icon="envelope" link="mailto:jovani@example.com" />
+                      </div>
                       <a href="mailto:jovani@example.com" className="contact-link color-white">
                         jovani@example.com
                       </a>
@@ -50,7 +60,9 @@ class Contact extends Component {
                   </Col>
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
-                      <CircleIcon icon="map-marker" link="https://www.google.com/maps" target="_blank" />
+                      <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
+                        <CircleIcon icon="map-marker" link="https://www.google.com/maps" target="_blank" />
+                      </div>
                       <a href="https://www.google.com/maps" className="contact-link color-white" target="_blank">
                         Quezon City, Philippines
                       </a>
@@ -59,7 +71,11 @@ class Contact extends Component {
                 </Row>
               </div>
               <div className="social-contact">
-                <h2 className="section-title color-white">Let&#39;s Keep in Touch</h2>
+                <h2 className={"section-title color-white animated " +
+                  (isActive ? 'fadeInUp' : 'fadeOutDown')}
+                >
+                  Let&#39;s Keep in Touch
+                </h2>
                 <div className="social-media-menu">
                   <div className={"animated " + (isActive ? 'rubberBand' : 'fadeOut')}>
                     {
