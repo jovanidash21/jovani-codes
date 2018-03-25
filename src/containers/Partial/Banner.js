@@ -22,6 +22,10 @@ class Banner extends Component {
       page,
       isActive
     } = this.props;
+    const socialMediaItemOptions = {
+      hexagonColor: "#e9e9e9",
+      iconColor: "#353535"
+    };
 
     return (
       <section className="banner-section">
@@ -64,6 +68,7 @@ class Banner extends Component {
                         icon="facebook"
                         link={options.data.acf.facebook_url}
                         title={options.data.acf.facebook_message}
+                        {...socialMediaItemOptions}
                       />
                     );
                     break;
@@ -75,6 +80,7 @@ class Banner extends Component {
                         icon="twitter"
                         link={options.data.acf.twitter_url}
                         title={options.data.acf.twitter_message}
+                        {...socialMediaItemOptions}
                       />
                     );
                     break;
@@ -86,6 +92,7 @@ class Banner extends Component {
                         icon="instagram"
                         link={options.data.acf.instagram_url}
                         title={options.data.acf.instagram_message}
+                        {...socialMediaItemOptions}
                       />
                     );
                     break;
@@ -97,6 +104,7 @@ class Banner extends Component {
                         icon="linkedin"
                         link={options.data.acf.linkedin_url}
                         title={options.data.acf.linkedin_message}
+                        {...socialMediaItemOptions}
                       />
                     );
                     break;
@@ -108,6 +116,7 @@ class Banner extends Component {
                         icon="google-plus"
                         link={options.data.acf.google_plus_url}
                         title={options.data.acf.google_plus_message}
+                        {...socialMediaItemOptions}
                       />
                     );
                     break;
@@ -119,6 +128,7 @@ class Banner extends Component {
                         icon="youtube-play"
                         link={options.data.acf.youtube_url}
                         title={options.data.acf.youtube_message}
+                        {...socialMediaItemOptions}
                       />
                     );
                     break;
@@ -130,6 +140,7 @@ class Banner extends Component {
                         icon="github"
                         link={options.data.acf.github_url}
                         title={options.data.acf.github_message}
+                        {...socialMediaItemOptions}
                       />
                     );
                     break;

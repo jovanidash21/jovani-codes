@@ -15,6 +15,10 @@ class Contact extends Component {
       options,
       isActive
     } = this.props;
+    const socialMediaItemOptions = {
+      hexagonColor: "#34231b",
+      iconColor: "#da4d2f"
+    };
 
     return (
       <section className="contact-section vertical-align-middle background-tertiary">
@@ -40,6 +44,7 @@ class Contact extends Component {
                                 icon="facebook"
                                 link={options.data.acf.facebook_url}
                                 title={options.data.acf.facebook_message}
+                                {...socialMediaItemOptions}
                               />
                             );
                             break;
@@ -51,6 +56,7 @@ class Contact extends Component {
                                 icon="twitter"
                                 link={options.data.acf.twitter_url}
                                 title={options.data.acf.twitter_message}
+                                {...socialMediaItemOptions}
                               />
                             );
                             break;
@@ -62,6 +68,7 @@ class Contact extends Component {
                                 icon="instagram"
                                 link={options.data.acf.instagram_url}
                                 title={options.data.acf.instagram_message}
+                                {...socialMediaItemOptions}
                               />
                             );
                             break;
@@ -73,6 +80,7 @@ class Contact extends Component {
                                 icon="linkedin"
                                 link={options.data.acf.linkedin_url}
                                 title={options.data.acf.linkedin_message}
+                                {...socialMediaItemOptions}
                               />
                             );
                             break;
@@ -84,6 +92,7 @@ class Contact extends Component {
                                 icon="google-plus"
                                 link={options.data.acf.google_plus_url}
                                 title={options.data.acf.google_plus_message}
+                                {...socialMediaItemOptions}
                               />
                             );
                             break;
@@ -95,6 +104,7 @@ class Contact extends Component {
                                 icon="youtube-play"
                                 link={options.data.acf.youtube_url}
                                 title={options.data.acf.youtube_message}
+                                {...socialMediaItemOptions}
                               />
                             );
                             break;
@@ -106,6 +116,7 @@ class Contact extends Component {
                                 icon="github"
                                 link={options.data.acf.github_url}
                                 title={options.data.acf.github_message}
+                                {...socialMediaItemOptions}
                               />
                             );
                             break;

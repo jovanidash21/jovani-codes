@@ -1,6 +1,4 @@
 .social-media-item {
-  $bg-color: $color-mercury;
-  $color: $color-mine-shaft;
   $color-hover: $color-mercury;
   $social-media-list: 'facebook' 'twitter' 'instagram' 'linkedin' 'google-plus' 'youtube' 'github';
   $social-media-colors: $color-facebook $color-twitter $color-instagram $color-linkedin $color-google-plus $color-youtube $color-github;
@@ -12,7 +10,7 @@
     &.#{nth($social-media-list, $i)} {
       &:hover {
         .hexagon-vertical {
-          background-color: nth($social_media_colors, $i);
+          background-color: nth($social_media_colors, $i) !important;
         }
       }
     }
@@ -22,7 +20,7 @@
     z-index: 1;
     .hexagon-vertical {
       .fa {
-        color: $color-hover;
+        color: $color-hover !important;
       }
     }
   }
@@ -47,7 +45,6 @@
     @include justify-content(center);
     @include transform-rotate(-60deg);
     @include transition(all 0.3s ease);
-    background-color: $bg-color;
     height: 100%;
     overflow: hidden;
     text-align: center;
@@ -55,7 +52,6 @@
     width: 100%;
     .fa {
       @include transition(all 0.3s ease);
-      color: $color;
       font-size: 21px;
       text-align: unset;
     }
