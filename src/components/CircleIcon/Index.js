@@ -4,21 +4,29 @@ import FontAwesome from 'react-fontawesome';
 
 const CircleIcon = (props) => {
   return (
-    <div className="circle-icon vertical-align-middle">
+    <a
+      href={props.link}
+      className="circle-icon vertical-align-middle"
+      target={props.target}
+    >
       <FontAwesome
         name={props.icon}
         size="4x"
       />
-    </div>
+    </a>
   )
 }
 
 CircleIcon.propTypes = {
   icon: PropTypes.string.isRequired,
+  link: PropTypes.string,
+  target: PropTypes.string,
   title: PropTypes.string
 }
 
 CircleIcon.defaultProps = {
+  link: '#',
+  target: '_self',
   title: ''
 }
 

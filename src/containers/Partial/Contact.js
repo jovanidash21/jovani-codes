@@ -34,9 +34,7 @@ class Contact extends Component {
                 <Row>
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
-                      <a href="tel:09123456789" className="color-white">
-                        <CircleIcon icon="phone" />
-                      </a>
+                      <CircleIcon icon="phone" link="tel:09123456789" />
                       <a href="tel:09123456789" className="contact-link color-white">
                         09123456789
                       </a>
@@ -44,9 +42,7 @@ class Contact extends Component {
                   </Col>
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
-                      <a href="mailto:jovani@example.com" className="color-white">
-                        <CircleIcon icon="envelope" />
-                      </a>
+                      <CircleIcon icon="envelope" link="mailto:jovani@example.com" />
                       <a href="mailto:jovani@example.com" className="contact-link color-white">
                         jovani@example.com
                       </a>
@@ -54,9 +50,7 @@ class Contact extends Component {
                   </Col>
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
-                      <a href="https://www.google.com/maps" className="color-white" target="_blank">
-                        <CircleIcon icon="map-marker" />
-                      </a>
+                      <CircleIcon icon="map-marker" link="https://www.google.com/maps" target="_blank" />
                       <a href="https://www.google.com/maps" className="contact-link color-white" target="_blank">
                         Quezon City, Philippines
                       </a>
