@@ -1,7 +1,10 @@
 .contact-section {
   .contact-details {
-    margin: 40px 0;
     .contact-info {
+      margin: 20px 0;
+      @include media-breakpoint-up(sm) {
+        margin: 40px 0;
+      }
       .circle-icon {
         margin: 0 auto;
         margin-bottom: 20px;
