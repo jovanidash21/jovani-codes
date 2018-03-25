@@ -57,4 +57,16 @@
       }
     }
   }
+  .logo-speech {
+    @include transform-translateY(-55%);
+    @include transition(all 0.4s ease-in);
+    bottom: auto;
+    position: absolute;
+    right: 121px;
+    top: 100%;
+    z-index: 2;
+    &:hover {
+      @include transform-translateY(-100%);
+    }
+  }
 }
