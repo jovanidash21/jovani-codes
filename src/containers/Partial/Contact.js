@@ -175,7 +175,7 @@ class Contact extends Component {
             </Col>
           </Row>
         </Container>
-        <div className="d-none d-md-block">
+        <div className="logo-speech-wrapper d-none d-md-block">
           <LogoSpeech speech="Curabitur non nulla sit amet nisl tempus convallis quis ac lectus." />
         </div>
       </section>

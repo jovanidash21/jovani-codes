@@ -21,7 +21,8 @@
         }
       }
       .contact-link {
-        font-size: 16px;
+        font-size: 17px;
+        font-weight: bold;
         &:hover {
           color: #fff;
           text-decoration: underline;
@@ -57,7 +58,7 @@
       }
     }
   }
-  .logo-speech {
+  .logo-speech-wrapper {
     @include transform-translateY(-55%);
     @include transition(all 0.4s ease-in);
     bottom: auto;
