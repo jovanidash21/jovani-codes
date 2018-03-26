@@ -1,13 +1,13 @@
 .circle-icon {
-  $bg-color: $color-treehouse;
-  $bg-color-hover: $color-punch;
-  $color: $color-punch;
-  $color-hover: $color-treehouse;
+  $bg-color: $color-punch;
+  $bg-color-hover: $color-treehouse;
+  $color: $color-treehouse;
+  $color-hover: $color-punch;
   $desktop-size: 140px;
   $mobile-size: 70px;
   @include transition(all 0.3s ease);
   background-color: $bg-color;
-  border: 5px solid $bg-color;
+  border: 5px solid $bg-color-hover;
   border-radius: 50%;
   height: $mobile-size;
   justify-content: center;
