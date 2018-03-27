@@ -8,7 +8,6 @@
   .slick-slide {
     @include align-items(center);
     @include display-flex();
-    @include justify-content(center);
   }
   .slick-prev,
   .slick-next,
@@ -23,10 +22,10 @@
     }
   }
   .slick-next {
-    right: 75px;
+    right: 60px;
   }
   .slick-prev {
-    left: 75px;
+    left: 60px;
   }
   .slick-dots {
     bottom: 0;
