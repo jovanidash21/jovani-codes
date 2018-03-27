@@ -41,7 +41,11 @@ class Contact extends Component {
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
                       <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
-                        <CircleIcon icon="phone" link="tel:09123456789" />
+                        <CircleIcon
+                          icon="phone"
+                          link="tel:09123456789"
+                          title=""
+                        />
                       </div>
                       <a href="tel:09123456789" className="contact-link color-white">
                         09123456789
@@ -51,7 +55,11 @@ class Contact extends Component {
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
                       <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
-                        <CircleIcon icon="envelope" link="mailto:jovani@example.com" />
+                        <CircleIcon
+                          icon="envelope"
+                          link="mailto:jovani@example.com"
+                          title=""
+                        />
                       </div>
                       <a href="mailto:jovani@example.com" className="contact-link color-white">
                         jovani@example.com
@@ -61,7 +69,11 @@ class Contact extends Component {
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
                       <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
-                        <CircleIcon icon="map-marker" link="https://www.google.com/maps" target="_blank" />
+                        <CircleIcon icon="map-marker"
+                          link="https://www.google.com/maps"
+                          target="_blank"
+                          title=""
+                        />
                       </div>
                       <a href="https://www.google.com/maps" className="contact-link color-white" target="_blank">
                         Quezon City, Philippines

@@ -8,6 +8,7 @@ const CircleIcon = (props) => {
       href={props.link}
       className="circle-icon vertical-align-middle"
       target={props.target}
+      title={props.title}
     >
       <FontAwesome
         name={props.icon}
