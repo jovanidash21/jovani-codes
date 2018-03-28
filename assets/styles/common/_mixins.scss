@@ -135,7 +135,7 @@
 /* Perspective
  * @param {length|none} $value - Value
  */
-@mixin prespective($value: none) {
+@mixin perspective($value: none) {
   @include css3-prefix('perspective', $value);
 }
 /* Placeholder
