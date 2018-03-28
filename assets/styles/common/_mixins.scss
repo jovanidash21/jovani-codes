@@ -202,6 +202,12 @@
 @mixin transform-scaleY($value...) {
   @include css3-prefix('transform', scaleY($value));
 }
+/* Transform Style
+ * @param {flat|preserve-3d|initial|inherit} $value - Value
+ */
+@mixin transform-style($value: flat) {
+  @include css3-prefix('transform-style', $value);
+}
 /* Transform Translate
  * @param {number} $value - Value
  */
