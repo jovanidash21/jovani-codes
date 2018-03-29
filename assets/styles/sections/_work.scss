@@ -5,10 +5,6 @@
   .slick-slide {
     height: 100%;
   }
-  .slick-slide {
-    @include align-items(center);
-    @include display-flex();
-  }
   .slick-prev,
   .slick-next,
   .slick-dots {
@@ -29,6 +25,17 @@
   }
   .slick-dots {
     bottom: 0;
+  }
+  .work-content {
+    @include align-items(center);
+    @include display-flex();
+    &:nth-child(even) {
+      .work-image-wrapper {
+        @include media-breakpoint-up(md) {
+          @include order(2);
+        }
+      }
+    }
   }
   .section-title {
     color: #fff;

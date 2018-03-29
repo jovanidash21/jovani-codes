@@ -23,12 +23,48 @@ class Work extends Component {
     return (
       <section className="work-section background-secondary">
         <Slider {...slickOptions}>
-          <div><WorkSlideItem title="Work 1" /></div>
-          <div><WorkSlideItem title="Work 2" /></div>
-          <div><WorkSlideItem title="Work 3" /></div>
-          <div><WorkSlideItem title="Work 4" /></div>
-          <div><WorkSlideItem title="Work 5" /></div>
-          <div><WorkSlideItem title="Work 6" /></div>
+          <div className="work-content">
+            <WorkSlideItem
+              title="Work 1"
+              description="Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+              link="http://example.com"
+            />
+          </div>
+          <div className="work-content">
+            <WorkSlideItem
+              title="Work 2"
+              description="Nulla quis lorem ut libero malesuada feugiat."
+              link="http://example.com"
+            />
+          </div>
+          <div className="work-content">
+            <WorkSlideItem
+              title="Work 3"
+              description="Vivamus suscipit tortor eget felis porttitor volutpat."
+              link="http://example.com"
+            />
+          </div>
+          <div className="work-content">
+            <WorkSlideItem
+              title="Work 4"
+              description="Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
+              link="http://example.com"
+            />
+          </div>
+          <div className="work-content">
+            <WorkSlideItem
+              title="Work 5"
+              description="Cras ultricies ligula sed magna dictum porta."
+              link="http://example.com"
+            />
+          </div>
+          <div className="work-content">
+            <WorkSlideItem
+              title="Work 6"
+              description="Donec sollicitudin molestie malesuada."
+              link="http://example.com"
+            />
+          </div>
         </Slider>
       </section>
     )
