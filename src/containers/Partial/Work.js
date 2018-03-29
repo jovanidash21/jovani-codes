@@ -9,6 +9,13 @@ import WorkSlideItem from '../../components/Work/WorkSlideItem';
 class Work extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      activeSlide: 0
+    };
+  }
+  handleAfterChange(event) {
+    this.setState({activeSlide: event});
   }
   render() {
     const { isActive } = this.props;
@@ -17,7 +24,8 @@ class Work extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      afterChange: ::this.handleAfterChange
     };
 
     return (
