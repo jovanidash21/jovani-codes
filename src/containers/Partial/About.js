@@ -12,7 +12,7 @@ class About extends Component {
     const { isActive } = this.props;
 
     return (
-      <section className="about-section vertical-align-middle background-secondary">
+      <section className="about-section vertical-align-middle background-primary">
         <Container>
           <Row>
             <Col xs="12">

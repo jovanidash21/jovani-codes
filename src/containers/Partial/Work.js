@@ -21,7 +21,7 @@ class Work extends Component {
     };
 
     return (
-      <section className="work-section background-primary">
+      <section className="work-section background-secondary">
         <Slider {...slickOptions}>
           <div><WorkSlideItem title="Work 1" /></div>
           <div><WorkSlideItem title="Work 2" /></div>
