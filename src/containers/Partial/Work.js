@@ -18,7 +18,7 @@ class Work extends Component {
     this.setState({activeSlide: event});
   }
   render() {
-    const { isActive } = this.props;
+    const { isSectionActive } = this.props;
     const slickOptions = {
       dots: true,
       infinite: true,
@@ -87,11 +87,11 @@ const mapStateToProps = (state) => {
 }
 
 Work.propTypes = {
-  isActive: PropTypes.bool,
+  isSectionActive: PropTypes.bool,
 }
 
 Work.defaultProps = {
-  isActive: false,
+  isSectionActive: false,
 }
 
 export default connect(

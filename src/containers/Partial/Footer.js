@@ -10,7 +10,7 @@ class Footer extends Component {
     super(props);
   }
   render() {
-    const { isActive } = this.props;
+    const { isSectionActive } = this.props;
 
     return (
       <section className="footer-section vertical-align-middle background-black">
@@ -37,11 +37,11 @@ const mapStateToProps = (state) => {
 }
 
 Footer.propTypes = {
-  isActive: PropTypes.bool,
+  isSectionActive: PropTypes.bool,
 }
 
 Footer.defaultProps = {
-  isActive: false,
+  isSectionActive: false,
 }
 
 export default connect(

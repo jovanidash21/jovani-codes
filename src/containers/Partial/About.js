@@ -9,7 +9,7 @@ class About extends Component {
     super(props);
   }
   render() {
-    const { isActive } = this.props;
+    const { isSectionActive } = this.props;
 
     return (
       <section className="about-section vertical-align-middle background-primary">
@@ -18,42 +18,42 @@ class About extends Component {
             <Col xs="12">
               <div className="greetings text-center">
                 <p className={"color-dark-brown text-uppercase animated " +
-                  (isActive ? 'rotateIn' : 'rotateOut')}
+                  (isSectionActive ? 'rotateIn' : 'rotateOut')}
                 >
                   Hello
                 </p>
                 <p className={"color-white text-lowercase animated " +
-                  (isActive ? 'fadeInDownBig' : 'fadeOutUpBig')}
+                  (isSectionActive ? 'fadeInDownBig' : 'fadeOutUpBig')}
                 >
                   Stranger
                 </p>
                 <p className={"color-tertiary text-uppercase animated " +
-                  (isActive ? 'rotateInDownLeft' : 'rotateOutUpLeft')}
+                  (isSectionActive ? 'rotateInDownLeft' : 'rotateOutUpLeft')}
                 >
                   I&#39;m a Web developer
                 </p>
                 <p className={"color-dark-brown text-uppercase animated " +
-                  (isActive ? 'bounceInDown' : 'bounceOutUp')}
+                  (isSectionActive ? 'bounceInDown' : 'bounceOutUp')}
                 >
                   I Build
                 </p>
                 <p className={"color-tertiary text-uppercase animated " +
-                  (isActive ? 'bounceInUp' : 'bounceOutDown')}
+                  (isSectionActive ? 'bounceInUp' : 'bounceOutDown')}
                 >
                   Websites
                 </p>
                 <p className={"color-dark-brown text-lowercase animated " +
-                  (isActive ? 'zoomIn' : 'zoomOut')}
+                  (isSectionActive ? 'zoomIn' : 'zoomOut')}
                 >
                   with
                 </p>
                 <p className={"color-white text-lowercase animated " +
-                  (isActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
+                  (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
                 >
                   Maximum
                 </p>
                 <p className={"color-dark-brown text-uppercase animated " +
-                  (isActive ? 'rollIn' : 'rollOut')}
+                  (isSectionActive ? 'rollIn' : 'rollOut')}
                 >
                   Effort
                 </p>
@@ -74,11 +74,11 @@ const mapStateToProps = (state) => {
 }
 
 About.propTypes = {
-  isActive: PropTypes.bool,
+  isSectionActive: PropTypes.bool,
 }
 
 About.defaultProps = {
-  isActive: false,
+  isSectionActive: false,
 }
 
 export default connect(

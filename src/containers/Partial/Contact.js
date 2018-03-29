@@ -14,7 +14,7 @@ class Contact extends Component {
   render() {
     const {
       options,
-      isActive
+      isSectionActive
     } = this.props;
     const socialMediaItemOptions = {
       hexagonColor: "#34231b",
@@ -27,12 +27,12 @@ class Contact extends Component {
           <Row>
             <Col xs="12">
               <h2 className={"section-title color-white animated " +
-                (isActive ? 'fadeInUp' : 'fadeOutDown')}
+                (isSectionActive ? 'fadeInUp' : 'fadeOutDown')}
               >
                 Contact Me
               </h2>
               <p className={"section-description color-dark-brown animated " +
-                (isActive ? 'fadeIn' : 'fadeOut')}
+                (isSectionActive ? 'fadeIn' : 'fadeOut')}
               >
                 Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
               </p>
@@ -40,7 +40,7 @@ class Contact extends Component {
                 <Row>
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
-                      <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
+                      <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
                         <CircleIcon
                           icon="phone"
                           link="tel:09123456789"
@@ -54,7 +54,7 @@ class Contact extends Component {
                   </Col>
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
-                      <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
+                      <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
                         <CircleIcon
                           icon="envelope"
                           link="mailto:jovani@example.com"
@@ -68,7 +68,7 @@ class Contact extends Component {
                   </Col>
                   <Col xs="12" sm="4">
                     <div className="contact-info text-center">
-                      <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
+                      <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
                         <CircleIcon icon="map-marker"
                           link="https://www.google.com/maps"
                           target="_blank"
@@ -84,12 +84,12 @@ class Contact extends Component {
               </div>
               <div className="social-contact">
                 <h2 className={"section-title color-white animated " +
-                  (isActive ? 'fadeInUp' : 'fadeOutDown')}
+                  (isSectionActive ? 'fadeInUp' : 'fadeOutDown')}
                 >
                   Let&#39;s Keep in Touch
                 </h2>
                 <div className="social-media-menu">
-                  <div className={"animated " + (isActive ? 'rubberBand' : 'fadeOut')}>
+                  <div className={"animated " + (isSectionActive ? 'rubberBand' : 'fadeOut')}>
                     {
                       Object.keys(options.data).length > 0 && options.data.constructor === Object &&
                       options.data.acf.social_medias.map((socialMedia, i) => {
@@ -203,11 +203,11 @@ const mapStateToProps = (state) => {
 }
 
 Contact.propTypes = {
-  isActive: PropTypes.bool,
+  isSectionActive: PropTypes.bool,
 }
 
 Contact.defaultProps = {
-  isActive: false,
+  isSectionActive: false,
 }
 
 export default connect(

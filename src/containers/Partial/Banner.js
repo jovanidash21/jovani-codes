@@ -20,7 +20,7 @@ class Banner extends Component {
     const {
       options,
       page,
-      isActive
+      isSectionActive
     } = this.props;
     const socialMediaItemOptions = {
       hexagonColor: "#e9e9e9",
@@ -34,7 +34,7 @@ class Banner extends Component {
           className="particles"
         />
         <div className="main-logo-wrapper">
-          <div className={"animated " + (isActive ? 'slideInDown' : 'slideOutUp')}>
+          <div className={"animated " + (isSectionActive ? 'slideInDown' : 'slideOutUp')}>
             <FaceLogo
               className="main-logo"
               width="120px"
@@ -42,12 +42,12 @@ class Banner extends Component {
           </div>
         </div>
         <div className="full-name-wrapper">
-          <div className={"animated " + (isActive ? 'slideInLeft' : 'slideOutLeft')}>
+          <div className={"animated " + (isSectionActive ? 'slideInLeft' : 'slideOutLeft')}>
             <FullName />
           </div>
         </div>
         <div className="face-portrait-wrapper">
-          <div className={"animated " + (isActive ? 'slideInRight' : 'slideOutRight')}>
+          <div className={"animated " + (isSectionActive ? 'slideInRight' : 'slideOutRight')}>
             <FacePortrait
               speech="Hey! Remember the name!"
               interval={11000}
@@ -55,7 +55,7 @@ class Banner extends Component {
           </div>
         </div>
         <div className="social-media-menu d-none d-md-block">
-          <div className={"animated " + (isActive ? 'zoomIn' : 'zoomOut')}>
+          <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
             {
               Object.keys(options.data).length > 0 && options.data.constructor === Object &&
               options.data.acf.social_medias.map((socialMedia, i) => {
@@ -150,7 +150,7 @@ class Banner extends Component {
           </div>
         </div>
         <div className="scroll-down-icon-wrapper">
-          <div className={"animated " + (isActive ? 'slideInUp' : 'slideOutDown')}>
+          <div className={"animated " + (isSectionActive ? 'slideInUp' : 'slideOutDown')}>
             <ScrollDownIcon title="Scroll Down" />
           </div>
         </div>
@@ -167,11 +167,11 @@ const mapStateToProps = (state) => {
 }
 
 Banner.propTypes = {
-  isActive: PropTypes.bool,
+  isSectionActive: PropTypes.bool,
 }
 
 Banner.defaultProps = {
-  isActive: false,
+  isSectionActive: false,
 }
 
 export default connect(

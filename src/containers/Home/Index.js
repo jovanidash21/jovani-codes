@@ -59,11 +59,21 @@ class Home extends Component {
         <ScrollToTopOnMount />
         <SectionsContainer {...fullPageOptions} activeSection={activeSection}>
           {::this.handleHeadData()}
-          <Section><Banner isActive={activeSection === 0} /></Section>
-          <Section><About isActive={activeSection === 1} /></Section>
-          <Section><Work isActive={activeSection === 2} /></Section>
-          <Section><Contact isActive={activeSection === 3} /></Section>
-          <Section><Footer isActive={activeSection === 4} /></Section>
+          <Section>
+            <Banner isSectionActive={activeSection === 0} />
+          </Section>
+          <Section>
+            <About isSectionActive={activeSection === 1} />
+          </Section>
+          <Section>
+            <Work isSectionActive={activeSection === 2} />
+          </Section>
+          <Section>
+            <Contact isSectionActive={activeSection === 3} />
+          </Section>
+          <Section>
+            <Footer isSectionActive={activeSection === 4} />
+          </Section>
         </SectionsContainer>
       </div>
     )
