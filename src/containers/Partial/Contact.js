@@ -22,7 +22,7 @@ class Contact extends Component {
     };
 
     return (
-      <section className="contact-section background-tertiary">
+      <section className="contact-section vertical-align-middle background-tertiary">
         <Container>
           <Row>
             <Col xs="12">
