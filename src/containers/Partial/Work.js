@@ -41,7 +41,8 @@ class Work extends Component {
                 title="Work 1"
                 image={workImagePath + 'laptop.png'}
                 description="Quisque velit nisi, pretium ut lacinia in, elementum id enim."
-                link="http://example.com"
+                siteLink="http://example.com"
+                githubLink="https://github.com"
                 isSlideActive={activeSlide === 0}
               />
             </div>
@@ -54,7 +55,7 @@ class Work extends Component {
                 image={workImagePath + 'desktop.png'}
                 title="Work 2"
                 description="Nulla quis lorem ut libero malesuada feugiat."
-                link="http://example.com"
+                siteLink="http://example.com"
                 isSlideActive={activeSlide === 1}
               />
             </div>
@@ -65,10 +66,11 @@ class Work extends Component {
             >
               <WorkSlideItem
                 image={workImagePath + 'tablet.png'}
-                  title="Work 3"
-                  description="Vivamus suscipit tortor eget felis porttitor volutpat."
-                  link="http://example.com"
-                  isSlideActive={activeSlide === 2}
+                title="Work 3"
+                description="Vivamus suscipit tortor eget felis porttitor volutpat."
+                siteLink="http://example.com"
+                githubLink="https://github.com"
+                isSlideActive={activeSlide === 2}
               />
             </div>
           </div>
@@ -78,9 +80,10 @@ class Work extends Component {
             >
               <WorkSlideItem
                 image={workImagePath + 'laptop.png'}
-                  title="Work 4"
-                  description="Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
-                  link="http://example.com"
+                title="Work 4"
+                description="Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
+                siteLink="http://example.com"
+                githubLink="https://github.com"
                 isSlideActive={activeSlide === 3}
               />
             </div>
@@ -91,10 +94,9 @@ class Work extends Component {
             >
               <WorkSlideItem
                 image={workImagePath + 'desktop.png'}
-                  title="Work 5"
-                  description="Cras ultricies ligula sed magna dictum porta."
-                  link="http://example.com"
-                  isSlideActive={activeSlide === 4}
+                title="Work 5"
+                description="Cras ultricies ligula sed magna dictum porta."
+                isSlideActive={activeSlide === 4}
               />
             </div>
           </div>
@@ -106,7 +108,8 @@ class Work extends Component {
                 image={workImagePath + 'tablet.png'}
                 title="Work 6"
                 description="Donec sollicitudin molestie malesuada."
-                link="http://example.com"
+                siteLink="http://example.com"
+                githubLink="https://github.com"
                 isSlideActive={activeSlide === 5}
               />
             </div>

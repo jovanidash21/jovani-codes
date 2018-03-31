@@ -1,4 +1,21 @@
 .work-section {
+  .work-content {
+    @include align-items(center);
+    @include display-flex();
+    &:nth-child(even) {
+      .work-image-wrapper {
+        @include media-breakpoint-up(md) {
+          @include order(2);
+        }
+      }
+    }
+    .work-links {
+      @include display-flex();
+    }
+  }
+  .section-title {
+    color: #fff;
+  }
   .slick-slider,
   .slick-list,
   .slick-track,
@@ -25,19 +42,5 @@
   }
   .slick-dots {
     bottom: 0;
-  }
-  .work-content {
-    @include align-items(center);
-    @include display-flex();
-    &:nth-child(even) {
-      .work-image-wrapper {
-        @include media-breakpoint-up(md) {
-          @include order(2);
-        }
-      }
-    }
-  }
-  .section-title {
-    color: #fff;
   }
 }

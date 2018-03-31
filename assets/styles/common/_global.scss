@@ -167,6 +167,36 @@ section[class*=-section] {
   height: $height;
   position: relative;
   width: $width;
+  &.black {
+    & > a {
+      &:before,
+      &:after {
+        border-color: #000;
+      }
+      &:before {
+        background-color: #000;
+        color: #fff;
+      }
+      &:after {
+        color: #000;
+      }
+    }
+  }
+  &.white {
+    & > a {
+      &:before,
+      &:after {
+        border-color: #fff;
+      }
+      &:before {
+        background-color: #fff;
+        color: #000;
+      }
+      &:after {
+        color: #fff;
+      }
+    }
+  }
   & > a {
     @include transform-style(preserve-3d);
     @include transform-translateZ(-($height / 2));
@@ -184,9 +214,10 @@ section[class*=-section] {
       @include display-flex;
       @include align-items(center);
       @include justify-content(center);
-      border: 5px solid $color;
+      border-style: solid;
+      border-width: 5px;
       box-sizing: border-box;
-      font-size: 20px;
+      font-size: 17px;
       height: $height;
       margin: 0;
       position: absolute;
@@ -197,8 +228,6 @@ section[class*=-section] {
         rotateY(0)
         translateZ($height / 2)
       );
-      background-color: $color;
-      color: #000;
     }
     &:after {
       @include transform(
@@ -206,8 +235,6 @@ section[class*=-section] {
         translateZ($height / 2)
       );
       background-color: transparent;
-      border-color: $color;
-      color: $color;
     }
     &:hover {
       @include transform(

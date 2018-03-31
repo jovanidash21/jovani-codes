@@ -25,14 +25,24 @@ const WorkSlideItem = (props) => {
                   {props.description}
                 </p>
               }
-              {
-                props.link &&
-                <div className={"flip-button animated " +
-                  (props.isSlideActive ? 'zoomIn' : 'zoomOut')}
-                >
-                  <a href={props.link} target="_blank" title="Visit the site" />
-                </div>
-              }
+              <div className="work-links">
+                {
+                  props.siteLink &&
+                  <div className={"flip-button white animated " +
+                    (props.isSlideActive ? 'zoomIn' : 'zoomOut')}
+                  >
+                    <a href={props.siteLink} target="_blank" title="Visit the site" />
+                  </div>
+                }
+                {
+                  props.githubLink &&
+                  <div className={"flip-button black animated " +
+                    (props.isSlideActive ? 'zoomIn' : 'zoomOut')}
+                  >
+                    <a href={props.githubLink} target="_blank" title="Go to GitHub" />
+                  </div>
+                }
+              </div>
             </div>
           </Col>
         </Row>
@@ -45,13 +55,15 @@ WorkSlideItem.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string,
-  link: PropTypes.string,
+  siteLink: PropTypes.string,
+  githubLink: PropTypes.string,
   isSlideActive: PropTypes.bool,
 }
 
 WorkSlideItem.defaultProps = {
   description: '',
-  link: '',
+  siteLink: '',
+  githubLink: '',
   isSlideActive: false
 }
 
