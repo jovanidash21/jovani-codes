@@ -57,7 +57,9 @@ class Banner extends Component {
         <div className="social-media-menu d-none d-md-block">
           <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
             {
-              Object.keys(options.data).length > 0 && options.data.constructor === Object &&
+              Object.keys(options.data).length > 0 &&
+              options.data.constructor === Object &&
+              options.data.acf.social_medias.length > 0 &&
               options.data.acf.social_medias.map((socialMedia, i) => {
                 switch (socialMedia) {
                   case 'facebook':
