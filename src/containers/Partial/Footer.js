@@ -17,10 +17,12 @@ class Footer extends Component {
         <Container>
           <Row>
             <Col xs="12">
-              <BadgeLogo
-                className="footer-logo text-center"
-                width="90vw"
-              />
+              <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
+                <BadgeLogo
+                  className="footer-logo text-center"
+                  width="90vw"
+                />
+              </div>
             </Col>
           </Row>
         </Container>
