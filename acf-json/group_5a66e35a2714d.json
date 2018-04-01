@@ -19,48 +19,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a66e7b64f447",
-            "label": "Subtitle",
-            "name": "subtitle",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5a66e9f72beb4",
-            "label": "Intro Title",
-            "name": "intro_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5a66ea072beb5",
-            "label": "Intro Description",
-            "name": "intro_description",
+            "label": "Description",
+            "name": "description",
             "type": "wysiwyg",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -74,6 +37,31 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_5abf97680295f",
+            "label": "Preview Image",
+            "name": "preview_image",
+            "type": "image",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_5a66e9d82beb2",
@@ -96,6 +84,7 @@
             "label": "Site URL",
             "name": "site_url",
             "type": "url",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -112,6 +101,7 @@
             "label": "GitHub URL",
             "name": "github_url",
             "type": "url",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -141,5 +131,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1516694037
+    "modified": 1522505628
 }
