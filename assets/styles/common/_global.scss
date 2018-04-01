@@ -221,6 +221,7 @@ section[class*=-section] {
       height: $height;
       margin: 0;
       position: absolute;
+      text-align: center;
       width: $width;
     }
     &:before {

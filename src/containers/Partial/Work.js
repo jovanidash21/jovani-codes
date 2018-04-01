@@ -14,11 +14,19 @@ class Work extends Component {
       activeSlide: 0
     };
   }
+  componentWillMount() {
+    const { fetchPosts } = this.props;
+
+    fetchPosts('work');
+  }
   handleAfterChange(event) {
     this.setState({activeSlide: event});
   }
   render() {
-    const { isSectionActive } = this.props;
+    const {
+      post,
+      isSectionActive
+    } = this.props;
     const { activeSlide } = this.state;
     const slickOptions = {
       dots: true,
@@ -28,93 +36,32 @@ class Work extends Component {
       slidesToScroll: 1,
       afterChange: ::this.handleAfterChange
     };
-    const workImagePath = JOVANI_CODES.images + '/work/';
 
     return (
       <section className="work-section background-secondary">
-        <Slider {...slickOptions}>
-          <div className="work-content">
-            <div className={"animated " +
-              (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
-            >
-              <WorkSlideItem
-                title="Work 1"
-                image={workImagePath + 'laptop.png'}
-                description="Quisque velit nisi, pretium ut lacinia in, elementum id enim."
-                siteLink="http://example.com"
-                githubLink="https://github.com"
-                isSlideActive={activeSlide === 0}
-              />
-            </div>
-          </div>
-          <div className="work-content">
-            <div className={"animated " +
-              (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
-            >
-              <WorkSlideItem
-                image={workImagePath + 'desktop.png'}
-                title="Work 2"
-                description="Nulla quis lorem ut libero malesuada feugiat."
-                siteLink="http://example.com"
-                isSlideActive={activeSlide === 1}
-              />
-            </div>
-          </div>
-          <div className="work-content">
-            <div className={"animated " +
-              (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
-            >
-              <WorkSlideItem
-                image={workImagePath + 'tablet.png'}
-                title="Work 3"
-                description="Vivamus suscipit tortor eget felis porttitor volutpat."
-                siteLink="http://example.com"
-                githubLink="https://github.com"
-                isSlideActive={activeSlide === 2}
-              />
-            </div>
-          </div>
-          <div className="work-content">
-            <div className={"animated " +
-              (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
-            >
-              <WorkSlideItem
-                image={workImagePath + 'laptop.png'}
-                title="Work 4"
-                description="Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
-                siteLink="http://example.com"
-                githubLink="https://github.com"
-                isSlideActive={activeSlide === 3}
-              />
-            </div>
-          </div>
-          <div className="work-content">
-            <div className={"animated " +
-              (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
-            >
-              <WorkSlideItem
-                image={workImagePath + 'desktop.png'}
-                title="Work 5"
-                description="Cras ultricies ligula sed magna dictum porta."
-                isSlideActive={activeSlide === 4}
-              />
-            </div>
-          </div>
-          <div className="work-content">
-            <div className={"animated " +
-              (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
-            >
-              <WorkSlideItem
-                image={workImagePath + 'tablet.png'}
-                title="Work 6"
-                description="Donec sollicitudin molestie malesuada."
-                siteLink="http://example.com"
-                githubLink="https://github.com"
-                isSlideActive={activeSlide === 5}
-              />
-            </div>
-          </div>
-        </Slider>
+        {
+          post.data.length > 0 &&
+          <Slider {...slickOptions}>
+            {
+              post.data.map((data, i) =>
+                <div key={i} className="work-content">
+                  <div className={"animated " +
+                    (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
+                  >
+                    <WorkSlideItem
+                      title={data.title.rendered}
+                      image={data.acf.preview_image.url}
+                      description={data.acf.description}
+                      siteLink={data.acf.site_url}
+                      githubLink={data.acf.github_url}
+                      isSlideActive={activeSlide === i}
+                    />
+                  </div>
+                </div>
+              )
+            }
+          </Slider>
+        }
       </section>
     )
   }
@@ -123,7 +70,8 @@ class Work extends Component {
 const mapStateToProps = (state) => {
   return {
     options: state.options,
-    page: state.page
+    page: state.page,
+    post: state.post
   }
 }
 

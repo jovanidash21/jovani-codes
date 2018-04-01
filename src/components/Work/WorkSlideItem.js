@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'reactstrap';
+import ReactHtmlParser from 'react-html-parser';
 
 const WorkSlideItem = (props) => {
   return (
@@ -19,11 +20,11 @@ const WorkSlideItem = (props) => {
               </h2>
               {
                 props.description &&
-                <p className={"section-description animated " +
+                <div className={"section-description animated " +
                   (props.isSlideActive ? 'fadeIn' : 'fadeOut')}
                 >
-                  {props.description}
-                </p>
+                  {ReactHtmlParser(props.description)}
+                </div>
               }
               <div className="work-links">
                 {
@@ -53,7 +54,7 @@ const WorkSlideItem = (props) => {
 
 WorkSlideItem.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   description: PropTypes.string,
   siteLink: PropTypes.string,
   githubLink: PropTypes.string,
@@ -61,6 +62,7 @@ WorkSlideItem.propTypes = {
 }
 
 WorkSlideItem.defaultProps = {
+  image: JOVANI_CODES.images + '/work/desktop.png',
   description: '',
   siteLink: '',
   githubLink: '',
