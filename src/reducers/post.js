@@ -6,8 +6,8 @@ import {
 const initialState = {
   isLoading: false,
   isError: false,
-  posts: {},
-  data: []
+  allPosts: {},
+  singlePost: []
 };
 
 const post = (state=initialState, action) => {
@@ -22,8 +22,8 @@ const post = (state=initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        posts: {
-          ...state.posts,
+        allPosts: {
+          ...state.allPosts,
           [action.meta]: action.payload.data
         }
       };
@@ -31,7 +31,7 @@ const post = (state=initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        data: action.payload.data
+        singlePost: action.payload.data
       };
     case `${FETCH_POSTS}_ERROR`:
     case `${FETCH_POST}_ERROR`:

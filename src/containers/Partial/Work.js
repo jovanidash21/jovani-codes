@@ -40,11 +40,11 @@ class Work extends Component {
     return (
       <section className="work-section background-secondary">
         {
-          'work' in post.posts &&
-          post.posts.work.length > 0 &&
+          'work' in post.allPosts &&
+          post.allPosts.work.length > 0 &&
           <Slider {...slickOptions}>
             {
-              post.posts.work.map((postData, i) =>
+              post.allPosts.work.map((postData, i) =>
                 <div key={i} className="work-content">
                   <div className={"animated " +
                     (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
