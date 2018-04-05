@@ -91,8 +91,7 @@ class Contact extends Component {
                 <div className="social-media-menu">
                   <div className={"animated " + (isSectionActive ? 'rubberBand' : 'fadeOut')}>
                     {
-                      Object.keys(options.data).length > 0 &&
-                      options.data.constructor === Object &&
+                      'social_medias' in options.data.acf &&
                       options.data.acf.social_medias.length > 0 &&
                       options.data.acf.social_medias.map((socialMedia, i) => {
                         switch (socialMedia) {
