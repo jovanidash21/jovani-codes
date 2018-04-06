@@ -26,20 +26,18 @@ const WorkSlideItem = (props) => {
                   {ReactHtmlParser(props.description)}
                 </div>
               }
-              <div className="work-links">
+              <div className={"work-links animated " +
+                (props.isSlideActive ? 'zoomIn' : 'zoomOut')}
+              >
                 {
                   props.siteLink &&
-                  <div className={"flip-button white animated " +
-                    (props.isSlideActive ? 'zoomIn' : 'zoomOut')}
-                  >
+                  <div className="flip-button white">
                     <a href={props.siteLink} target="_blank" title="Visit the site" />
                   </div>
                 }
                 {
                   props.githubLink &&
-                  <div className={"flip-button black animated " +
-                    (props.isSlideActive ? 'zoomIn' : 'zoomOut')}
-                  >
+                  <div className="flip-button black">
                     <a href={props.githubLink} target="_blank" title="Go to GitHub" />
                   </div>
                 }
