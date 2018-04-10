@@ -161,12 +161,16 @@ section[class*=-section] {
 }
 .flip-button {
   $color: #fff;
-  $height: 60px;
+  $desktop-height: 60px;
+  $mobile-height: 45px;
   $width: 100%;
   @include perspective(1000px);
-  height: $height;
+  height: $mobile-height;
   position: relative;
   width: $width;
+  @include media-breakpoint-up(sm) {
+    height: $desktop-height;
+  }
   &.black {
     & > a {
       &:before,
@@ -199,7 +203,7 @@ section[class*=-section] {
   }
   & > a {
     @include transform-style(preserve-3d);
-    @include transform-translateZ(-($height / 2));
+    @include transform-translateZ(-($mobile-height / 2));
     @include transition(transform 0.25s);
     font-weight: bold;
     margin: 0;
@@ -218,30 +222,54 @@ section[class*=-section] {
       border-width: 5px;
       box-sizing: border-box;
       font-size: 17px;
-      height: $height;
+      height: $mobile-height;
       margin: 0;
       position: absolute;
       text-align: center;
       width: $width;
+      @include media-breakpoint-up(sm) {
+        height: $desktop-height;
+      }
     }
     &:before {
       @include transform(
         rotateY(0)
-        translateZ($height / 2)
+        translateZ($mobile-height / 2)
       );
+      @include media-breakpoint-up(sm) {
+        @include transform(
+          rotateY(0)
+          translateZ($desktop-height / 2)
+        );
+      }
     }
     &:after {
       @include transform(
         rotateX(90deg)
-        translateZ($height / 2)
+        translateZ($mobile-height / 2)
       );
+      @include media-breakpoint-up(sm) {
+        @include transform(
+          rotateX(90deg)
+          translateZ($desktop-height / 2)
+        );
+      }
       background-color: transparent;
     }
     &:hover {
       @include transform(
-        translateZ(-($height / 2))
+        translateZ(-($mobile-height / 2))
         rotateX(-90deg)
       )
+      @include media-breakpoint-up(sm) {
+        @include transform(
+        translateZ(-($desktop-height / 2))
+        rotateX(-90deg)
+        );
+      }
+    }
+    @include media-breakpoint-up(sm) {
+      @include transform-translateZ(-($desktop-height / 2));
     }
   }
 }
