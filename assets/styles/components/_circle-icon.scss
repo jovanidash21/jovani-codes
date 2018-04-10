@@ -1,29 +1,52 @@
 .circle-icon {
-  $bg-color: $color-punch;
+  $bg-color: transparent;
   $bg-color-hover: $color-treehouse;
+  $border-width: 5px;
   $color: $color-treehouse;
   $color-hover: $color-punch;
   $desktop-size: 140px;
   $mobile-size: 70px;
-  @include transition(all 0.3s ease);
+  $transition: all 0.2s ease-in-out;
   background-color: $bg-color;
-  border: 5px solid $bg-color-hover;
+  border: $border-width solid $bg-color-hover;
   border-radius: 50%;
   height: $mobile-size;
   justify-content: center;
+  position: relative;
   width: $mobile-size;
   @include media-breakpoint-up(sm) {
     height: $desktop-size;
     width: $desktop-size;
   }
+  &:before {
+    content: "";
+    @include transition($transition);
+    background: $bg-color-hover;
+    border-radius: 50%;
+    height: 0;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 0;
+  }
   &:hover {
-    background-color: $bg-color-hover;
+    &:before {
+      height: $mobile-size;
+      left: -$border-width;
+      top: -$border-width;
+      width: $mobile-size;
+      @include media-breakpoint-up(sm) {
+        height: $desktop-size;
+        width: $desktop-size;
+      }
+    }
     .fa {
       color: $color-hover;
     }
   }
   .fa {
-    @include transition(all 0.3s ease);
+    @include transition($transition);
     color: $color;
+    z-index: 1;
   }
 }
