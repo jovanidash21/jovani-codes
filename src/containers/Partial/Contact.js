@@ -39,46 +39,58 @@ class Contact extends Component {
               <div className="contact-details">
                 <Row>
                   <Col xs="12" sm="4">
-                    <div className="contact-info text-center">
-                      <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
-                        <CircleIcon
-                          icon="phone"
-                          link="tel:09123456789"
-                          title=""
-                        />
+                    {
+                      'contact_number' in options.data.acf &&
+                      options.data.acf.contact_number.length > 0 &&
+                      <div className="contact-info text-center">
+                        <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
+                          <CircleIcon
+                            icon="phone"
+                            link={'tel:' + options.data.acf.contact_number}
+                            title=""
+                          />
+                        </div>
+                        <a href={'tel:' + options.data.acf.contact_number} className="contact-link color-white">
+                          {options.data.acf.contact_number}
+                        </a>
                       </div>
-                      <a href="tel:09123456789" className="contact-link color-white">
-                        09123456789
-                      </a>
-                    </div>
+                    }
                   </Col>
                   <Col xs="12" sm="4">
-                    <div className="contact-info text-center">
-                      <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
-                        <CircleIcon
-                          icon="envelope"
-                          link="mailto:jovani@example.com"
-                          title=""
-                        />
+                    {
+                      'email' in options.data.acf &&
+                      options.data.acf.email.length > 0 &&
+                      <div className="contact-info text-center">
+                        <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
+                          <CircleIcon
+                            icon="envelope"
+                            link={'mailto:' + options.data.acf.email}
+                            title=""
+                          />
+                        </div>
+                        <a href={'mailto:' + options.data.acf.email} className="contact-link color-white">
+                          {options.data.acf.email}
+                        </a>
                       </div>
-                      <a href="mailto:jovani@example.com" className="contact-link color-white">
-                        jovani@example.com
-                      </a>
-                    </div>
+                    }
                   </Col>
                   <Col xs="12" sm="4">
-                    <div className="contact-info text-center">
-                      <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
-                        <CircleIcon icon="map-marker"
-                          link="https://www.google.com/maps"
-                          target="_blank"
-                          title=""
-                        />
+                    {
+                      'address' in options.data.acf &&
+                      options.data.acf.address.length > 0 &&
+                      <div className="contact-info text-center">
+                        <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
+                          <CircleIcon icon="map-marker"
+                            link="https://www.google.com/maps"
+                            target="_blank"
+                            title=""
+                          />
+                        </div>
+                        <a href="https://www.google.com/maps" className="contact-link color-white" target="_blank">
+                          {options.data.acf.address}
+                        </a>
                       </div>
-                      <a href="https://www.google.com/maps" className="contact-link color-white" target="_blank">
-                        Quezon City, Philippines
-                      </a>
-                    </div>
+                    }
                   </Col>
                 </Row>
               </div>
