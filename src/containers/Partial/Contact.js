@@ -78,15 +78,17 @@ class Contact extends Component {
                     {
                       'address' in options.data.acf &&
                       options.data.acf.address.length > 0 &&
+                      'google_maps_link' in options.data.acf &&
+                      options.data.acf.google_maps_link.length > 0 &&
                       <div className="contact-info text-center">
                         <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
                           <CircleIcon icon="map-marker"
-                            link="https://www.google.com/maps"
+                            link={options.data.acf.google_maps_link}
                             target="_blank"
                             title=""
                           />
                         </div>
-                        <a href="https://www.google.com/maps" className="contact-link color-white" target="_blank">
+                        <a href={options.data.acf.google_maps_link} className="contact-link color-white" target="_blank">
                           {options.data.acf.address}
                         </a>
                       </div>
