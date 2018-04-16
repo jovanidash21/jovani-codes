@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import VelocityTransitionGroup from 'velocity-react/velocity-transition-group';
 import ReactSVG from 'react-svg';
 import Typist from 'react-typist';
+import './styles.scss';
 
 class LogoSpeech extends Component {
   constructor(props) {

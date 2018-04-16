@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from 'react-fontawesome';
+import './styles.scss';
 
 const CircleIcon = (props) => {
   return (

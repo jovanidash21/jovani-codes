@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import VelocityTransitionGroup from 'velocity-react/velocity-transition-group';
 import Typist from 'react-typist';
+import './styles.scss';
 
 class FacePortrait extends Component {
   constructor(props) {

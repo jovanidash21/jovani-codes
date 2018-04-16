@@ -1,6 +1,7 @@
 import React from 'react';
 import Tilt from 'react-tilt';
 import ReactSVG from 'react-svg';
+import './styles.scss';
 
 const tiltOptions = {
   max: 20,
