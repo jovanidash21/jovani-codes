@@ -96,6 +96,7 @@ const webpackConfig = {
                   path.join(__dirname, '/bower_components/bootstrap/scss/_mixins.scss'),
                   path.join(__dirname, '/assets/styles/common/_variables.scss'),
                   path.join(__dirname, '/assets/styles/common/_mixins.scss'),
+                  path.join(__dirname, '/assets/styles/common/_keyframes.scss'),
                 ],
               },
             },
