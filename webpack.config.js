@@ -87,6 +87,18 @@ const webpackConfig = {
             {
               loader: 'sass-loader',
             },
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: [
+                  path.join(__dirname, '/bower_components/bootstrap/scss/_functions.scss'),
+                  path.join(__dirname, '/bower_components/bootstrap/scss/_variables.scss'),
+                  path.join(__dirname, '/bower_components/bootstrap/scss/_mixins.scss'),
+                  path.join(__dirname, '/assets/styles/common/_variables.scss'),
+                  path.join(__dirname, '/assets/styles/common/_mixins.scss'),
+                ],
+              },
+            },
           ],
           fallback: 'style-loader',
         }),
