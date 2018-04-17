@@ -1,4 +1,8 @@
 .footer-section {
+  background-image: url('#{$images}/footer-background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   .footer-logo {
     .badge-logo {
       @include media-breakpoint-up(sm) {

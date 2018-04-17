@@ -13,7 +13,8 @@ class Footer extends Component {
     const { isSectionActive } = this.props;
 
     return (
-      <section className="footer-section vertical-align-middle background-black">
+      <section className="footer-section vertical-align-middle">
+        <div className="dimmer" />
         <Container>
           <Row>
             <Col xs="12">
