@@ -33,13 +33,13 @@ const WorkSlideItem = (props) => {
                 {
                   props.siteLink &&
                   <div className="flip-button white">
-                    <a href={props.siteLink} target="_blank" title="Visit the site" />
+                    <a href={props.siteLink} target="_blank" title="Live Site" />
                   </div>
                 }
                 {
                   props.githubLink &&
                   <div className="flip-button black">
-                    <a href={props.githubLink} target="_blank" title="Go to GitHub" />
+                    <a href={props.githubLink} target="_blank" title="GitHub" />
                   </div>
                 }
               </div>
