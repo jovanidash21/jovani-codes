@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
+import ReactHtmlParser from 'react-html-parser';
 import mapDispatchToProps from '../../actions';
 import CircleIcon from '../../components/CircleIcon';
 import SocialMediaItem from '../../components/SocialMediaItem';
@@ -31,11 +32,15 @@ class Contact extends Component {
               >
                 Contact Me
               </h2>
-              <p className={"section-description color-dark-brown animated " +
-                (isSectionActive ? 'fadeIn' : 'fadeOut')}
-              >
-                Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              </p>
+              {
+                'contact_description' in options.data.acf &&
+                options.data.acf.contact_description.length > 0 &&
+                <p className={"section-description color-dark-brown animated " +
+                  (isSectionActive ? 'fadeIn' : 'fadeOut')}
+                >
+                  {ReactHtmlParser(options.data.acf.contact_description)}
+                </p>
+              }
               <div className="contact-details">
                 <Row>
                   <Col xs="12" sm="4">

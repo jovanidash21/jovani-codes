@@ -19,6 +19,26 @@
             "endpoint": 0
         },
         {
+            "key": "field_5ad898549bd39",
+            "label": "Contact Description",
+            "name": "contact_description",
+            "type": "textarea",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
             "key": "field_5acd64e1800ea",
             "label": "Contact Number",
             "name": "contact_number",
@@ -531,5 +551,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523533201
+    "modified": 1524144286
 }
