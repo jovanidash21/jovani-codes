@@ -9,7 +9,8 @@ class FacePortrait extends Component {
     super(props);
 
     this.state = {
-      showSpeechBubble: false
+      showSpeechBubble: false,
+      speechIndex: 0
     };
   }
   componentDidMount() {
@@ -25,9 +26,22 @@ class FacePortrait extends Component {
 
     this.setState({showSpeechBubble: !showSpeechBubble});
   }
+  handleSpeechBubbleIndex() {
+    const { speeches } = this.props;
+    const { speechIndex } = this.state;
+
+    if ( speeches.length -1 > speechIndex ) {
+      this.setState({speechIndex: this.state.speechIndex + 1});
+    } else {
+      this.setState({speechIndex: 0});
+    }
+  }
   render() {
-    const { speech } = this.props;
-    const { showSpeechBubble } = this.state;
+    const { speeches } = this.props;
+    const {
+      showSpeechBubble,
+      speechIndex
+    } = this.state;
 
     return (
       <div className="face-portrait">
@@ -35,9 +49,8 @@ class FacePortrait extends Component {
           {
             showSpeechBubble &&
             <div className="speech-bubble big right d-none d-md-block">
-              <Typist>
-                <Typist.Delay ms={500} />
-                {speech}
+              <Typist startDelay={500} onTypingDone={::this.handleSpeechBubbleIndex}>
+                {speeches[speechIndex]}
               </Typist>
             </div>
           }
@@ -49,12 +62,12 @@ class FacePortrait extends Component {
 }
 
 FacePortrait.propTypes = {
-  speech: PropTypes.string,
+  speeches: PropTypes.array,
   interval: PropTypes.number
 }
 
 FacePortrait.defaultProps = {
-  speech: '',
+  speeches: [],
   interval: 10000
 }
 

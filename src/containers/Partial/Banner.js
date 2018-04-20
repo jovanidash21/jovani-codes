@@ -15,6 +15,25 @@ import particlesJSConfig from './particles-js-config.json';
 class Banner extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      speeches: []
+    };
+  }
+  componentWillMount() {
+    ::this.handleSpeechBubbleTexts();
+  }
+  handleSpeechBubbleTexts() {
+    const { options } = this.props;
+    const speechesArray = [];
+
+    if ( 'speeches' in options.data.acf ) {
+      options.data.acf.speeches.map((speech, i) => {
+        speechesArray.push(speech.speech);
+      })
+
+      this.setState({speeches: speechesArray});
+    }
   }
   render() {
     const {
@@ -22,6 +41,7 @@ class Banner extends Component {
       page,
       isSectionActive
     } = this.props;
+    const { speeches } = this.state;
     const socialMediaItemOptions = {
       hexagonColor: "#e9e9e9",
       iconColor: "#353535"
@@ -49,7 +69,7 @@ class Banner extends Component {
         <div className="face-portrait-wrapper">
           <div className={"animated " + (isSectionActive ? 'slideInRight' : 'slideOutRight')}>
             <FacePortrait
-              speech="Hey! Remember the name!"
+              speeches={speeches}
               interval={11000}
             />
           </div>
