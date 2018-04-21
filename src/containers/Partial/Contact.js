@@ -19,7 +19,7 @@ class Contact extends Component {
     } = this.props;
     const socialMediaItemOptions = {
       hexagonColor: "#34231b",
-      iconColor: "#da4d2f"
+      iconColor: "#f26630"
     };
 
     return (
