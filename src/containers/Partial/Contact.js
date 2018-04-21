@@ -35,7 +35,7 @@ class Contact extends Component {
               {
                 'contact_description' in options.data.acf &&
                 options.data.acf.contact_description.length > 0 &&
-                <p className={"section-description color-dark-brown animated " +
+                <p className={"section-description color-white animated " +
                   (isSectionActive ? 'fadeIn' : 'fadeOut')}
                 >
                   {ReactHtmlParser(options.data.acf.contact_description)}
