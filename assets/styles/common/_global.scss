@@ -21,7 +21,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   @include selection {
-    background: $color-electric-violet;
+    background-color: $color-electric-violet;
     color: #fff;
   }
 }
