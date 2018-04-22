@@ -49,6 +49,7 @@ class Banner extends Component {
 
     return (
       <section className="banner-section">
+        <div className="dimmer" />
         <Particles
           params={particlesJSConfig}
           className="particles"
