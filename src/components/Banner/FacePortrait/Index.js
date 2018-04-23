@@ -47,6 +47,7 @@ class FacePortrait extends Component {
       <div className="face-portrait">
         <VelocityTransitionGroup enter={{animation: "fadeIn"}} leave={{animation: "fadeOut"}}>
           {
+            speeches.length > 0 &&
             showSpeechBubble &&
             <div className="speech-bubble big right d-none d-md-block">
               <Typist startDelay={500} onTypingDone={::this.handleSpeechBubbleIndex}>
