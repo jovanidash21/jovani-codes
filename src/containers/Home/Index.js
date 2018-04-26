@@ -45,12 +45,8 @@ class Home extends Component {
         'contact',
         'footer'
       ],
-      scrollBar: false,
-      navigation: true,
       navigationClass: 'full-page-navigation',
       navigationAnchorClass: 'full-page-navigation-anchor',
-      verticalAlign: false,
-      arrowNavigation: true,
       scrollCallback: (states) => this.setState({activeSection: states.activeSection})
     };
 
