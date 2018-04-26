@@ -1,10 +1,13 @@
 .scroll-down-icon {
+  $animation-duration: 1.5s;
+  $animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+  $animation-iteration-count: infinite;
   $mouse-color: $color-red-violet;
   font-size: 14px;
   text-align: center;
   text-transform: lowercase;
   .mouse {
-    @include animation(mouse 1.5s ease infinite);
+    @include animation(mouse $animation-duration $animation-timing-function $animation-iteration-count);
     border: 3px solid $mouse-color;
     border-radius: 15px;
   	display: block;
@@ -29,7 +32,7 @@
       width: 4px;
     }
     &:after {
-      @include animation(scroll-wheel 1.5s ease-in-out infinite);
+      @include animation(scroll-wheel $animation-duration $animation-timing-function $animation-iteration-count);
       @include transform-translateX(-50%);
       background-color: $mouse-color;
       border-radius: 50%;
