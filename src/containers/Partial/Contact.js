@@ -108,7 +108,7 @@ class Contact extends Component {
                   Let&#39;s Keep in Touch
                 </h2>
                 <div className="social-media-menu">
-                  <div className={"animated " + (isSectionActive ? 'rubberBand' : 'fadeOut')}>
+                  <div className={"animated " + (isSectionActive ? 'flipInX' : 'flipOutX')}>
                     {
                       'social_medias' in options.data.acf &&
                       options.data.acf.social_medias.length > 0 &&

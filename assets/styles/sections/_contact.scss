@@ -38,6 +38,9 @@
     .social-media-menu {
       margin: 0 auto;
       width: 230px;
+      .animated {
+        @include animation-delay(0.5s);
+      }
       .social-media-item {
         display: inline-block;
         margin: 3px;
