@@ -33,6 +33,12 @@
 @mixin animation($value) {
   @include css3-prefix('animation', $value);
 }
+/* Animation Delay
+ * @param {time|initial|inherit} $value - Value
+ */
+@mixin animation-delay($value) {
+  @include css3-prefix('animation-delay', $value);
+}
 /* Clip Path
  * @param {none|clip-source|basic-shape|geometry-box} $value - Value
  */
