@@ -44,7 +44,7 @@ class Banner extends Component {
     const { speeches } = this.state;
     const socialMediaItemOptions = {
       hexagonColor: "#e9e9e9",
-      iconColor: "#353535"
+      iconColor: "#000"
     };
 
     return (
