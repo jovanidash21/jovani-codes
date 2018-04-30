@@ -30,7 +30,7 @@
     padding: 7px;
     position: relative;
     @include media-breakpoint-up(sm) {
-      padding: 14px;
+      padding: 11px;
     }
     &:before {
       content: "";
@@ -97,7 +97,7 @@
       position: relative;
       @include media-breakpoint-up(sm) {
         margin: 3px;
-        padding: 14px;
+        padding: 11px;
       }
       &:before {
         content: "";
