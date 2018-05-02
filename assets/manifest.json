@@ -24,8 +24,7 @@
     "vendor.js": {
       "bower": [
         "jquery",
-        "PACE",
-        "wow"
+        "PACE"
       ]
     }
   }
