@@ -19,7 +19,7 @@
     @include transform-scale(1.2);
     z-index: 1;
     .hexagon-vertical {
-      .fa {
+      svg {
         color: $color-hover !important;
       }
     }
@@ -50,7 +50,7 @@
     text-align: center;
     visibility: visible;
     width: 100%;
-    .fa {
+    svg {
       @include transition(all 0.3s ease);
       font-size: 21px;
       text-align: unset;

@@ -60,26 +60,22 @@
     }
   }
 }
-.slick-next,
-.slick-prev {
+.slick-arrow {
   height: auto;
   width: auto;
   &:before {
+    content: "";
+  }
+  svg {
     @include opacity(0.5);
     @include transition(all 0.2s ease-in);
     color: #000;
-    font-family: $font-family-font-awesome;
     font-size: 100px;
   }
-}
-.slick-next {
-  &:before {
-    content:  "\f105";
-  }
-}
-.slick-prev {
-  &:before {
-    content:  "\f104";
+  &:hover {
+    svg {
+      @include opacity(1);
+    }
   }
 }
 

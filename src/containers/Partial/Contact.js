@@ -119,7 +119,7 @@ class Contact extends Component {
                               <SocialMediaItem
                                 key={i}
                                 socialMedia="facebook"
-                                icon="facebook"
+                                icon="facebook-f"
                                 link={options.data.acf.facebook_url}
                                 title={options.data.acf.facebook_message}
                                 {...socialMediaItemOptions}
@@ -155,7 +155,7 @@ class Contact extends Component {
                               <SocialMediaItem
                                 key={i}
                                 socialMedia="linkedin"
-                                icon="linkedin"
+                                icon="linkedin-in"
                                 link={options.data.acf.linkedin_url}
                                 title={options.data.acf.linkedin_message}
                                 {...socialMediaItemOptions}
@@ -167,7 +167,7 @@ class Contact extends Component {
                               <SocialMediaItem
                                 key={i}
                                 socialMedia="google-plus"
-                                icon="google-plus"
+                                icon="google-plus-g"
                                 link={options.data.acf.google_plus_url}
                                 title={options.data.acf.google_plus_message}
                                 {...socialMediaItemOptions}
@@ -179,7 +179,7 @@ class Contact extends Component {
                               <SocialMediaItem
                                 key={i}
                                 socialMedia="youtube"
-                                icon="youtube-play"
+                                icon="youtube"
                                 link={options.data.acf.youtube_url}
                                 title={options.data.acf.youtube_message}
                                 {...socialMediaItemOptions}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from 'react-fontawesome';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import './styles.scss';
 
 const CircleIcon = (props) => {
@@ -11,10 +11,7 @@ const CircleIcon = (props) => {
       target={props.target}
       title={props.title}
     >
-      <FontAwesome
-        name={props.icon}
-        size="4x"
-      />
+      <FontAwesomeIcon icon={props.icon} size="4x" />
     </a>
   )
 }

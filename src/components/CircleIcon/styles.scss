@@ -40,11 +40,11 @@
         width: $desktop-size;
       }
     }
-    .fa {
+    svg {
       color: $color-hover;
     }
   }
-  .fa {
+  svg {
     @include transition($transition);
     color: $color;
     z-index: 1;

@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import Slider from 'react-slick';
 import mapDispatchToProps from '../../actions';
+import PrevArrow from '../../components/PrevArrow';
+import NextArrow from '../../components/NextArrow';
 import WorkSlideItem from '../../components/Work/WorkSlideItem';
 
 class Work extends Component {
@@ -34,6 +36,8 @@ class Work extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      prevArrow: <PrevArrow />,
+      nextArrow: <NextArrow />,
       afterChange: ::this.handleAfterChange
     };
 

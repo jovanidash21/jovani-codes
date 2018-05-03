@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from 'react-fontawesome';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import './styles.scss';
 
 const SocialMediaItem = (props) => {
@@ -10,10 +10,10 @@ const SocialMediaItem = (props) => {
         <div className="hexagon-anti-diagonal">
           <div className="hexagon-main-diagonal">
             <div className="hexagon-vertical" style={{backgroundColor: props.hexagonColor}}>
-              <FontAwesome
-                name={props.icon}
+              <FontAwesomeIcon
+                icon={["fab", props.icon]}
                 size="2x"
-                style={{color: props.iconColor}}
+                color={props.iconColor}
               />
             </div>
            </div>

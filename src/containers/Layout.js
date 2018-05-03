@@ -46,7 +46,7 @@ const mapStateToProps = (state) => {
   };
 }
 
-Layout.propTypes={
+Layout.propTypes = {
   component: PropTypes.func.isRequired
 }
 
