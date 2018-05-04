@@ -7,8 +7,6 @@ import history from './history';
 import routes from './routes';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
-import faAngleLeft from '@fortawesome/fontawesome-free-solid/faAngleLeft';
-import faAngleRight from '@fortawesome/fontawesome-free-solid/faAngleRight';
 import faPhone from '@fortawesome/fontawesome-free-solid/faPhone';
 import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
 import faMapMarker from '@fortawesome/fontawesome-free-solid/faMapMarker';
@@ -18,8 +16,6 @@ import 'velocity-animate/velocity.ui';
 
 fontawesome.library.add(
   brands,
-  faAngleLeft,
-  faAngleRight,
   faPhone,
   faEnvelope,
   faMapMarker

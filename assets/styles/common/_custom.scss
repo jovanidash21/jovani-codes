@@ -70,7 +70,8 @@
     @include opacity(0.5);
     @include transition(all 0.2s ease-in);
     color: #000;
-    font-size: 100px;
+    height: 70px;
+    width: auto;
   }
   &:hover {
     svg {

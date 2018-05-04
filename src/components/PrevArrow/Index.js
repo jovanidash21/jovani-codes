@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import ReactSVG from 'react-svg';
 
 const PrevArrow = (props) => {
   return (
@@ -9,10 +9,7 @@ const PrevArrow = (props) => {
       style={{...props.style}}
       onClick={props.onClick}
     >
-      <FontAwesomeIcon
-        icon="angle-left"
-        size="2x"
-      />
+      <ReactSVG path={JOVANI_CODES.images + '/icons/prev-arrow.svg'} />
     </div>
   )
 }
