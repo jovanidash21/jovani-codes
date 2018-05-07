@@ -1,25 +1,4 @@
-/* Keyframes
- * @param {animation-name} $animation-name - Animation Name
- */
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
-    @content;
-  }
-  @-moz-keyframes #{$animation-name} {
-    @content;
-  }
-  @-ms-keyframes #{$animation-name} {
-    @content;
-  }
-  @-o-keyframes #{$animation-name} {
-    @content;
-  }
-  @keyframes #{$animation-name} {
-    @content;
-  }
-}
-
-@include keyframes(mouse) {
+@keyframes mouse {
   0% {
     margin-bottom: 15px;
 	}
@@ -31,7 +10,7 @@
   }
 }
 
-@include keyframes(scroll-wheel) {
+@keyframes scroll-wheel {
   0% {
     opacity: 1;
     top: 22%;
