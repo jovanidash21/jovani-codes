@@ -1,16 +1,16 @@
 .work-section {
   .work-content {
-    @include align-items(center);
-    @include display-flex();
+    align-items: center;
+    display: flex;
     &:nth-child(even) {
       .work-image-wrapper {
         @include media-breakpoint-up(md) {
-          @include order(2);
+          order: 2;
         }
       }
     }
     .work-links {
-      @include display-flex();
+      display: flex;
     }
   }
   .section-title {

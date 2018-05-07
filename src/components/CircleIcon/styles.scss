@@ -20,13 +20,13 @@
   }
   &:before {
     content: "";
-    @include transition($transition);
     background: $bg-color-hover;
     border-radius: 50%;
     height: 0;
     left: 50%;
     position: absolute;
     top: 50%;
+    transition: $transition;
     width: 0;
   }
   &:hover {
@@ -45,8 +45,8 @@
     }
   }
   svg {
-    @include transition($transition);
     color: $color;
+    transition: $transition;
     z-index: 1;
   }
 }

@@ -20,7 +20,7 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
-  @include selection {
+  ::selection {
     background-color: $color-electric-violet;
     color: #fff;
   }
@@ -89,8 +89,8 @@ section[class*=-section] {
   color: #fff;
 }
 .vertical-align-middle {
-  @include display-flex();
-  @include align-items(center);
+  align-items: center;
+  display: flex;
 }
 .section-title,
 .section-description {

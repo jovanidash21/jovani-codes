@@ -8,9 +8,9 @@
       margin-bottom: 0;
     }
     .contact-info {
+      align-items: center;
+      display: flex;
       margin: 5px 0;
-      @include display-flex();
-      @include align-items(center);
       @include media-breakpoint-up(sm) {
         display: block;
         margin: 40px 0;
@@ -39,7 +39,7 @@
       margin: 0 auto;
       width: 230px;
       .animated {
-        @include animation-delay(0.5s);
+        animation-delay: 0.5s;
       }
       .social-media-item {
         display: inline-block;
@@ -65,15 +65,15 @@
     }
   }
   .logo-speech-wrapper {
-    @include transform-translateY(-55%);
-    @include transition(all 0.4s ease-in);
     bottom: auto;
     position: absolute;
     right: 121px;
     top: 100%;
+    transform: translateY(-55%);
+    transition: all 0.4s ease-in;
     z-index: 2;
     &:hover {
-      @include transform-translateY(-100%);
+      transform: translateY(-100%);
     }
   }
 }

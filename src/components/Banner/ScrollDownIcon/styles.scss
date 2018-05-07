@@ -7,7 +7,7 @@
   text-align: center;
   text-transform: lowercase;
   .mouse {
-    @include animation(mouse $animation-duration $animation-timing-function $animation-iteration-count);
+    animation: 'mouse' $animation-duration $animation-timing-function $animation-iteration-count;
     border: 2px solid $mouse-color;
     border-radius: 15px;
   	display: block;
@@ -24,19 +24,19 @@
       position: absolute;
     }
     &:before {
-      @include transform-translate(-50%, -50%);
       background-color: rgba($mouse-color, 0.4);
       border-radius: 2px;
       height: 55%;
       top: 50%;
+      transform: translate(-50%, -50%);
       width: 2px;
     }
     &:after {
-      @include animation(scroll-wheel $animation-duration $animation-timing-function $animation-iteration-count);
-      @include transform-translateX(-50%);
+      animation: 'scroll-wheel' $animation-duration $animation-timing-function $animation-iteration-count;
       background-color: $mouse-color;
       border-radius: 3px;
       height: 10px;
+      transform: translateX(-50%);
       width: 6px;
     }
   }

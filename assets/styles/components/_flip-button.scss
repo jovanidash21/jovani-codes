@@ -3,8 +3,8 @@
   $desktop-height: 60px;
   $mobile-height: 45px;
   $width: 100%;
-  @include perspective(1000px);
   height: $mobile-height;
+  perspective: 1000px;
   position: relative;
   width: $width;
   @include media-breakpoint-up(sm) {
@@ -41,9 +41,6 @@
     }
   }
   & > a {
-    @include transform-style(preserve-3d);
-    @include transform-translateZ(-($mobile-height / 2));
-    @include transition(transform 0.25s);
     font-weight: bold;
     margin: 0;
     padding: 0;
@@ -51,17 +48,20 @@
     height: 100%;
     position: absolute;
     text-transform: uppercase;
+    transform-style: preserve-3d;
+    transform: translateZ(-($mobile-height / 2));
+    transition: transform 0.25s;
     &:before,
     &:after {
       content: attr(title);
-      @include display-flex;
-      @include align-items(center);
-      @include justify-content(center);
+      align-items: center;
       border-style: solid;
       border-width: 5px;
       box-sizing: border-box;
+      display: flex;
       font-size: 17px;
       height: $mobile-height;
+      justify-content: center;
       margin: 0;
       position: absolute;
       text-align: center;
@@ -71,44 +71,26 @@
       }
     }
     &:before {
-      @include transform(
-        rotateY(0)
-        translateZ($mobile-height / 2)
-      );
+      transform: rotateY(0) translateZ($mobile-height / 2);
       @include media-breakpoint-up(sm) {
-        @include transform(
-          rotateY(0)
-          translateZ($desktop-height / 2)
-        );
+        transform: rotateY(0) translateZ($desktop-height / 2);
       }
     }
     &:after {
-      @include transform(
-        rotateX(90deg)
-        translateZ($mobile-height / 2)
-      );
+      transform: rotateX(90deg) translateZ($mobile-height / 2);
       @include media-breakpoint-up(sm) {
-        @include transform(
-          rotateX(90deg)
-          translateZ($desktop-height / 2)
-        );
+        transform: rotateX(90deg) translateZ($desktop-height / 2);
       }
       background-color: transparent;
     }
     &:hover {
-      @include transform(
-        translateZ(-($mobile-height / 2))
-        rotateX(-90deg)
-      )
+      transform: translateZ(-($mobile-height / 2)) rotateX(-90deg);
       @include media-breakpoint-up(sm) {
-        @include transform(
-        translateZ(-($desktop-height / 2))
-        rotateX(-90deg)
-        );
+        transform: translateZ(-($desktop-height / 2)) rotateX(-90deg);
       }
     }
     @include media-breakpoint-up(sm) {
-      @include transform-translateZ(-($desktop-height / 2));
+      transform: translateZ(-($desktop-height / 2));
     }
   }
 }

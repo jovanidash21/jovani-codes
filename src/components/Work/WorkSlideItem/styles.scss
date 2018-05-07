@@ -17,9 +17,9 @@
   }
   .work-description-wrapper {
     .work-description {
-      @include display-flex();
-      @include flex-direction(column);
-      @include justify-content(center);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       height: 100%;
     }
   }
