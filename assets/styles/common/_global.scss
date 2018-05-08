@@ -101,12 +101,13 @@ section[class*=-section] {
 }
 .section-title {
   font-size: 4rem;
+  text-shadow: 3px 3px 0 #000;
 }
 .section-description {
   font-size: 1.5rem;
 }
 .dimmer {
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, .6);
   bottom: 0;
   left: 0;
   position: absolute;
