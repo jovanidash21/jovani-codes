@@ -1,0 +1,45 @@
+.not-found-section {
+  background-image: url('#{$images}/polygon-abstract-background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 100vh !important;
+  .admin-bar & {
+    height: calc(100vh - #{$wp-admin-bar-height-desktop}) !important;
+    @media (max-width: $wp-admin-screen-md-max) {
+      height: calc(100vh - #{$wp-admin-bar-height-mobile}) !important;
+    }
+  }
+  .main-logo-wrapper {
+    left: 50%;
+    position: absolute;
+    top: 21px;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  .not-found-description {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    @include media-breakpoint-up(md) {
+      white-space: nowrap;
+    }
+    h2 {
+      font-size: 100px;
+      font-style: italic;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      text-shadow: 4px 2px 1px $color-secondary;
+    }
+    p {
+      background-color: $color-tertiary;
+      color: #fff;
+      font-size: 30px;
+      line-height: 30px;
+      padding: 8px;
+    }
+  }
+}

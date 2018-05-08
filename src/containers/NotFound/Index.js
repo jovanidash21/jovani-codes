@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Alert } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import Head from '../../components/Head';
+import FaceLogo from '../../components/FaceLogo';
 
 class NotFound extends Component {
   constructor(props) {
@@ -18,16 +19,22 @@ class NotFound extends Component {
     const { page } = this.props;
 
     return (
-      <div>
+      <section class="not-found-section">
         {::this.handleHeadData('Page Not Found')}
-        <div className="container">
-          <Alert className="text-center" color="danger">
-            <h2 className="display-3">
-              Sorry, but the page you are looking for does not exist.
-            </h2>
-          </Alert>
+        <div className="dimmer" />
+        <div className="main-logo-wrapper">
+          <Link to="/">
+            <FaceLogo
+              className="main-logo"
+              width="120px"
+            />
+          </Link>
         </div>
-      </div>
+        <div className="not-found-description text-center">
+          <h2>Oops!</h2>
+          <p>Sorry, but the page you are looking for does not exist.</p>
+        </div>
+      </section>
     )
   }
 }
