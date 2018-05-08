@@ -50,17 +50,19 @@ class Work extends Component {
             {
               post.allPosts.work.map((postData, i) =>
                 <div key={i} className="work-content">
-                  <div className={"animated " +
-                    (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
-                  >
-                    <WorkSlideItem
-                      title={postData.title.rendered}
-                      image={postData.acf.preview_image.url}
-                      description={postData.acf.description}
-                      siteLink={postData.acf.site_url}
-                      githubLink={postData.acf.github_url}
-                      isSlideActive={activeSlide === i}
-                    />
+                  <div class="work-slide-item-wrapper">
+                    <div className={"animated " +
+                      (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
+                    >
+                      <WorkSlideItem
+                        title={postData.title.rendered}
+                        image={postData.acf.preview_image.url}
+                        description={postData.acf.description}
+                        siteLink={postData.acf.site_url}
+                        githubLink={postData.acf.github_url}
+                        isSlideActive={activeSlide === i}
+                      />
+                    </div>
                   </div>
                 </div>
               )

@@ -1,11 +1,4 @@
 .work-slide-item {
-  margin: 0 20px;
-  @include media-breakpoint-up(sm) {
-    margin: 0 60px;
-  }
-  @include media-breakpoint-up(md) {
-    margin: 0 130px;
-  }
   .work-image-wrapper {
     .work-image {
       height: auto;
