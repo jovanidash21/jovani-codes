@@ -31,8 +31,6 @@ class Work extends Component {
     } = this.props;
     const { activeSlide } = this.state;
     const slickOptions = {
-      dots: true,
-      infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -46,7 +44,13 @@ class Work extends Component {
         {
           'work' in post.allPosts &&
           post.allPosts.work.length > 0 &&
-          <Slider {...slickOptions}>
+          <Slider
+            {...slickOptions}
+            swipe={post.allPosts.work.length > 1}
+            infinite={post.allPosts.work.length > 1}
+            dots={post.allPosts.work.length > 1}
+            arrows={post.allPosts.work.length > 1}
+          >
             {
               post.allPosts.work.map((postData, i) =>
                 <div key={i} className="work-content">
