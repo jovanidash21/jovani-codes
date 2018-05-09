@@ -13,7 +13,7 @@ const FullName = (props) => {
     <div className="full-name">
       <Tilt className="Tilt" options={{tiltOptions}}>
         <ReactSVG
-          path={JOVANI_CODES.images + '/full-name.svg'}
+          path={JOVANI_CODES.images + '/logos/full-name.svg'}
           className="retro"
         />
       </Tilt>

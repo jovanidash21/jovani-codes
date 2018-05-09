@@ -56,7 +56,7 @@ class FacePortrait extends Component {
             </div>
           }
         </VelocityTransitionGroup>
-        <img src={JOVANI_CODES.images + '/low-poly-portrait.png'} className="low-poly" />
+        <img src={JOVANI_CODES.images + '/logos/low-poly-portrait.png'} className="low-poly" />
       </div>
     )
   }
