@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Container, Row, Col } from 'reactstrap';
 import Slider from 'react-slick';
 import mapDispatchToProps from '../../actions';
 import PrevArrow from '../../components/PrevArrow';
