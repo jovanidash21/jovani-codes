@@ -21,10 +21,8 @@ class Layout extends Component {
 
     if (!options.isLoading && options.isSuccess) {
       return (
-        <div>
-          <div className="main-content">
-            <Content {...matchProps} />
-          </div>
+        <div className="main-content">
+          <Content {...matchProps} />
         </div>
       )
     } else {
