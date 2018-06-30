@@ -53,7 +53,7 @@ class Work extends Component {
             {
               post.allPosts.work.map((postData, i) =>
                 <div key={i} className="work-content">
-                  <div class="work-slide-item-wrapper">
+                  <div className="work-slide-item-wrapper">
                     <div className={"animated " +
                       (isSectionActive ? 'fadeInUpBig' : 'fadeOutDownBig')}
                     >
