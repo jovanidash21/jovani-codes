@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
 import mapDispatchToProps from '../../actions';
-import PrevArrow from '../../components/PrevArrow';
-import NextArrow from '../../components/NextArrow';
+import Arrow from '../../components/Arrow';
 import WorkSlideItem from '../../components/Work/WorkSlideItem';
 
 class Work extends Component {
@@ -33,8 +32,8 @@ class Work extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      prevArrow: <PrevArrow />,
-      nextArrow: <NextArrow />,
+      prevArrow: <Arrow direction="left" />,
+      nextArrow: <Arrow direction="right" />,
       afterChange: ::this.handleAfterChange
     };
 
