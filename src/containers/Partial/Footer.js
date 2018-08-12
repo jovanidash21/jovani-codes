@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
-import BadgeLogo from '../../components/BadgeLogo';
+import { BadgeLogo } from '../../components/BadgeLogo';
 import mapDispatchToProps from '../../actions';
 
 class Footer extends Component {

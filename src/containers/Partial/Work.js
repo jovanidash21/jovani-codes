@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
 import mapDispatchToProps from '../../actions';
-import Arrow from '../../components/Arrow';
-import WorkSlideItem from '../../components/Work/WorkSlideItem';
+import { Arrow } from '../../components/Arrow';
+import { WorkSlideItem } from '../../components/Work';
 
 class Work extends Component {
   constructor(props) {

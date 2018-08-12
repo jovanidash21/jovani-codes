@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 import Particles from 'react-particles-js';
 import ReactSVG from 'react-svg';
 import mapDispatchToProps from '../../actions';
-import FaceLogo from '../../components/FaceLogo';
-import FullName from '../../components/Banner/FullName';
-import FacePortrait from '../../components/Banner/FacePortrait';
-import SocialMediaItem from '../../components/SocialMediaItem';
-import ScrollDownIcon from '../../components/Banner/ScrollDownIcon';
+import { FaceLogo } from '../../components/FaceLogo';
+import {
+  FullName,
+  FacePortrait,
+  ScrollDownIcon
+} from '../../components/Banner';
+import { SocialMediaItem } from '../../components/SocialMediaItem';
 import particlesJSConfig from './particles-js-config.json';
 
 class Banner extends Component {

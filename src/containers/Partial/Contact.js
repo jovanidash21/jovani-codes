@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import ReactHtmlParser from 'react-html-parser';
 import mapDispatchToProps from '../../actions';
-import CircleIcon from '../../components/CircleIcon';
-import SocialMediaItem from '../../components/SocialMediaItem';
-import LogoSpeech from '../../components/LogoSpeech';
+import { CircleIcon } from '../../components/CircleIcon';
+import { SocialMediaItem } from '../../components/SocialMediaItem';
+import { LogoSpeech } from '../../components/LogoSpeech';
 
 class Contact extends Component {
   constructor(props) {

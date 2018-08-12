@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch } from 'react-router';
 import Layout from '../containers/Layout';
-import Home from '../containers/Home';
-import NotFound from '../containers/NotFound';
+import { Home } from '../containers/Home';
+import { NotFound } from '../containers/NotFound';
 
 const routes = (
   <div>
