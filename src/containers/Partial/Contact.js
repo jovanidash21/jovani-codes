@@ -33,6 +33,7 @@ class Contact extends Component {
                 Contact Me
               </h2>
               {
+                options.data.acf &&
                 'contact_description' in options.data.acf &&
                 options.data.acf.contact_description.length > 0 &&
                 <p className={"section-description color-white animated " +
@@ -45,6 +46,7 @@ class Contact extends Component {
                 <Row>
                   <Col xs="12" sm="4">
                     {
+                      options.data.acf &&
                       'contact_number' in options.data.acf &&
                       options.data.acf.contact_number.length > 0 &&
                       <div className="contact-info text-center">
@@ -63,6 +65,7 @@ class Contact extends Component {
                   </Col>
                   <Col xs="12" sm="4">
                     {
+                      options.data.acf &&
                       'email' in options.data.acf &&
                       options.data.acf.email.length > 0 &&
                       <div className="contact-info text-center">
@@ -81,6 +84,7 @@ class Contact extends Component {
                   </Col>
                   <Col xs="12" sm="4">
                     {
+                      options.data.acf &&
                       'address' in options.data.acf &&
                       options.data.acf.address.length > 0 &&
                       'google_maps_link' in options.data.acf &&
@@ -110,6 +114,7 @@ class Contact extends Component {
                 <div className="social-media-menu">
                   <div className={"animated " + (isSectionActive ? 'flipInX' : 'flipOutX')}>
                     {
+                      options.data.acf &&
                       'social_medias' in options.data.acf &&
                       options.data.acf.social_medias.length > 0 &&
                       options.data.acf.social_medias.map((socialMedia, i) => {

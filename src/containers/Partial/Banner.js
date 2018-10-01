@@ -28,7 +28,11 @@ class Banner extends Component {
     const { options } = this.props;
     const speechesArray = [];
 
-    if ( 'speeches' in options.data.acf ) {
+    if (
+      options.data.acf &&
+      'speeches' in options.data.acf &&
+      options.data.acf.speeches.length > 0
+    ) {
       options.data.acf.speeches.map((speech, i) => {
         speechesArray.push(speech.speech);
       })
@@ -79,6 +83,7 @@ class Banner extends Component {
         <div className="social-media-menu d-none d-md-block">
           <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
             {
+              options.data.acf &&
               'social_medias' in options.data.acf &&
               options.data.acf.social_medias.length > 0 &&
               options.data.acf.social_medias.map((socialMedia, i) => {
