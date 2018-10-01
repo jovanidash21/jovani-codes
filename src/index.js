@@ -5,20 +5,18 @@ import store from './store';
 import { ConnectedRouter } from 'react-router-redux';
 import history from './history';
 import routes from './routes';
-import fontawesome from '@fortawesome/fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
-import faPhone from '@fortawesome/fontawesome-free-solid/faPhone';
-import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
-import faMapMarker from '@fortawesome/fontawesome-free-solid/faMapMarker';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import 'react-typist/dist/Typist.css';
 import 'velocity-animate';
 import 'velocity-animate/velocity.ui';
 
-fontawesome.library.add(
-  brands,
-  faPhone,
-  faEnvelope,
-  faMapMarker
+library.add(
+  fab,
+  far,
+  fas
 );
 
 render(
