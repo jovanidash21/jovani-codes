@@ -9,7 +9,7 @@ const Arrow = (props) => {
       style={{...props.style}}
       onClick={props.onClick}
     >
-      <ReactSVG path={JOVANI_CODES.images + '/icons/arrows/' + props.direction + '-arrow.svg'} />
+      <ReactSVG src={JOVANI_CODES.images + '/icons/arrows/' + props.direction + '-arrow.svg'} />
     </div>
   )
 }

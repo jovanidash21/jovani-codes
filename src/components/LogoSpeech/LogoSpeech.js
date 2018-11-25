@@ -45,9 +45,9 @@ class LogoSpeech extends Component {
           }
         </VelocityTransitionGroup>
         <ReactSVG
-          path={JOVANI_CODES.images + '/logos/face-logo.svg'}
-          wrapperClassName="speaker"
-          className="face-logo"
+          className="speaker"
+          src={JOVANI_CODES.images + '/logos/face-logo.svg'}
+          svgClassName="face-logo"
         />
       </div>
     )

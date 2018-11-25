@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Particles from 'react-particles-js';
-import ReactSVG from 'react-svg';
 import mapDispatchToProps from '../../actions';
 import { FaceLogo } from '../../components/FaceLogo';
 import {

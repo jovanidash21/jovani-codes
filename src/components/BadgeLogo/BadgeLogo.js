@@ -5,10 +5,10 @@ import ReactSVG from 'react-svg';
 const BadgeLogo = (props) => {
   return (
     <ReactSVG
-      path={JOVANI_CODES.images + '/logos/badge-logo.svg'}
-      wrapperClassName={props.className}
-      className="badge-logo"
-      style={{height: props.height, width: props.width}}
+      className={props.className}
+      src={JOVANI_CODES.images + '/logos/badge-logo.svg'}
+      svgClassName="badge-logo"
+      svgStyle={{height: props.height, width: props.width}}
     />
   )
 }
