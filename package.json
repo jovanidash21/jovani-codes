@@ -92,7 +92,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.6",
     "react-slick": "^0.18.1",
-    "react-svg": "^2.2.10",
+    "react-svg": "^7.1.1",
     "react-tilt": "^0.1.4",
     "react-typist": "^2.0.4",
     "reactstrap": "^6.5.0",
