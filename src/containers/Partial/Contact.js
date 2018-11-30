@@ -53,11 +53,11 @@ class Contact extends Component {
                         <div className={"animated " + (isSectionActive ? 'zoomIn' : 'zoomOut')}>
                           <CircleIcon
                             icon="phone"
-                            link={'tel:' + options.data.acf.contact_number}
+                            link={'tel:' + options.data.acf.contact_number.replace(/\s/g, '')}
                             title=""
                           />
                         </div>
-                        <a href={'tel:' + options.data.acf.contact_number} className="contact-link color-white">
+                        <a href={'tel:' + options.data.acf.contact_number.replace(/\s/g, '')} className="contact-link color-white">
                           {options.data.acf.contact_number}
                         </a>
                       </div>
