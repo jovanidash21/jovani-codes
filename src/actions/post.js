@@ -8,7 +8,7 @@ export function fetchPosts(postType) {
   return dispatch => {
     return dispatch({
       type: FETCH_POSTS,
-      payload: axios.get(`/wp-json/wp/v2/${postType}`),
+      payload: axios.get(JOVANI_CODES.siteURL + '/wp-json/wp/v2/' + postType),
       meta: postType
     })
     .catch((error) => {
@@ -23,7 +23,7 @@ export function fetchPost(postType, slug) {
   return dispatch => {
     return dispatch({
       type: FETCH_POST,
-      payload: axios.get(`/wp-json/wp/v2/${postType}/?slug=${slug}`)
+      payload: axios.get(JOVANI_CODES.siteURL + '/wp-json/wp/v2/' + postType + '/?slug=' + slug)
     })
     .catch((error) => {
       if (error instanceof Error) {

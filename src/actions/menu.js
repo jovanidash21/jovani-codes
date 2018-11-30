@@ -5,7 +5,7 @@ export function fetchMenu(location) {
   return dispatch => {
     return dispatch({
       type: FETCH_MENU,
-      payload: axios.get(`/wp-json/wp/v2/menus/${location}`),
+      payload: axios.get(JOVANI_CODES.siteURL + '/wp-json/wp/v2/menus/' + location),
       meta: location
     })
     .catch((error) => {
