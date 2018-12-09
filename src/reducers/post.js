@@ -35,7 +35,10 @@ const post = (state=initialState, action) => {
           success: true,
           error: false
         },
-        all: action.payload.data
+        all: {
+          ...state.all,
+          [action.meta]: action.payload.data
+        }
       };
     case `${FETCH_POST}_SUCCESS`:
       return {
