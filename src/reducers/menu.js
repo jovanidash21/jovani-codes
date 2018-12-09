@@ -1,9 +1,14 @@
 import { FETCH_MENU } from '../constants/menu';
 
+const commonStateFlags = {
+  loading: false,
+  success: false,
+  error: false
+};
+
 const initialState = {
-  isLoading: false,
-  isError: false,
-  menus: {}
+  fetch: {...commonStateFlags},
+  all: {}
 };
 
 const menu = (state=initialState, action) => {
@@ -11,22 +16,34 @@ const menu = (state=initialState, action) => {
     case `${FETCH_MENU}_LOADING`:
       return {
         ...state,
-        isLoading: true
+        fetch: {
+          ...state.fetch,
+          loading: true
+        }
       };
     case `${FETCH_MENU}_SUCCESS`:
       return {
         ...state,
-        isLoading: false,
-        menus: {
-          ...state.menus,
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: true,
+          error: false
+        },
+        all: {
+          ...state.all,
           [action.meta]: action.payload.data
         }
       };
     case `${FETCH_MENU}_ERROR`:
       return {
         ...state,
-        isLoading: false,
-        isError: true
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: false,
+          error: true
+        }
       };
     default:
       return state;

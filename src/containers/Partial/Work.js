@@ -40,17 +40,17 @@ class Work extends Component {
     return (
       <section className="work-section background-secondary">
         {
-          'work' in post.allPosts &&
-          post.allPosts.work.length > 0 &&
+          'work' in post.all &&
+          post.all.work.length > 0 &&
           <Slider
             {...slickOptions}
-            swipe={post.allPosts.work.length > 1}
-            infinite={post.allPosts.work.length > 1}
-            dots={post.allPosts.work.length > 1}
-            arrows={post.allPosts.work.length > 1}
+            swipe={post.all.work.length > 1}
+            infinite={post.all.work.length > 1}
+            dots={post.all.work.length > 1}
+            arrows={post.all.work.length > 1}
           >
             {
-              post.allPosts.work.map((postData, i) =>
+              post.all.work.map((postData, i) =>
                 <div key={i} className="work-content">
                   <div className="work-slide-item-wrapper">
                     <div className={"animated " +

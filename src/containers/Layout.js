@@ -19,7 +19,7 @@ class Layout extends Component {
       options
     } = this.props;
 
-    if (!options.isLoading && options.isSuccess) {
+    if ( !options.fetch.loading && options.fetch.success ) {
       return (
         <div className="main-content">
           <Content {...matchProps} />

@@ -3,11 +3,16 @@ import {
   FETCH_PAGE
 } from '../constants/page';
 
+const commonStateFlags = {
+  loading: false,
+  success: false,
+  error: false
+};
+
 const initialState = {
-  isLoading: false,
-  isError: false,
-  allPages: [],
-  singlePage: {}
+  fetch: {...commonStateFlags},
+  all: [],
+  single: {}
 };
 
 const page = (state=initialState, action) => {
@@ -16,20 +21,33 @@ const page = (state=initialState, action) => {
     case `${FETCH_PAGE}_LOADING`:
       return {
         ...state,
-        isLoading: true
+        fetch: {
+          ...state.fetch,
+          loading: true
+        }
       };
     case `${FETCH_PAGES}_SUCCESS`:
       return {
         ...state,
-        isLoading: false,
-        allPages: action.payload.data
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: true,
+          error: false
+        },
+        all: action.payload.data
       };
     case `${FETCH_PAGE}_SUCCESS`:
       return {
         ...state,
-        isLoading: false,
-        singlePage: {
-          ...state.singlePage,
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: true,
+          error: false
+        },
+        single: {
+          ...state.single,
           [action.meta]: action.payload.data
         }
       };
@@ -37,8 +55,12 @@ const page = (state=initialState, action) => {
     case `${FETCH_PAGE}_ERROR`:
       return {
         ...state,
-        isLoading: false,
-        isError: true
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: false,
+          error: true
+        }
       };
     default:
       return state;

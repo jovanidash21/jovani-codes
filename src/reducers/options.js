@@ -1,8 +1,13 @@
 import { FETCH_OPTIONS } from '../constants/options';
 
+const commonStateFlags = {
+  loading: false,
+  success: false,
+  error: false
+};
+
 const initialState = {
-  isLoading: false,
-  isError: false,
+  fetch: {...commonStateFlags},
   data: {}
 };
 
@@ -11,20 +16,31 @@ const options = (state=initialState, action) => {
     case `${FETCH_OPTIONS}_LOADING`:
       return {
         ...state,
-        isLoading: true
+        fetch: {
+          ...state.fetch,
+          loading: true
+        }
       };
     case `${FETCH_OPTIONS}_SUCCESS`:
       return {
         ...state,
-        isLoading: false,
-        isSuccess: true,
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: true,
+          error: false
+        },
         data: action.payload.data
       };
     case `${FETCH_OPTIONS}_ERROR`:
       return {
         ...state,
-        isLoading: false,
-        isError: true
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: false,
+          error: true
+        }
       };
     default:
       return state;

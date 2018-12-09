@@ -3,11 +3,16 @@ import {
   FETCH_POST
 } from '../constants/post';
 
+const commonStateFlags = {
+  loading: false,
+  success: false,
+  error: false
+};
+
 const initialState = {
-  isLoading: false,
-  isError: false,
-  allPosts: {},
-  singlePost: []
+  fetch: {...commonStateFlags},
+  all: [],
+  single: {}
 };
 
 const post = (state=initialState, action) => {
@@ -16,29 +21,46 @@ const post = (state=initialState, action) => {
     case `${FETCH_POST}_LOADING`:
       return {
         ...state,
-        isLoading: true
+        fetch: {
+          ...state.fetch,
+          loading: true
+        }
       };
     case `${FETCH_POSTS}_SUCCESS`:
       return {
         ...state,
-        isLoading: false,
-        allPosts: {
-          ...state.allPosts,
-          [action.meta]: action.payload.data
-        }
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: true,
+          error: false
+        },
+        all: action.payload.data
       };
     case `${FETCH_POST}_SUCCESS`:
       return {
         ...state,
-        isLoading: false,
-        singlePost: action.payload.data
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: true,
+          error: false
+        },
+        single: {
+          ...state.single,
+          [action.meta]: action.payload.data
+        }
       };
     case `${FETCH_POSTS}_ERROR`:
     case `${FETCH_POST}_ERROR`:
       return {
         ...state,
-        isLoading: false,
-        isError: true
+        fetch: {
+          ...state.fetch,
+          loading: false,
+          success: false,
+          error: true
+        }
       };
     default:
       return state;
