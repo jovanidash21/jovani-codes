@@ -19,7 +19,7 @@ class NotFound extends Component {
     const { page } = this.props;
 
     return (
-      <section class="not-found-section">
+      <section className="not-found-section">
         {::this.handleHeadData('Page Not Found')}
         <div className="dimmer" />
         <div className="main-logo-wrapper">
@@ -31,8 +31,8 @@ class NotFound extends Component {
           </Link>
         </div>
         <div className="not-found-description text-center">
-          <h2>Oops!</h2>
-          <p>Sorry, but the page you are looking for does not exist.</p>
+          <h2>404</h2>
+          <p>Ooops! Sorry, but the page you are looking for does not exist.</p>
         </div>
       </section>
     )

@@ -94,6 +94,7 @@ module.exports = {
                   path.join(__dirname, '/assets/styles/common/_variables.scss'),
                   path.join(__dirname, '/assets/styles/common/_mixins.scss'),
                   path.join(__dirname, '/assets/styles/common/_keyframes.scss'),
+                  path.join(__dirname, '/assets/styles/common/_functions.scss'),
                 ],
               },
             },

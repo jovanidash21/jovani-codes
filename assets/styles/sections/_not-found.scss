@@ -28,17 +28,24 @@
       white-space: nowrap;
     }
     h2 {
-      font-size: 100px;
-      font-style: italic;
+      font-family: $font-family-lato;
+      font-size: 150px;
+      font-weight: bolder;
       letter-spacing: 4px;
+      line-height: 150px;
       margin-bottom: 20px;
-      text-shadow: 4px 2px 1px $color-secondary;
+      text-shadow: long-shadow(10, 5, 5, 5, 5, 5, 5);
+      @include media-breakpoint-down(sm) {
+        font-size: 100px;
+        line-height: 100px;
+        margin-top: 30px;
+      }
     }
     p {
       background-color: $color-tertiary;
       color: #fff;
-      font-size: 30px;
-      line-height: 30px;
+      font-size: 26px;
+      line-height: 26px;
       padding: 8px;
     }
   }
