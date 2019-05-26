@@ -10,7 +10,7 @@ const reducers = combineReducers({
   options,
   menu,
   page,
-  post
+  post,
 });
 
 export default reducers;

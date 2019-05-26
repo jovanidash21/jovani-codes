@@ -1,18 +1,18 @@
 import {
   FETCH_POSTS,
-  FETCH_POST
+  FETCH_POST,
 } from '../constants/post';
 
 const commonStateFlags = {
   loading: false,
   success: false,
-  error: false
+  error: false,
 };
 
 const initialState = {
   fetch: {...commonStateFlags},
   all: [],
-  single: {}
+  single: {},
 };
 
 const post = (state=initialState, action) => {
@@ -23,7 +23,7 @@ const post = (state=initialState, action) => {
         ...state,
         fetch: {
           ...state.fetch,
-          loading: true
+          loading: true,
         }
       };
     case `${FETCH_POSTS}_SUCCESS`:
@@ -33,11 +33,11 @@ const post = (state=initialState, action) => {
           ...state.fetch,
           loading: false,
           success: true,
-          error: false
+          error: false,
         },
         all: {
           ...state.all,
-          [action.meta]: action.payload.data
+          [action.meta]: action.payload.data,
         }
       };
     case `${FETCH_POST}_SUCCESS`:
@@ -47,11 +47,11 @@ const post = (state=initialState, action) => {
           ...state.fetch,
           loading: false,
           success: true,
-          error: false
+          error: false,
         },
         single: {
           ...state.single,
-          [action.meta]: action.payload.data
+          [action.meta]: action.payload.data,
         }
       };
     case `${FETCH_POSTS}_ERROR`:
@@ -62,7 +62,7 @@ const post = (state=initialState, action) => {
           ...state.fetch,
           loading: false,
           success: false,
-          error: true
+          error: true,
         }
       };
     default:

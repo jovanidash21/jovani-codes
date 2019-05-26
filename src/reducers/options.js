@@ -3,7 +3,7 @@ import { FETCH_OPTIONS } from '../constants/options';
 const commonStateFlags = {
   loading: false,
   success: false,
-  error: false
+  error: false,
 };
 
 const initialState = {
@@ -18,7 +18,7 @@ const options = (state=initialState, action) => {
         ...state,
         fetch: {
           ...state.fetch,
-          loading: true
+          loading: true,
         }
       };
     case `${FETCH_OPTIONS}_SUCCESS`:
@@ -28,7 +28,7 @@ const options = (state=initialState, action) => {
           ...state.fetch,
           loading: false,
           success: true,
-          error: false
+          error: false,
         },
         data: action.payload.data
       };
@@ -39,7 +39,7 @@ const options = (state=initialState, action) => {
           ...state.fetch,
           loading: false,
           success: false,
-          error: true
+          error: true,
         }
       };
     default:

@@ -3,12 +3,12 @@ import { FETCH_MENU } from '../constants/menu';
 const commonStateFlags = {
   loading: false,
   success: false,
-  error: false
+  error: false,
 };
 
 const initialState = {
   fetch: {...commonStateFlags},
-  all: {}
+  all: {},
 };
 
 const menu = (state=initialState, action) => {
@@ -18,7 +18,7 @@ const menu = (state=initialState, action) => {
         ...state,
         fetch: {
           ...state.fetch,
-          loading: true
+          loading: true,
         }
       };
     case `${FETCH_MENU}_SUCCESS`:
@@ -28,11 +28,11 @@ const menu = (state=initialState, action) => {
           ...state.fetch,
           loading: false,
           success: true,
-          error: false
+          error: false,
         },
         all: {
           ...state.all,
-          [action.meta]: action.payload.data
+          [action.meta]: action.payload.data,
         }
       };
     case `${FETCH_MENU}_ERROR`:
@@ -42,7 +42,7 @@ const menu = (state=initialState, action) => {
           ...state.fetch,
           loading: false,
           success: false,
-          error: true
+          error: true,
         }
       };
     default:
