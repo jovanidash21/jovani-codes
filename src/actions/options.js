@@ -5,7 +5,7 @@ export function fetchOptions() {
   return dispatch => {
     return dispatch({
       type: FETCH_OPTIONS,
-      payload: axios.get(JOVANI_CODES.siteURL + '/wp-json/acf/v2/options'),
+      payload: axios.get('/acf/v2/options'),
     })
     .catch((error) => {
       if (error instanceof Error) {

@@ -3,11 +3,11 @@ import { fetchOptions } from './options';
 import { fetchMenu } from './menu';
 import {
   fetchPages,
-  fetchPage
+  fetchPage,
 } from './page';
 import {
   fetchPosts,
-  fetchPost
+  fetchPost,
 } from './post';
 
 const actions = (dispatch) => {
@@ -17,7 +17,7 @@ const actions = (dispatch) => {
     fetchPages,
     fetchPage,
     fetchPosts,
-    fetchPost
+    fetchPost,
   }, dispatch);
 }
 
