@@ -2,7 +2,7 @@
 
 $libraries = [
   'lib/setup.php',
-  'lib/post-type.php',
+  'lib/post-types.php',
   'lib/acf.php',
   'lib/assets.php',
   'lib/revision.php'
