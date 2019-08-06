@@ -20,13 +20,13 @@ CircleIcon.propTypes = {
   icon: PropTypes.string.isRequired,
   link: PropTypes.string,
   target: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 }
 
 CircleIcon.defaultProps = {
   link: '#',
   target: '_self',
-  title: ''
+  title: '',
 }
 
 export default CircleIcon;

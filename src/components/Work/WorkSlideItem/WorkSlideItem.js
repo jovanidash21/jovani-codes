@@ -65,7 +65,7 @@ WorkSlideItem.defaultProps = {
   description: '',
   siteLink: '',
   githubLink: '',
-  isSlideActive: false
+  isSlideActive: false,
 }
 
 export default WorkSlideItem;

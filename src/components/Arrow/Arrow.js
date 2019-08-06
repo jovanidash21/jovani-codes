@@ -18,13 +18,13 @@ Arrow.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   direction: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 }
 
 Arrow.defaultProps = {
   className: '',
   style: {},
-  onClick: () => {}
+  onClick: () => {},
 }
 
 export default Arrow;

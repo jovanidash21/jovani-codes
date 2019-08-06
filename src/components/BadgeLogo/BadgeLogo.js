@@ -16,13 +16,13 @@ const BadgeLogo = (props) => {
 BadgeLogo.propTypes = {
   className: PropTypes.string,
   height: PropTypes.string,
-  width: PropTypes.string
+  width: PropTypes.string,
 }
 
 BadgeLogo.defaultProps = {
   className: '',
   height: 'auto',
-  width: 'auto'
+  width: 'auto',
 }
 
 export default BadgeLogo;

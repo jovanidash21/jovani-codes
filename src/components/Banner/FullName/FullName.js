@@ -5,7 +5,7 @@ import './styles.scss';
 
 const tiltOptions = {
   max: 20,
-  speed: 200
+  speed: 200,
 }
 
 const FullName = (props) => {

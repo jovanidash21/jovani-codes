@@ -14,11 +14,11 @@ const ScrollDownIcon = (props) => {
 }
 
 ScrollDownIcon.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
 }
 
 ScrollDownIcon.defaultProps = {
-  title: ''
+  title: '',
 }
 
 export default ScrollDownIcon;

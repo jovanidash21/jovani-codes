@@ -16,13 +16,13 @@ const FaceLogo = (props) => {
 FaceLogo.propTypes = {
   className: PropTypes.string,
   height: PropTypes.string,
-  width: PropTypes.string
+  width: PropTypes.string,
 }
 
 FaceLogo.defaultProps = {
   className: '',
   height: 'auto',
-  width: 'auto'
+  width: 'auto',
 }
 
 export default FaceLogo;

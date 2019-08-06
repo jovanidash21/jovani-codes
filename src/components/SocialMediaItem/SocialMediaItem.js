@@ -29,7 +29,7 @@ SocialMediaItem.propTypes = {
   hexagonColor: PropTypes.string,
   iconColor: PropTypes.string,
   link: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 }
 
 SocialMediaItem.defaultProps = {
@@ -37,7 +37,7 @@ SocialMediaItem.defaultProps = {
   hexagonColor: "#fff",
   iconColor: "#000",
   link: '#',
-  title: ''
+  title: '',
 }
 
 export default SocialMediaItem;

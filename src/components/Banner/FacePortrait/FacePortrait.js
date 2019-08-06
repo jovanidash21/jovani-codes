@@ -40,7 +40,7 @@ class FacePortrait extends Component {
     const { speeches } = this.props;
     const {
       showSpeechBubble,
-      speechIndex
+      speechIndex,
     } = this.state;
 
     return (
@@ -64,12 +64,12 @@ class FacePortrait extends Component {
 
 FacePortrait.propTypes = {
   speeches: PropTypes.array,
-  interval: PropTypes.number
+  interval: PropTypes.number,
 }
 
 FacePortrait.defaultProps = {
   speeches: [],
-  interval: 10000
+  interval: 10000,
 }
 
 export default FacePortrait;

@@ -55,11 +55,11 @@ class LogoSpeech extends Component {
 }
 
 LogoSpeech.propTypes = {
-  speech: PropTypes.string
+  speech: PropTypes.string,
 }
 
 LogoSpeech.defaultProps = {
-  speech: ''
+  speech: '',
 }
 
 export default LogoSpeech;
