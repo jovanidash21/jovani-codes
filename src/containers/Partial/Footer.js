@@ -35,7 +35,7 @@ class Footer extends Component {
 const mapStateToProps = (state) => {
   return {
     options: state.options,
-    page: state.page
+    page: state.page,
   }
 }
 

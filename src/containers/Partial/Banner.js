@@ -7,7 +7,7 @@ import { FaceLogo } from '../../components/FaceLogo';
 import {
   FullName,
   FacePortrait,
-  ScrollDownIcon
+  ScrollDownIcon,
 } from '../../components/Banner';
 import { SocialMediaItem } from '../../components/SocialMediaItem';
 import particlesJSConfig from './particles-js-config.json';
@@ -43,7 +43,7 @@ class Banner extends Component {
     const {
       options,
       page,
-      isSectionActive
+      isSectionActive,
     } = this.props;
     const { speeches } = this.state;
     const socialMediaItemOptions = {
@@ -189,7 +189,7 @@ class Banner extends Component {
 const mapStateToProps = (state) => {
   return {
     options: state.options,
-    page: state.page
+    page: state.page,
   }
 }
 

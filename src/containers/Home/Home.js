@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {
   ScrollToTopOnMount,
   SectionsContainer,
-  Section
+  Section,
 } from 'react-fullpage';
 import mapDispatchToProps from '../../actions';
 import Head from '../../components/Head';
@@ -12,7 +12,7 @@ import {
   About,
   Work,
   Contact,
-  Footer
+  Footer,
 } from '../Partial'
 
 class Home extends Component {
@@ -45,7 +45,7 @@ class Home extends Component {
         'about',
         'work',
         'contact',
-        'footer'
+        'footer',
       ],
       navigationClass: 'full-page-navigation',
       navigationAnchorClass: 'full-page-navigation-anchor',
@@ -80,7 +80,7 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    page: state.page
+    page: state.page,
   }
 }
 

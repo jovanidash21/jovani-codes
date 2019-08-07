@@ -11,7 +11,7 @@ class Work extends Component {
     super(props);
 
     this.state = {
-      activeSlide: 0
+      activeSlide: 0,
     };
   }
   componentWillMount() {
@@ -25,7 +25,7 @@ class Work extends Component {
   render() {
     const {
       post,
-      isSectionActive
+      isSectionActive,
     } = this.props;
     const { activeSlide } = this.state;
     const slickOptions = {
@@ -34,7 +34,7 @@ class Work extends Component {
       slidesToScroll: 1,
       prevArrow: <Arrow direction="left" />,
       nextArrow: <Arrow direction="right" />,
-      afterChange: ::this.handleAfterChange
+      afterChange: ::this.handleAfterChange,
     };
 
     return (
@@ -80,7 +80,7 @@ const mapStateToProps = (state) => {
   return {
     options: state.options,
     page: state.page,
-    post: state.post
+    post: state.post,
   }
 }
 
