@@ -13,7 +13,7 @@ const initialState = {
 
 const menu = (state=initialState, action) => {
   switch(action.type) {
-    case `${FETCH_MENU}_LOADING`:
+    case `${FETCH_MENU}_LOADING`: { 
       return {
         ...state,
         fetch: {
@@ -21,7 +21,8 @@ const menu = (state=initialState, action) => {
           loading: true,
         }
       };
-    case `${FETCH_MENU}_SUCCESS`:
+    }  
+    case `${FETCH_MENU}_SUCCESS`: {
       return {
         ...state,
         fetch: {
@@ -35,7 +36,8 @@ const menu = (state=initialState, action) => {
           [action.meta]: action.payload.data,
         }
       };
-    case `${FETCH_MENU}_ERROR`:
+    }
+    case `${FETCH_MENU}_ERROR`: {
       return {
         ...state,
         fetch: {
@@ -45,6 +47,7 @@ const menu = (state=initialState, action) => {
           error: true,
         }
       };
+    }
     default:
       return state;
   }

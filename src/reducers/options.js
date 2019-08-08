@@ -13,7 +13,7 @@ const initialState = {
 
 const options = (state=initialState, action) => {
   switch(action.type) {
-    case `${FETCH_OPTIONS}_LOADING`:
+    case `${FETCH_OPTIONS}_LOADING`: {
       return {
         ...state,
         fetch: {
@@ -21,7 +21,8 @@ const options = (state=initialState, action) => {
           loading: true,
         }
       };
-    case `${FETCH_OPTIONS}_SUCCESS`:
+    }
+    case `${FETCH_OPTIONS}_SUCCESS`: {
       return {
         ...state,
         fetch: {
@@ -32,7 +33,8 @@ const options = (state=initialState, action) => {
         },
         data: action.payload.data
       };
-    case `${FETCH_OPTIONS}_ERROR`:
+    }
+    case `${FETCH_OPTIONS}_ERROR`: {
       return {
         ...state,
         fetch: {
@@ -42,6 +44,7 @@ const options = (state=initialState, action) => {
           error: true,
         }
       };
+    }
     default:
       return state;
   }

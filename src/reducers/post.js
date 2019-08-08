@@ -18,7 +18,7 @@ const initialState = {
 const post = (state=initialState, action) => {
   switch(action.type) {
     case `${FETCH_POSTS}_LOADING`:
-    case `${FETCH_POST}_LOADING`:
+    case `${FETCH_POST}_LOADING`: {
       return {
         ...state,
         fetch: {
@@ -26,7 +26,8 @@ const post = (state=initialState, action) => {
           loading: true,
         }
       };
-    case `${FETCH_POSTS}_SUCCESS`:
+    }
+    case `${FETCH_POSTS}_SUCCESS`: {
       return {
         ...state,
         fetch: {
@@ -40,7 +41,8 @@ const post = (state=initialState, action) => {
           [action.meta]: action.payload.data,
         }
       };
-    case `${FETCH_POST}_SUCCESS`:
+    }
+    case `${FETCH_POST}_SUCCESS`: {
       return {
         ...state,
         fetch: {
@@ -54,8 +56,9 @@ const post = (state=initialState, action) => {
           [action.meta]: action.payload.data,
         }
       };
+    }
     case `${FETCH_POSTS}_ERROR`:
-    case `${FETCH_POST}_ERROR`:
+    case `${FETCH_POST}_ERROR`: {
       return {
         ...state,
         fetch: {
@@ -65,6 +68,7 @@ const post = (state=initialState, action) => {
           error: true,
         }
       };
+    }
     default:
       return state;
   }

@@ -18,7 +18,7 @@ const initialState = {
 const page = (state=initialState, action) => {
   switch(action.type) {
     case `${FETCH_PAGES}_LOADING`:
-    case `${FETCH_PAGE}_LOADING`:
+    case `${FETCH_PAGE}_LOADING`: {
       return {
         ...state,
         fetch: {
@@ -26,7 +26,8 @@ const page = (state=initialState, action) => {
           loading: true,
         }
       };
-    case `${FETCH_PAGES}_SUCCESS`:
+    }
+    case `${FETCH_PAGES}_SUCCESS`: {
       return {
         ...state,
         fetch: {
@@ -40,7 +41,8 @@ const page = (state=initialState, action) => {
           [action.meta]: action.payload.data,
         }
       };
-    case `${FETCH_PAGE}_SUCCESS`:
+    }
+    case `${FETCH_PAGE}_SUCCESS`: {
       return {
         ...state,
         fetch: {
@@ -54,8 +56,9 @@ const page = (state=initialState, action) => {
           [action.meta]: action.payload.data,
         }
       };
+    }
     case `${FETCH_PAGES}_ERROR`:
-    case `${FETCH_PAGE}_ERROR`:
+    case `${FETCH_PAGE}_ERROR`: {
       return {
         ...state,
         fetch: {
@@ -65,6 +68,7 @@ const page = (state=initialState, action) => {
           error: true,
         }
       };
+    }
     default:
       return state;
   }
